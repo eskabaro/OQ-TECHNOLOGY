@@ -110,4 +110,9 @@ body {
     .flex_vertical_gap_10 {
         @apply flex flex-col gap-10;
     }
+
+    // rest
+    .top-0-im {
+        top: 0 !important;
+    }
 }

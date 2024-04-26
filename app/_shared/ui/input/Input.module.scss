@@ -1,15 +1,19 @@
-.input {
-    @apply w-full;
+.input:focus-within ~ .placeholder {
+    @apply opacity-0 top-0;
+}
 
-    &:focus-within ~ .placeholder {
-        @apply top-0;
+.input {
+    @apply w-full border border-shadow-slate;
+
+    &.error {
+        @apply border-red-600;
     }
 }
 
 .placeholder {
     @apply absolute left-5 top-2/4 -translate-y-2/4 text-silver-mist text-lg font-normal;
 
-    &.active {
-        @apply top-0;
+    &.error {
+        @apply text-red-600;
     }
 }

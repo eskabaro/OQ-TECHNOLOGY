@@ -1,11 +1,12 @@
 'use client'
 
 import { FC } from 'react'
+import { SubmitHandler, useForm } from 'react-hook-form'
+
 import { Text } from '../../../../_shared/ui/typography/text'
 import { Container } from '@/app/(app)/_components/container/Container'
 import { Input } from '@/app/_shared/ui/input'
 import { Button } from '@/app/_shared/ui/button'
-import { SubmitHandler, useForm } from 'react-hook-form'
 
 interface IFormInput {
     firstName: string
@@ -20,6 +21,7 @@ export const FirstSection: FC = () => {
     const {
         handleSubmit,
         register,
+        watch,
         formState: { errors }
     } = useForm<IFormInput>({
         mode: 'onBlur'
@@ -43,12 +45,12 @@ export const FirstSection: FC = () => {
 
                 <form onSubmit={handleSubmit(onSubmit)} style={{ maxWidth: 900 }} className='w-full m-auto flex flex-col gap-72'>
                     <div className='grid grid-cols-2 gap-5'>
-                        <Input {...register('firstName', { required: true })} variant='first' placeholder='First name *' />
-                        <Input {...register('lastName', { required: true })} variant='first' placeholder='Last name *' />
-                        <Input {...register('company', { required: true })} variant='first' placeholder='Company *' />
-                        <Input {...register('country', {})} variant='first' placeholder='Country' />
-                        <Input {...register('email', { required: true })} variant='first' placeholder='Email *' />
-                        <Input {...register('message', { required: true })} variant='first' placeholder='Message *' />
+                        <Input {...register('firstName', { required: true })} error={!!errors.firstName} variant='first' placeholder='First name *' />
+                        <Input {...register('lastName', { required: true })} error={!!errors.lastName} variant='first' placeholder='Last name *' />
+                        <Input {...register('company', { required: true })} error={!!errors.company} variant='first' placeholder='Company *' />
+                        <Input {...register('country', {})} error={!!errors.country} variant='first' placeholder='Country' />
+                        <Input {...register('email', { required: true })} error={!!errors.email} variant='first' placeholder='Email *' />
+                        <Input {...register('message', { required: true })} error={!!errors.message} variant='first' placeholder='Message *' />
                     </div>
                     <div className='flex justify-center'>
                         <Button variant='long'>

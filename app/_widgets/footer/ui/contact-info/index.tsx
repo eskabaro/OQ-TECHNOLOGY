@@ -2,7 +2,8 @@ import { FC } from 'react'
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { Text } from '../../../../_shared/ui/typography/text'
+
+import { Text } from '@/app/_shared/ui/typography/text'
 import { Logo } from '@/app/_shared/ui/logo'
 import { Country } from '../country'
 

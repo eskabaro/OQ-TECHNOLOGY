@@ -11,7 +11,7 @@ import { Text } from '@/app/_shared/ui/typography/text'
 
 export const Header: FC = () => {
     const pathname = usePathname()
-    const isActiveLinkStyles = (url: string) => `opacity_animation opacity-${pathname === url ? 100 : 50} hover:opacity-100`
+    const isActiveLinkStyles = 'opacity_animation hover:opacity-100'
     const linksStyles = 'text-lg font-semibold'
 
     return (
@@ -48,7 +48,7 @@ export const Header: FC = () => {
                 <nav className='flex items-center'>
                     <ul className='flex_horizontal_gap_4'>
                         <li>
-                            <Link href={'/contact-us'} className={isActiveLinkStyles('/contact-us')}>
+                            <Link href={'/contact-us'} style={{ opacity: '/contact-us' === pathname ? 1 : 0.5 }} className={isActiveLinkStyles}>
                                 <Text className={linksStyles} as='span'>
                                     Enterprise
                                 </Text>
@@ -58,7 +58,7 @@ export const Header: FC = () => {
                             {'|'}
                         </Text>
                         <li>
-                            <Link href={'/'} className={isActiveLinkStyles('')}>
+                            <Link href={'/'} style={{ opacity: '/' === pathname ? 1 : 0.5 }} className={isActiveLinkStyles}>
                                 <Text className={linksStyles} as='span'>
                                     Roam
                                 </Text>
@@ -68,7 +68,7 @@ export const Header: FC = () => {
                             {'|'}
                         </Text>
                         <li>
-                            <Link href={'/'} className={isActiveLinkStyles('')}>
+                            <Link href={'/'} style={{ opacity: '/' === pathname ? 1 : 0.5 }} className={isActiveLinkStyles}>
                                 <Text className={linksStyles} as='span'>
                                     Personal
                                 </Text>
