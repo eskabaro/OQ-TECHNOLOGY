@@ -1,0 +1,15 @@
+.input {
+    @apply w-full;
+
+    &:focus-within ~ .placeholder {
+        @apply top-0;
+    }
+}
+
+.placeholder {
+    @apply absolute left-5 top-2/4 -translate-y-2/4 text-silver-mist text-lg font-normal;
+
+    &.active {
+        @apply top-0;
+    }
+}
