@@ -30,15 +30,16 @@ export const Input: FC<IInputProps> = forwardRef(({ variant, placeholder, error,
                     'px-5 py-18 rounded-53 backdrop-blur-[0.25rem] bg-transparent outline-none': variant === 'first',
                     '': variant === 'second'
                 })}
+                placeholder={placeholder}
                 onChange={(e) => setIsActive(!!e.target.value)}
             />
-            <span
+            {/* <span
                 className={cn(`${styles.placeholder} ${error && styles.error} transform_animation`, {
                     'opacity-0 top-0-im': isActive
                 })}
             >
                 {placeholder}
-            </span>
+            </span> */}
         </label>
     )
 })

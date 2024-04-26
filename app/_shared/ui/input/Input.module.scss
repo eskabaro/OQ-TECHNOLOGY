@@ -5,6 +5,15 @@
 .input {
     @apply w-full border border-shadow-slate;
 
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+        -webkit-text-fill-color: #c4c4c4 !important;
+        -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+        border: 1px solid #464646 !important;
+    }
+
     &.error {
         @apply border-red-600;
     }
