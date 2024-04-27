@@ -19,11 +19,11 @@
 
         align-items: center;
 
-        > h1 {
+        > div > h1 {
             @include fontSize(toRem(88), 4vw, toRem(88), 600);
         }
 
-        > p {
+        > div > p {
             @include fontSize(toRem(22), 4vw, toRem(22), 600);
 
             max-width: em(600);

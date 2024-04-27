@@ -38,7 +38,7 @@
 
     &_item {
         transition: all 0.2s ease;
-
+        overflow: hidden;
         border: toRem(1) solid transparent;
         border-radius: 50%;
         background: linear-gradient(#0b0b0b, #2f2f37) padding-box, linear-gradient(to top, #0b0b0b, #2f2f37) border-box;
@@ -50,15 +50,20 @@
             justify-content: center;
             align-items: center;
             background-color: $shadowCharcoal;
-            border-radius: 50%;
         }
 
-        &:hover {
-            border-radius: 15px;
+        &:first-child:hover {
+            border-top-right-radius: toRem(15) !important;
+            border-bottom-right-radius: toRem(15) !important;
+        }
 
-            > a {
-                border-radius: 15px;
-            }
+        &:nth-child(2):hover {
+            border-radius: toRem(15);
+        }
+
+        &:last-child:hover {
+            border-top-left-radius: toRem(15) !important;
+            border-bottom-left-radius: toRem(15) !important;
         }
     }
 }

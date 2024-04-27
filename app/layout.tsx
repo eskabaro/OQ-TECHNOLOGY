@@ -20,7 +20,7 @@ export default function RootLayout({
     return (
         <html lang='en'>
             <body className={proxima_nova.className}>
-                <div className='min-h-full flex flex-col'>
+                <div className='wrapper'>
                     <Header />
                     <main className='flex-1'>{children}</main>
                     <Footer />

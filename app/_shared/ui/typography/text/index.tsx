@@ -2,7 +2,7 @@
 
 import { ComponentPropsWithoutRef, ComponentType, ReactNode } from 'react'
 
-type TextElementType = 'div' | 'p' | 'a' | 'span' | 'label' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+type TextElementType = 'div' | 'p' | 'a' | 'span' | 'label' | 'time' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
 type AdditionalTextPropsType<T extends TextElementType | ComponentType> = T extends keyof JSX.IntrinsicElements ? JSX.IntrinsicElements[T] : ComponentPropsWithoutRef<T>
 
 interface ITextProps {

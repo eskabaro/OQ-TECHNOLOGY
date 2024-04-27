@@ -1,0 +1,25 @@
+@import '../../../../(app)/_styles/mixins.scss';
+
+.wrapper {
+    padding: toRem(260) 0 toRem(150) 0;
+    background-image: url('/images/earth-2.svg');
+    background-repeat: no-repeat;
+    background-size: 40%;
+
+    &_container {
+        @include flexVerticalGap(20);
+    }
+}
+
+.title {
+    @include fontSize(toRem(88), 4vw, toRem(88), 600);
+
+    color: white;
+    text-align: center;
+}
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: toRem(50);
+}

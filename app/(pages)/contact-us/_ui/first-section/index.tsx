@@ -4,6 +4,7 @@ import { FC } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 
 import { Text } from '../../../../_shared/ui/typography/text'
+import { HeadingAnimate } from '@/app/_shared/ui/heading-animate'
 import { Container } from '@/app/(app)/_components/container'
 import { Input } from '@/app/_shared/ui/input'
 import { Button } from '@/app/_shared/ui/button'
@@ -37,8 +38,12 @@ export const FirstSection: FC = () => {
             <Container>
                 <div className={styles['content-box']}>
                     <div className={styles['content-box_heading']}>
-                        <Text as='h1'>DO YOU HAVE ANY IDEA OR REMAINING QUESTION?</Text>
-                        <Text as='p'>Sit sit non ut adipiscing aliquet est consectetur risus. Velit integer urna ut mattis mauris augue. Nunc amet aliquam blandit risus massa. Scelerisque est sed eu.</Text>
+                        <HeadingAnimate>
+                            <Text as='h1'>DO YOU HAVE ANY IDEA OR REMAINING QUESTION?</Text>
+                        </HeadingAnimate>
+                        <HeadingAnimate duration={200}>
+                            <Text as='p'>Sit sit non ut adipiscing aliquet est consectetur risus. Velit integer urna ut mattis mauris augue. Nunc amet aliquam blandit risus massa. Scelerisque est sed eu.</Text>
+                        </HeadingAnimate>
                     </div>
 
                     <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>

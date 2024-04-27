@@ -1,0 +1,12 @@
+@import '../../../(app)/_styles/mixins.scss';
+
+.wrapper {
+    @include allAnimation(all, 0.3s);
+    opacity: 0;
+    transform: translateY(20px);
+
+    &.active {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}

@@ -1,3 +1,5 @@
+import { NewsList } from './_ui/news-list'
+
 export default function NewsPage() {
-    return <div>news</div>
+    return <NewsList />
 }

@@ -1,11 +1,16 @@
 'use client'
 
 import { FC, HTMLAttributes, PropsWithChildren } from 'react'
+import cn from 'classnames'
 import styles from './Container.module.scss'
 
-export const Container: FC<PropsWithChildren<HTMLAttributes<HTMLDivElement>>> = ({ children, ...props }) => {
+interface IContainerProps extends PropsWithChildren<HTMLAttributes<HTMLDivElement>> {
+    className?: string
+}
+
+export const Container: FC<IContainerProps> = ({ children, className, ...props }) => {
     return (
-        <div className={styles.container} {...props}>
+        <div className={cn(styles.container, className)} {...props}>
             {children}
         </div>
     )

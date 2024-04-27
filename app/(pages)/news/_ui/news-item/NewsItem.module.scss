@@ -1,0 +1,60 @@
+@import '../../../../(app)/_styles/mixins.scss';
+@import '../../../../(app)/_styles/vaiables.scss';
+
+.wrapper {
+    @include flexVerticalGap(5);
+
+    > img {
+        max-width: 100%;
+        object-fit: contain;
+        height: auto;
+    }
+
+    &_heading {
+        @include flexHorizontalGap(4);
+
+        justify-content: space-between;
+
+        > .title {
+            @include flexVerticalGap(1);
+            @include adaptiveValue('max-width', 300, 100, 1500, 1100, 1);
+            max-width: 300px;
+
+            width: 100%;
+            > h2 {
+                @include fontSize(toRem(20), 4vw, toRem(20), 600);
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+
+                color: $slateSilver;
+            }
+
+            > time {
+                @include fontSize(toRem(18), 4vw, toRem(18), 400);
+
+                color: $mistySlate;
+            }
+        }
+
+        > a > span {
+            @include flexHorizontalGap(3);
+            @include allAnimation(all, 0.09s);
+
+            text-wrap: nowrap;
+            text-transform: uppercase;
+            padding-block: toRem(6);
+            align-items: center;
+
+            &:hover {
+                color: rgba($color: #fff, $alpha: 0.5);
+
+                border-bottom-color: rgba($color: #fff, $alpha: 0.8) !important;
+
+                > svg {
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+}

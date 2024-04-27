@@ -1,0 +1,40 @@
+@import '../../../../(app)/_styles/mixins.scss';
+@import '../../../../(app)/_styles/vaiables.scss';
+
+@mixin btnPrevNext {
+    width: toRem(48);
+    height: toRem(48);
+    display: grid;
+    place-items: center;
+    background-color: $autumnBlaze;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.wrapper {
+    @include flexHorizontalGap(4);
+
+    align-items: center;
+    justify-content: center;
+
+    &_prev {
+        @include btnPrevNext;
+    }
+
+    &_count {
+        @include fontSize(toRem(24), 4vw, toRem(24), 400);
+
+        cursor: pointer;
+        height: fit-content;
+
+        &.selected {
+            color: $autumnBlaze;
+        }
+    }
+
+    &_next {
+        @include btnPrevNext;
+
+        transform: rotate(-180deg);
+    }
+}
