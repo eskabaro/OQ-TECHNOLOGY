@@ -11,6 +11,7 @@ import { Text } from '@/app/_shared/ui/typography/text'
 
 import styles from './Header.module.scss'
 import { Container } from '@/app/(app)/_components/container'
+import { Icon } from '@/app/_shared/ui/icon'
 
 export const Header: FC = () => {
     // const pathname = usePathname()
@@ -59,7 +60,7 @@ export const Header: FC = () => {
                     </ul>
                 </nav>
                 <button className={styles['burger-btn']}>
-                    <Image src='/svgs/bars.svg' width={32} height={24} alt='Bars' />
+                    <Icon name='bars' />
                 </button>
             </div>
         </header>

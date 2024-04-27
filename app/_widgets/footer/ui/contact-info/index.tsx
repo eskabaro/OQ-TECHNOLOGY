@@ -1,10 +1,9 @@
 import { FC } from 'react'
-
 import Link from 'next/link'
-import Image from 'next/image'
 
 import { Text } from '@/app/_shared/ui/typography/text'
 import { Logo } from '@/app/_shared/ui/logo'
+import { Icon } from '@/app/_shared/ui/icon'
 import { Country } from '../country'
 
 import styles from './ContactInfo.module.scss'
@@ -18,17 +17,17 @@ export const ContactInfo: FC = () => {
                 <ul className={styles.list}>
                     <li className={styles.list_item}>
                         <Link href={''}>
-                            <Image src='/svgs/facebook.svg' width={20} height={20} alt='Facebook' />
+                            <Icon name='facebook' />
                         </Link>
                     </li>
                     <li className={styles.list_item}>
                         <Link href={''}>
-                            <Image src='/svgs/twitter.svg' width={20} height={20} alt='Twitter' />
+                            <Icon name='twitter' />
                         </Link>
                     </li>
                     <li className={styles.list_item}>
                         <Link href={''}>
-                            <Image src='/svgs/linkedin.svg' width={20} height={20} alt='Linkedin' />
+                            <Icon name='linkedin' />
                         </Link>
                     </li>
                 </ul>

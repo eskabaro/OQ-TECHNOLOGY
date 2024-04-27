@@ -79,7 +79,7 @@
 .burger-btn {
     height: fit-content;
 
-    > img {
+    > svg {
         @include opacityAnimation;
 
         &:hover {

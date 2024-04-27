@@ -5,6 +5,8 @@ import Image from 'next/image'
 
 import { Text } from '@/app/_shared/ui/typography/text'
 import styles from './Country.module.scss'
+import { Icon } from '@/app/_shared/ui/icon'
+import Link from 'next/link'
 
 interface ICountryProps {
     countryFlagSrc: string
@@ -22,17 +24,21 @@ export const Country: FC<ICountryProps> = ({ countryFlagSrc, countryName, phone,
                 <Text as='span'>{countryName}</Text>
             </li>
             <li className={styles.wrapper_item}>
-                <Image src='/svgs/phone.svg' width={32} height={32} alt='Phone' />
-                <Text isUnderline as='span'>
-                    {phone}
-                </Text>
+                <Link href={`tel:${phone}`}>
+                    <Icon name='phone' style={{ minWidth: 32 }} />
+                    <Text isUnderline as='span'>
+                        {phone}
+                    </Text>
+                </Link>
             </li>
             {locations.map((e) => (
                 <li className={styles.wrapper_item} key={e}>
-                    <Image src='/svgs/location.svg' width={32} height={32} alt='Location' />
-                    <Text isUnderline as='span'>
-                        {e}
-                    </Text>
+                    <Link href={`tel:${phone}`}>
+                        <Icon name='location' style={{ minWidth: 32 }} />
+                        <Text isUnderline as='span'>
+                            {e}
+                        </Text>
+                    </Link>
                 </li>
             ))}
         </ul>
