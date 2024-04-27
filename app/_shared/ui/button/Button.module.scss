@@ -1,0 +1,23 @@
+@import '../../../(app)/_styles/mixins.scss';
+@import '../../../(app)/_styles/vaiables.scss';
+
+.button {
+    @include opacityAnimation;
+
+    border-radius: toRem(38);
+    padding-block: toRem(22);
+    max-height: toRem(62);
+
+    &:hover {
+        opacity: 0.75;
+    }
+
+    &.long {
+        @include fontSize(toRem(16), 4vw, toRem(16), 600);
+        @include flexHorizontalGap(5);
+        align-items: center;
+        justify-content: center;
+        background-color: $autumnBlaze;
+        min-width: toRem(280);
+    }
+}

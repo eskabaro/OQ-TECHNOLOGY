@@ -1,0 +1,64 @@
+@import '../../../../(app)/_styles/mixins.scss';
+@import '../../../../(app)/_styles/vaiables.scss';
+
+.wrapper {
+    background-image: url('/images/earth.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: em(256);
+    padding-bottom: em(144);
+    text-align: center;
+}
+
+.content-box {
+    @include flexVerticalGap(21);
+
+    &_heading {
+        @include flexVerticalGap(2);
+
+        align-items: center;
+
+        > h1 {
+            @include fontSize(toRem(88), 4vw, toRem(88), 600);
+        }
+
+        > p {
+            @include fontSize(toRem(22), 4vw, toRem(22), 600);
+
+            max-width: em(600);
+        }
+    }
+}
+
+.form {
+    @include flexVerticalGap(18);
+
+    max-width: em(900);
+    width: 100%;
+    margin: auto;
+
+    &_inputs-box {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: toRem(20);
+    }
+
+    &_btn-box {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.btn-circle {
+    height: toRem(20);
+    width: toRem(20);
+    background-color: white;
+    border-radius: 50%;
+}
+
+.btn-text {
+    @include fontSize(toRem(16), 4vw, toRem(16), 600);
+
+    letter-spacing: 0.09em;
+}

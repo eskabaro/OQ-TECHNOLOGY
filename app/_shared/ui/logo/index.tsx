@@ -5,9 +5,11 @@ import { FC } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
+import styles from './Logo.module.scss'
+
 export const Logo: FC = () => {
     return (
-        <Link href='/' className='flex items-center w-fit'>
+        <Link href='/' className={styles.logo}>
             <Image src='/images/logo.svg' width={134} height={87} alt='Logo' priority />
         </Link>
     )

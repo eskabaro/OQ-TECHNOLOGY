@@ -1,0 +1,24 @@
+@import './null.scss';
+@import './vaiables.scss';
+@import './mixins.scss';
+
+html,
+body {
+    background-color: $shadowSlate;
+    height: 100%;
+    color: white;
+
+    ::-webkit-scrollbar {
+        width: toRem(4);
+        height: toRem(4);
+
+        &-thumb {
+            background-color: $autumnBlaze;
+            border-radius: toRem(2);
+        }
+
+        &-track {
+            background-color: transparent;
+        }
+    }
+}

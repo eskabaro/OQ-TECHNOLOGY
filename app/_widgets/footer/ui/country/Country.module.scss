@@ -1,0 +1,28 @@
+@import '../../../../(app)/_styles/mixins.scss';
+@import '../../../../(app)/_styles/vaiables.scss';
+
+.wrapper {
+    @include flexVerticalGap(4);
+
+    max-width: em(208);
+
+    &_item {
+        @include flexHorizontalGap(2);
+
+        align-items: center;
+
+        &:first-child {
+            > span {
+                @include fontSize(toRem(18), 4vw, toRem(18), 600);
+
+                color: $mistySlate;
+            }
+        }
+
+        > span {
+            @include fontSize(toRem(16), 4vw, toRem(16), 600);
+
+            color: white;
+        }
+    }
+}

@@ -1,0 +1,89 @@
+@import '../../(app)/_styles/mixins.scss';
+@import '../../(app)/_styles/vaiables.scss';
+
+@mixin list {
+    > li {
+        display: flex;
+        height: fit-content;
+    }
+
+    > li > a {
+        @include opacityAnimation;
+        @include fontSize(toRem(18), 4vw, toRem(18), 600);
+    }
+}
+
+.wrapper {
+    @include flexHorizontalGap(10);
+    @include container;
+
+    height: toRem(88);
+    justify-content: space-between;
+    position: absolute;
+    top: toRem(18);
+    left: 50%;
+    transform: translateX(-50%);
+
+    &_left-side {
+        @include flexHorizontalGap(12);
+    }
+
+    &_right-side {
+        @include flexHorizontalGap(12);
+
+        align-items: center;
+    }
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+
+    &_list {
+        @include flexHorizontalGap(8);
+        @include list;
+
+        > li > a {
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+
+    &_list {
+        @include flexHorizontalGap(4);
+        @include list;
+
+        display: flex;
+        align-items: center;
+
+        > li > a {
+            opacity: 0.5;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.vertical-bar {
+    @include fontSize(toRem(18), 4vw, toRem(18), 600);
+}
+
+.burger-btn {
+    height: fit-content;
+
+    > img {
+        @include opacityAnimation;
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}

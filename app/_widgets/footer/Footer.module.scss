@@ -1,0 +1,18 @@
+/* container bg-midnight-ahadow shadow-footer */
+@import '../../(app)/_styles/mixins.scss';
+@import '../../(app)/_styles/vaiables.scss';
+
+.wrapper {
+    @include container;
+
+    background-color: $midnightSahadow;
+    box-shadow: 0 0 0 100vmax $midnightSahadow;
+    clip-path: inset(0 -100vmax);
+
+    &_line {
+        height: toRem(1);
+        background-color: $shadowCharcoal;
+        box-shadow: 0 0 0 100vmax $shadowCharcoal;
+        clip-path: inset(0 -100vmax);
+    }
+}

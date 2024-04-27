@@ -1,4 +1,5 @@
 @use 'sass:math';
+@import './vaiables.scss';
 
 @function math-div($a, $b) {
     @return calc($a / $b);
@@ -17,6 +18,51 @@
 @function em($px, $current: 16) {
     $result: math-div($px, $current) + em;
     @return $result;
+}
+
+// animations
+@mixin transformAnimation {
+    transition: transform 0.2s ease-in-out;
+}
+
+@mixin opacityAnimation {
+    transition: opacity 0.1s ease-out;
+}
+
+@mixin allAnimation($animation, $time) {
+    transition: $animation $time ease-out;
+}
+
+// flex
+@mixin flexHorizontalGap($count) {
+    $gap: $count * 4;
+
+    display: flex;
+    flex-direction: row;
+    column-gap: toRem($gap);
+}
+
+@mixin flexVerticalGap($count) {
+    $gap: $count * 4;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: toRem($gap);
+}
+
+// container
+@mixin container {
+    max-width: em($maxWidthContainer);
+    width: 100%;
+    margin: auto;
+    padding-inline: toRem(32);
+}
+
+// adaptive value
+@mixin fontSize($min, $vw, $max, $weight, $lh: normal) {
+    font-size: clamp($min, $vw, $max);
+    font-weight: $weight;
+    line-height: $lh;
 }
 
 @mixin adaptiveValue($property, $startSize, $minSize, $widthFrom: $maxWidthContainer, $widthTo: $minWidth, $keepSize: 0) {

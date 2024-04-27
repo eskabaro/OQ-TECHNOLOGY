@@ -1,28 +1,57 @@
+@import '../../../(app)/_styles/mixins.scss';
+@import '../../../(app)/_styles/vaiables.scss';
+
+.wrapper {
+    position: relative;
+    overflow: hidden;
+
+    &.first {
+        max-width: em(440);
+    }
+}
+
 .input:focus-within ~ .placeholder {
-    @apply opacity-0 top-0;
+    opacity: 0;
+    top: 0;
 }
 
 .input {
-    @apply w-full border border-shadow-slate;
+    @include allAnimation(all, 0.2s);
+
+    width: 100%;
+    border: toRem(1) solid $shadowSlate;
+    outline: none;
+    color: white;
 
     &:-webkit-autofill,
     &:-webkit-autofill:hover,
     &:-webkit-autofill:focus,
     &:-webkit-autofill:active {
         -webkit-text-fill-color: #c4c4c4 !important;
-        -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+        -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
         border: 1px solid #464646 !important;
     }
 
+    &.first {
+        padding: toRem(18) toRem(20);
+        border-radius: toRem(52);
+        backdrop-filter: blur(toRem(4));
+        background: rgba(255, 255, 255, 0.02);
+    }
+
     &.error {
-        @apply border-red-600;
+        border-color: red;
+
+        &::placeholder {
+            color: red;
+        }
     }
 }
 
-.placeholder {
-    @apply absolute left-5 top-2/4 -translate-y-2/4 text-silver-mist text-lg font-normal;
+// .placeholder {
+//     @apply absolute left-5 top-2/4 -translate-y-2/4 text-silver-mist text-lg font-normal;
 
-    &.error {
-        @apply text-red-600;
-    }
-}
+//     &.error {
+//         @apply text-red-600;
+//     }
+// }

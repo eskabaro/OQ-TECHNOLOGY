@@ -1,0 +1,26 @@
+@import '../../../../(app)/_styles/mixins.scss';
+@import '../../../../(app)/_styles/vaiables.scss';
+
+.wrapper {
+    @include flexHorizontalGap(3);
+    @include fontSize(toRem(16), 4vw, toRem(16), 400);
+
+    justify-content: space-between;
+    align-items: center;
+    padding-block: toRem(24);
+    color: $mistySlate;
+
+    &_left-side {
+        @include flexHorizontalGap(5);
+
+        > .vertical-line {
+            width: toRem(1);
+            height: toRem(27);
+            background-color: $shadowCharcoal;
+        }
+    }
+
+    &_right-side {
+        height: fit-content;
+    }
+}
