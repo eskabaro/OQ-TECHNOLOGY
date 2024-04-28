@@ -84,6 +84,17 @@ export const icons = {
             />
         </svg>
     ),
+    'x-mark': (props: SVGProps<SVGSVGElement>) => (
+        <svg width='32' height='32' viewBox='0 0 32 32' fill='none' {...props}>
+            <rect width='32' height='32' rx='16' fill='white' fillOpacity='0.1' />
+            <path d='M24 8L16 16M8 24L16 16M16 16L8 8M16 16L24 24' stroke='white' strokeWidth='2' />
+        </svg>
+    ),
+    'arrow-down': (props: SVGProps<SVGSVGElement>) => (
+        <svg width='14' height='8' viewBox='0 0 14 8' fill='none' {...props}>
+            <path d='M7 7.5L0 0.5H14L7 7.5Z' fill='white' />
+        </svg>
+    ),
     'mini-arrow': (props: SVGProps<SVGSVGElement>) => (
         <svg width='10' height='18' viewBox='0 0 10 18' fill='none' {...props}>
             <path d='M9 1L5 5L1 9L9 17' stroke='black' />

@@ -1,0 +1,53 @@
+@import '../../../(app)/_styles/mixins.scss';
+
+.bg {
+    @include allAnimation(all, 0.25s);
+
+    position: fixed;
+    inset: 0;
+    visibility: hidden;
+    z-index: 2;
+
+    &.active {
+        visibility: visible;
+        background-color: rgba($color: #d9d9d9, $alpha: 0.2);
+    }
+
+    &_modal {
+        @include allAnimation(all, 0.25s);
+        @include flexVerticalGap(16);
+
+        z-index: 1;
+        position: absolute;
+        right: em(-280);
+        top: 0;
+        background-color: black;
+        width: em(280);
+        height: 100vh;
+        padding: toRem(48) toRem(24);
+
+        &.active {
+            right: 0;
+        }
+    }
+}
+
+.list {
+    > li {
+        @include fontSize(toRem(18), 4vw, toRem(18), 600);
+
+        padding-block: toRem(32);
+        text-transform: uppercase;
+
+        &:not(:last-child) {
+            border-bottom: toRem(1) solid white;
+        }
+
+        > a,
+        > button {
+            &:hover {
+                opacity: 0.75;
+            }
+        }
+    }
+}

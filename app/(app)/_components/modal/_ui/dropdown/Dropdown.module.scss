@@ -1,0 +1,57 @@
+@import '../../../../../(app)/_styles/mixins.scss';
+
+.wrapper {
+    &_btn {
+        text-transform: uppercase;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        > svg {
+            @include transformAnimation;
+        }
+
+        &.active {
+            > svg {
+                transform: rotate(-180deg);
+            }
+        }
+    }
+
+    &_menu {
+        @include allAnimation(all, 0.2s);
+
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+
+        > li {
+            @include fontSize(toRem(18), 4vw, toRem(18), 600);
+
+            margin-left: toRem(24);
+            padding-block: toRem(16);
+            text-transform: uppercase;
+
+            &:first-child {
+                padding-top: toRem(32);
+            }
+
+            &:not(:last-child) {
+                border-bottom: toRem(1) solid white;
+            }
+
+            > a {
+                &:hover {
+                    opacity: 0.75;
+                }
+            }
+        }
+
+        &.active {
+            opacity: 1;
+            height: auto;
+            visibility: visible;
+        }
+    }
+}
