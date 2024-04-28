@@ -1,0 +1,34 @@
+@import '../../../../(app)/_styles/mixins.scss';
+
+.wrapper {
+    @include flexVerticalGap(8);
+
+    &_video-box {
+        position: relative;
+
+        > img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        > svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+        }
+    }
+
+    &_heading {
+        @include flexVerticalGap(6);
+
+        > h2 {
+            @include fontSize(toRem(32), 4vw, toRem(32), 600);
+        }
+
+        > p {
+            @include fontSize(toRem(18), 4vw, toRem(18), 400, 150%);
+        }
+    }
+}

@@ -4,14 +4,19 @@ import { FC, HTMLAttributes, PropsWithChildren } from 'react'
 import cn from 'classnames'
 import styles from './Container.module.scss'
 
+type ContainerTagType = 'section' | 'div'
+
 interface IContainerProps extends PropsWithChildren<HTMLAttributes<HTMLDivElement>> {
     className?: string
+    as?: ContainerTagType
 }
 
-export const Container: FC<IContainerProps> = ({ children, className, ...props }) => {
+export const Container: FC<IContainerProps> = ({ children, className, as, ...props }) => {
+    const Component = as || 'div'
+
     return (
-        <div className={cn(styles.container, className)} {...props}>
+        <Component className={cn(styles.container, className)} {...props}>
             {children}
-        </div>
+        </Component>
     )
 }

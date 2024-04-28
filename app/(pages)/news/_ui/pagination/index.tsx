@@ -48,7 +48,7 @@ const Pagination: FC<IPaginationProps> = ({ onPageChange, totalCount, siblingCou
                 <Icon name='mini-arrow' />
             </li>
 
-            {paginationRange?.map((pageNumber) => {
+            {/* {paginationRange?.map((pageNumber) => {
                 if (pageNumber === DOTS) {
                     return (
                         <li key={pageNumber} className='pagination-item dots'>
@@ -68,7 +68,42 @@ const Pagination: FC<IPaginationProps> = ({ onPageChange, totalCount, siblingCou
                         <Text as='span'>{pageNumber}</Text>
                     </li>
                 )
-            })}
+            })} */}
+            <li
+                className={cn(styles.wrapper_count, {
+                    // [styles.selected]: pageNumber === currentPage
+                })}
+            >
+                <Text as='span'>1</Text>
+            </li>
+            <li
+                className={cn(styles.wrapper_count, {
+                    [styles.selected]: currentPage
+                })}
+            >
+                <Text as='span'>2</Text>
+            </li>
+            <li
+                className={cn(styles.wrapper_count, {
+                    // [styles.selected]: pageNumber === currentPage
+                })}
+            >
+                <Text as='span'>3</Text>
+            </li>
+            <li
+                className={cn(styles.wrapper_count, {
+                    // [styles.selected]: pageNumber === currentPage
+                })}
+            >
+                <Text as='span'>...</Text>
+            </li>
+            <li
+                className={cn(styles.wrapper_count, {
+                    // [styles.selected]: pageNumber === currentPage
+                })}
+            >
+                <Text as='span'>25</Text>
+            </li>
 
             <li
                 onClick={onNext}

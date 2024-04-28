@@ -1,0 +1,26 @@
+@import '../../../../(app)/_styles/mixins.scss';
+@import '../../../../(app)/_styles/vaiables.scss';
+
+.wrapper {
+    @include flexVerticalGap(20);
+
+    &_heading {
+        @include flexVerticalGap(1);
+
+        > div {
+            > p {
+                @include fontSize(toRem(20), 4vw, toRem(20), 600);
+
+                color: $mistySlate;
+            }
+
+            > h1 {
+                @include fontSize(toRem(58), 4vw, toRem(58), 600);
+            }
+        }
+    }
+
+    &_video {
+        @include flexHorizontalGap(12.5);
+    }
+}

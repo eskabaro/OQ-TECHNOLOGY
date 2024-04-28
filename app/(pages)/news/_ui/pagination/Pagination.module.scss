@@ -18,7 +18,12 @@
     justify-content: center;
 
     &_prev {
+        @include opacityAnimation;
         @include btnPrevNext;
+
+        &:hover {
+            opacity: 0.75;
+        }
     }
 
     &_count {
@@ -34,7 +39,12 @@
 
     &_next {
         @include btnPrevNext;
+        @include opacityAnimation;
 
         transform: rotate(-180deg);
+
+        &:hover {
+            opacity: 0.75;
+        }
     }
 }

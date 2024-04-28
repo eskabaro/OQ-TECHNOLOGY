@@ -22,7 +22,7 @@ export default function RootLayout({
             <body className={proxima_nova.className}>
                 <div className='wrapper'>
                     <Header />
-                    <main className='flex-1'>{children}</main>
+                    <main className='main'>{children}</main>
                     <Footer />
                 </div>
             </body>

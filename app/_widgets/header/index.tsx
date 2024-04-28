@@ -10,7 +10,7 @@ import { Logo } from '@/app/_shared/ui/logo'
 import { Text } from '@/app/_shared/ui/typography/text'
 
 import styles from './Header.module.scss'
-import { Container } from '@/app/(app)/_components/container'
+// import { Container } from '@/app/(app)/_components/container'
 import { Icon } from '@/app/_shared/ui/icon'
 
 export const Header: FC = () => {
