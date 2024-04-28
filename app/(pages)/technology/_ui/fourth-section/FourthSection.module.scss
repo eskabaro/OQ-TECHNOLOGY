@@ -7,6 +7,8 @@
     &_heading {
         @include flexVerticalGap(1);
 
+        border-bottom: toRem(1) solid $shadowCharcoal;
+
         > div {
             > p {
                 @include fontSize(toRem(20), 4vw, toRem(20), 600);

@@ -1,0 +1,19 @@
+@import '../../../../(app)/_styles/mixins.scss';
+
+.wrapper {
+    @include flexVerticalGap(4);
+
+    justify-content: center;
+
+    > h2 {
+        @include fontSize(toRem(44), 4vw, toRem(44), 600);
+    }
+
+    > p {
+        @include fontSize(toRem(18), 4vw, toRem(18), 400, 150%);
+
+        &:first-of-type {
+            padding-top: toRem(8);
+        }
+    }
+}
