@@ -1,0 +1,34 @@
+@import '../../../../(app)/_styles/mixins.scss';
+
+.wrapper {
+    background-image: url('/images/earth-3.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-block: toRem(452);
+    margin-bottom: toRem(120);
+
+    &_container {
+        @include container;
+    }
+}
+
+.heading {
+    @include flexVerticalGap(4);
+
+    text-align: center;
+
+    > div > h1 {
+        @include fontSize(toRem(88), 4vw, toRem(88), 600);
+
+        text-transform: uppercase;
+    }
+
+    > div > p {
+        @include fontSize(toRem(22), 4vw, toRem(22), 600);
+
+        text-align: center;
+        max-width: em(600);
+        margin: auto;
+    }
+}

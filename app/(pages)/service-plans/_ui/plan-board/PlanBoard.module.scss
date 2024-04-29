@@ -1,0 +1,21 @@
+@import '../../../../(app)/_styles/mixins.scss';
+
+.image-box {
+    position: relative;
+
+    > img {
+        height: auto;
+        max-width: 100%;
+    }
+
+    > h1 {
+        @include fontSize(toRem(58), 4vw, toRem(58), 700);
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-transform: uppercase;
+        text-wrap: nowrap;
+    }
+}

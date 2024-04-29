@@ -15,9 +15,20 @@
     &.long {
         @include fontSize(toRem(16), 4vw, toRem(16), 600);
         @include flexHorizontalGap(5);
+
         align-items: center;
         justify-content: center;
         background-color: $autumnBlaze;
         min-width: toRem(280);
+    }
+
+    &.short {
+        @include fontSize(toRem(16), 4vw, toRem(16), 600);
+
+        padding: toRem(16) toRem(32);
+        color: black;
+        border-radius: toRem(100);
+        background-color: $autumnBlaze;
+        width: fit-content;
     }
 }

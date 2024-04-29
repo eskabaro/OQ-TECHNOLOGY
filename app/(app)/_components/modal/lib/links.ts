@@ -14,6 +14,12 @@ export const links: ILink[] = [
     },
     {
         id: 2,
+        title: 'Service Plans',
+        href: 'service-plans',
+        childrens: []
+    },
+    {
+        id: 3,
         title: 'News and Media',
         href: '',
         childrens: [
@@ -32,7 +38,7 @@ export const links: ILink[] = [
         ]
     },
     {
-        id: 3,
+        id: 4,
         title: 'Contact Us',
         href: 'contact-us',
         childrens: []

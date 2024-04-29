@@ -10,9 +10,9 @@ interface IButtonProps extends PropsWithChildren<HTMLAttributes<HTMLButtonElemen
     variant: VariantType
 }
 
-export const Button: FC<IButtonProps> = ({ children, variant, ...props }) => {
+export const Button: FC<IButtonProps> = ({ children, variant, className, ...props }) => {
     return (
-        <button {...props} className={cn(styles.button, styles[variant])}>
+        <button {...props} className={cn(styles.button, className, styles[variant])}>
             {children}
         </button>
     )

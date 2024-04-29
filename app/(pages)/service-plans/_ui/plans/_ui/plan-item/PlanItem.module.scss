@@ -1,0 +1,63 @@
+@import '../../../../../../(app)/_styles/mixins.scss';
+@import '../../../../../../(app)/_styles/vaiables.scss';
+
+.wrapper {
+    @include flexVerticalGap(6);
+    @include allAnimation(all, 0.15s);
+
+    border: toRem(1) solid $shadowCharcoal;
+    padding: toRem(32) toRem(24) toRem(48) toRem(24);
+    border-radius: toRem(16);
+
+    &.active {
+        border-color: $autumnBlaze;
+        box-shadow: 0 0 toRem(35) 0 rgba(250, 160, 85, 0.5);
+        background-color: $midnightAbyss;
+    }
+
+    &_heading {
+        @include flexVerticalGap(4);
+
+        text-align: center;
+
+        > h2 {
+            @include fontSize(toRem(32), 4vw, toRem(32), 600);
+        }
+
+        > span {
+            @include fontSize(toRem(16), 4vw, toRem(16), 400);
+        }
+    }
+
+    &_price {
+        display: flex;
+        justify-content: center;
+
+        > span:first-child {
+            @include fontSize(toRem(48), 4vw, toRem(48), 400);
+        }
+
+        > span:last-child {
+            @include fontSize(toRem(24), 4vw, toRem(24), 400);
+
+            display: flex;
+            align-items: flex-end;
+        }
+    }
+
+    &_list {
+        @include flexVerticalGap(4);
+
+        padding-inline: toRem(32);
+    }
+}
+
+.list-item {
+    @include flexHorizontalGap(4);
+    @include fontSize(toRem(16), 4vw, toRem(16), 400);
+}
+
+.order-btn {
+    margin-top: toRem(24);
+    margin-inline: auto;
+}
