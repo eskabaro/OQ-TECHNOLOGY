@@ -1,11 +1,13 @@
 'use client'
 
 import { FC } from 'react'
-import styles from './Third.module.scss'
+import Image from 'next/image'
+
 import { HeadingAnimate } from '@/app/_shared/ui/heading-animate'
 import { Text } from '@/app/_shared/ui/typography/text'
-import Image from 'next/image'
 import { Article } from '@/app/_shared/ui/typography/article'
+
+import styles from './Third.module.scss'
 
 export const ThirdSection: FC = () => {
     return (

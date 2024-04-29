@@ -16,7 +16,7 @@ export const FourthSection: FC = () => {
                     <Text as='p'>TECHNOLOGY</Text>
                 </HeadingAnimate>
                 <HeadingAnimate duration={200}>
-                    <Text as='h1'>HIGH ALTITUDE PLATFORMS AND DRONES</Text>
+                    <Text as='h1'>LEARN MORE FROM OUR PROFESSIONALS</Text>
                 </HeadingAnimate>
             </div>
             <div className={styles.wrapper_video}>
