@@ -18,20 +18,22 @@ export const useClickOutside = (initialvaule: boolean): IOut => {
         }
     }
 
-    const handleScroll = () => {
-        if (isShow) {
-            window.scrollTo({ top: 0 })
-        }
-    }
-
     useEffect(() => {
         setIsShow(false)
     }, [pathname])
 
     useEffect(() => {
-        window.addEventListener('scroll', handleScroll)
+        const handleBodyStyle = () => {
+            document.body.style.overflow = isShow ? 'hidden' : 'auto'
+            document.body.style.paddingRight = isShow ? '0.25rem' : '0rem'
+        }
 
-        return () => window.removeEventListener('scroll', handleScroll)
+        handleBodyStyle()
+
+        return () => {
+            document.body.style.overflow = 'auto'
+            document.body.style.paddingRight = '0rem'
+        }
     }, [isShow])
 
     useEffect(() => {

@@ -13,23 +13,15 @@ export const HeadingAnimate: FC<IHeadingAnimateProps> = ({ children, duration = 
     const ref = useRef(null)
     const [isVisible, setIsVisible] = useState<boolean>(false)
 
-    const options = { root: null, rootMargin: '0px', threshold: 0.9 }
-
     useEffect(() => {
-        const observer = new IntersectionObserver((entries) => {
-            const [entry] = entries
-
-            setTimeout(() => {
-                setIsVisible(entry.isIntersecting)
-            }, duration)
-        }, options)
-
-        if (ref.current) observer.observe(ref.current)
+        const timeout = setTimeout(() => {
+            setIsVisible(true)
+        }, duration)
 
         return () => {
-            if (ref.current) observer.unobserve(ref.current)
+            clearTimeout(timeout)
         }
-    }, [ref, options])
+    }, [])
 
     return (
         <div

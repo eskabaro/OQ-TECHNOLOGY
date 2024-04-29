@@ -10,7 +10,6 @@ body {
 
     ::-webkit-scrollbar {
         width: toRem(4);
-        height: toRem(4);
 
         &-thumb {
             background-color: $autumnBlaze;
