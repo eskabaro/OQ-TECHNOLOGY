@@ -1,0 +1,45 @@
+@import '../../_styles/mixins.scss';
+
+.wrapper {
+    overflow: hidden;
+    padding-top: toRem(80);
+    padding-bottom: toRem(150);
+
+    &_marquee {
+        @include flexHorizontalGap(12);
+
+        user-select: none;
+    }
+}
+
+@keyframes scrollX {
+    from {
+        left: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.group {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    justify-content: space-around;
+    width: 100%;
+    gap: toRem(48);
+    animation: scrollX 30s linear infinite;
+
+    &_image {
+        display: grid;
+        place-items: center;
+        width: em(250);
+
+        > img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}

@@ -1,0 +1,1 @@
+export const images = ['/slider/media/image-1.png', '/slider/media/image-2.png', '/slider/media/image-3.png', '/slider/media/image-4.png', '/slider/media/image-5.png', '/slider/media/image-6.png', '/slider/media/image-7.png']

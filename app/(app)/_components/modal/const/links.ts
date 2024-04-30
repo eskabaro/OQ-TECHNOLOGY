@@ -8,38 +8,38 @@ export interface ILink {
 export const links: ILink[] = [
     {
         id: 1,
-        title: 'Technology',
+        title: 'technology',
         href: 'technology',
         childrens: []
     },
     {
         id: 2,
-        title: 'Service Plans',
+        title: 'service plans',
         href: 'service-plans',
         childrens: []
     },
     {
         id: 3,
-        title: 'News and Media',
+        title: 'news and media',
         href: '',
         childrens: [
             {
                 id: 1,
-                title: 'News',
+                title: 'news',
                 href: 'news',
                 childrens: []
             },
             {
                 id: 2,
                 title: 'media',
-                href: '',
+                href: 'in-the-media',
                 childrens: []
             }
         ]
     },
     {
         id: 4,
-        title: 'Contact Us',
+        title: 'contact us',
         href: 'contact-us',
         childrens: []
     }

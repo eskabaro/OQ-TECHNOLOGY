@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 import { Icon } from '@/app/_shared/ui/icon'
 import { Dropdown } from './_ui/dropdown'
-import { links } from './lib/links'
+import { links } from './const/links'
 
 import styles from './Modal.module.scss'
 

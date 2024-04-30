@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import cn from 'classnames'
 
-import { ILink } from '../../lib/links'
+import { ILink } from '../../const/links'
 import { Icon } from '@/app/_shared/ui/icon'
 
 import styles from './Dropdown.module.scss'
