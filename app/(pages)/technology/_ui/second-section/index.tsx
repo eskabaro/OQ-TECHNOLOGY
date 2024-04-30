@@ -5,18 +5,18 @@ import Image from 'next/image'
 
 import { Text } from '@/app/_shared/ui/typography/text'
 import { HeadingAnimate } from '@/app/_shared/ui/heading-animate'
+import { Article } from '@/app/_shared/ui/typography/article'
 
 import styles from './SecondSection.module.scss'
-import { Article } from '@/app/_shared/ui/typography/article'
 
 export const SecondSection: FC = () => {
     return (
         <div className={styles.wrapper}>
             <div className={styles.wrapper_heading}>
-                <HeadingAnimate>
+                <HeadingAnimate isObserver>
                     <Text as='p'>TECHNOLOGY</Text>
                 </HeadingAnimate>
-                <HeadingAnimate duration={200}>
+                <HeadingAnimate isObserver duration={200}>
                     <Text as='h1'>SAT-CP</Text>
                 </HeadingAnimate>
             </div>

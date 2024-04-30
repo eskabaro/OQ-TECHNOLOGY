@@ -10,16 +10,17 @@ import styles from './Title.module.scss'
 interface ITitleProps {
     title: string
     text?: string
+    isObserver?: boolean
 }
 
-export const Title: FC<ITitleProps> = ({ title, text }) => {
+export const Title: FC<ITitleProps> = ({ title, text, isObserver }) => {
     return (
         <div className={styles.heading}>
-            <HeadingAnimate>
+            <HeadingAnimate isObserver={isObserver}>
                 <Text as='h1'>{title}</Text>
             </HeadingAnimate>
             {text && (
-                <HeadingAnimate duration={200}>
+                <HeadingAnimate isObserver={isObserver} duration={200}>
                     <Text as='p'>{text}</Text>
                 </HeadingAnimate>
             )}
