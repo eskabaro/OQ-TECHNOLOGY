@@ -3,11 +3,10 @@
 import { FC } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 
-import { Text } from '../../../../_shared/ui/typography/text'
-import { HeadingAnimate } from '@/app/_shared/ui/heading-animate'
 import { Container } from '@/app/(app)/_components/container'
 import { Input } from '@/app/_shared/ui/input'
 import { Button } from '@/app/_shared/ui/button'
+import { Title } from '@/app/_shared/ui/typography/title'
 
 import styles from './FirstSection.module.scss'
 
@@ -37,14 +36,10 @@ export const FirstSection: FC = () => {
         <section className={styles.wrapper}>
             <Container>
                 <div className={styles['content-box']}>
-                    <div className={styles['content-box_heading']}>
-                        <HeadingAnimate>
-                            <Text as='h1'>DO YOU HAVE ANY IDEA OR REMAINING QUESTION?</Text>
-                        </HeadingAnimate>
-                        <HeadingAnimate duration={200}>
-                            <Text as='p'>Sit sit non ut adipiscing aliquet est consectetur risus. Velit integer urna ut mattis mauris augue. Nunc amet aliquam blandit risus massa. Scelerisque est sed eu.</Text>
-                        </HeadingAnimate>
-                    </div>
+                    <Title
+                        title='DO YOU HAVE ANY IDEA OR REMAINING QUESTION?'
+                        text='Sit sit non ut adipiscing aliquet est consectetur risus. Velit integer urna ut mattis mauris augue. Nunc amet aliquam blandit risus massa. Scelerisque est sed eu.'
+                    />
 
                     <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
                         <div className={styles['form_inputs-box']}>

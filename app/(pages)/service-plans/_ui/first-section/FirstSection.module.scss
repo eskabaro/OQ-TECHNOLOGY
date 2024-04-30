@@ -12,23 +12,3 @@
         @include container;
     }
 }
-
-.heading {
-    @include flexVerticalGap(4);
-
-    text-align: center;
-
-    > div > h1 {
-        @include fontSize(toRem(88), 4vw, toRem(88), 600);
-
-        text-transform: uppercase;
-    }
-
-    > div > p {
-        @include fontSize(toRem(22), 4vw, toRem(22), 600);
-
-        text-align: center;
-        max-width: em(600);
-        margin: auto;
-    }
-}

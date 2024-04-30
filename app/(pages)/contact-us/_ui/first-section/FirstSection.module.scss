@@ -13,22 +13,6 @@
 
 .content-box {
     @include flexVerticalGap(21);
-
-    &_heading {
-        @include flexVerticalGap(2);
-
-        align-items: center;
-
-        > div > h1 {
-            @include fontSize(toRem(88), 4vw, toRem(88), 600);
-        }
-
-        > div > p {
-            @include fontSize(toRem(22), 4vw, toRem(22), 600);
-
-            max-width: em(600);
-        }
-    }
 }
 
 .form {

@@ -3,13 +3,12 @@
 import { FC, useMemo, useState } from 'react'
 
 import { Container } from '@/app/(app)/_components/container'
-import { Text } from '@/app/_shared/ui/typography/text'
 import { data } from '@/app/_shared/const/news'
 import { NewsItem } from '../news-item'
+import { Title } from '@/app/_shared/ui/typography/title'
 
 import Pagination from '../pagination'
 import styles from './NewsList.module.scss'
-import { HeadingAnimate } from '@/app/_shared/ui/heading-animate'
 
 let PageSize = 9
 
@@ -26,11 +25,7 @@ export const NewsList: FC = () => {
     return (
         <section className={styles.wrapper}>
             <Container className={styles.wrapper_container}>
-                <HeadingAnimate>
-                    <Text className={styles.title} as='h1'>
-                        OQ NEWS
-                    </Text>
-                </HeadingAnimate>
+                <Title title='OQ NEWS' />
 
                 <ul className={styles.list}>
                     {currentTableData.map((item) => {
