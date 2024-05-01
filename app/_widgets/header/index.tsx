@@ -1,8 +1,8 @@
 'use client'
 
 import { FC } from 'react'
+import { usePathname } from 'next/navigation'
 import Link from 'next/link'
-// import { usePathname } from 'next/navigation'
 
 import { Logo } from '@/app/_shared/ui/logo'
 import { Text } from '@/app/_shared/ui/typography/text'
@@ -14,7 +14,7 @@ import styles from './Header.module.scss'
 // import { Container } from '@/app/(app)/_components/container'
 
 export const Header: FC = () => {
-    // const pathname = usePathname()
+    const pathname = usePathname()
     const { ref, isShow, setIsShow } = useClickOutside(false)
 
     return (
@@ -51,7 +51,9 @@ export const Header: FC = () => {
                                 {'|'}
                             </Text>
                             <li>
-                                <Link href={'/'}>Roam</Link>
+                                <Link style={{ opacity: '/roam' === pathname ? 1 : 0.5 }} href={'roam'}>
+                                    Roam
+                                </Link>
                             </li>
                             <Text className={styles['vertical-bar']} as='span'>
                                 {'|'}

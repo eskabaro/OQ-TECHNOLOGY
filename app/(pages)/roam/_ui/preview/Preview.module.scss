@@ -1,0 +1,17 @@
+@import '../../../../(app)/_styles/mixins.scss';
+
+.wrapper {
+    padding-block: toRem(424);
+
+    background-image: url('/images/earth-4.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &_container {
+        @include flexVerticalGap(8);
+    }
+}
+
+.btn-box {
+    text-align: center;
+}
