@@ -11,7 +11,7 @@ import { Icon } from '@/app/_shared/ui/icon'
 import { useClickOutside } from '@/app/_shared/lib/hooks/useClickOutside'
 
 import styles from './Header.module.scss'
-// import { Container } from '@/app/(app)/_components/container'
+import cn from 'classnames'
 
 export const Header: FC = () => {
     const pathname = usePathname()
@@ -40,18 +40,18 @@ export const Header: FC = () => {
                     <nav className={styles['nav-right']}>
                         <ul className={styles['nav-right_list']}>
                             <li>
-                                <Link
-                                    href={'/'}
-                                    // style={{ opacity: '/' === pathname ? 1 : 0.5 }}
-                                >
-                                    Enterprise
-                                </Link>
+                                <Link href={'/'}>Enterprise</Link>
                             </li>
                             <Text className={styles['vertical-bar']} as='span'>
                                 {'|'}
                             </Text>
                             <li>
-                                <Link style={{ opacity: '/roam' === pathname ? 1 : 0.5 }} href={'roam'}>
+                                <Link
+                                    href={'roam'}
+                                    className={cn(styles.link, {
+                                        [styles.active]: '/roam' === pathname
+                                    })}
+                                >
                                     Roam
                                 </Link>
                             </li>
@@ -59,7 +59,14 @@ export const Header: FC = () => {
                                 {'|'}
                             </Text>
                             <li>
-                                <Link href={'/'}>Personal</Link>
+                                <Link
+                                    href={'personal'}
+                                    className={cn(styles.link, {
+                                        [styles.active]: '/personal' === pathname
+                                    })}
+                                >
+                                    Personal
+                                </Link>
                             </li>
                         </ul>
                     </nav>

@@ -42,12 +42,16 @@
     &_list {
         @include flexHorizontalGap(8);
         @include list;
+    }
+}
 
-        > li > a {
-            &:hover {
-                opacity: 0.5;
-            }
-        }
+.link {
+    &.active {
+        opacity: 1;
+    }
+
+    &:hover {
+        opacity: 0.5;
     }
 }
 

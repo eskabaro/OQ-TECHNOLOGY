@@ -1,0 +1,32 @@
+@import '../../../../(app)/_styles/mixins.scss';
+
+.wrapper {
+    padding-block: toRem(260);
+    background-image: url('/images/bg-personal.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &_container {
+        @include flexHorizontalGap(18);
+    }
+}
+
+.left-side {
+    @include flexVerticalGap(8);
+
+    &_title {
+        align-items: start;
+
+        > div > p {
+            text-align: start;
+        }
+    }
+
+    &_btn-box {
+        @include flexHorizontalGap(6);
+
+        > button {
+            color: white !important;
+        }
+    }
+}
