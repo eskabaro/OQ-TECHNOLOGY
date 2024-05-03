@@ -8,22 +8,29 @@ import { Text } from '../text'
 
 import styles from './Title.module.scss'
 
+export type SizesType = 'L' | 'XL' | 'XXL'
+
 interface ITitleProps {
+    size: SizesType
     title: string
     text?: string
     isObserver?: boolean
     className?: string
 }
 
-export const Title: FC<ITitleProps> = ({ title, text, isObserver, className }) => {
+export const Title: FC<ITitleProps> = ({ size, title, text, isObserver, className }) => {
     return (
         <div className={cn(styles.heading, className)}>
             <HeadingAnimate isObserver={isObserver}>
-                <Text as='h1'>{title}</Text>
+                <Text className={cn([styles[size]])} as='h1'>
+                    {title}
+                </Text>
             </HeadingAnimate>
             {text && (
                 <HeadingAnimate isObserver={isObserver} duration={200}>
-                    <Text as='p'>{text}</Text>
+                    <Text className={cn([styles[size]])} as='p'>
+                        {text}
+                    </Text>
                 </HeadingAnimate>
             )}
         </div>

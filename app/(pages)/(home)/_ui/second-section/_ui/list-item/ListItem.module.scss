@@ -1,0 +1,18 @@
+@import '../../../../../../(app)/_styles/mixins.scss';
+
+.wrapper {
+    @include flexVerticalGap(8);
+
+    > img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.heading {
+    align-items: start;
+
+    > div > p {
+        text-align: start;
+    }
+}

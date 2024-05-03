@@ -6,13 +6,33 @@
     align-items: center;
 
     > div > h1 {
-        @include fontSize(toRem(88), 4vw, toRem(88), 600);
+        &.XXL {
+            @include fontSize(toRem(88), 4vw, toRem(88), 600);
+        }
+
+        &.XL {
+            @include fontSize(toRem(64), 4vw, toRem(64), 600);
+        }
+
+        &.L {
+            @include fontSize(toRem(32), 4vw, toRem(32), 600);
+        }
     }
 
     > div > p {
-        @include fontSize(toRem(22), 4vw, toRem(22), 600);
-
         max-width: em(600);
         text-align: center;
+
+        &.XXL {
+            @include fontSize(toRem(24), 4vw, toRem(24), 600, 150%);
+        }
+
+        &.XL {
+            @include fontSize(toRem(24), 4vw, toRem(24), 150%);
+        }
+
+        &.L {
+            @include fontSize(toRem(20), 4vw, toRem(20), 400, 150%);
+        }
     }
 }

@@ -1,0 +1,19 @@
+@import '../../../../(app)/_styles/mixins.scss';
+
+.wrapper {
+    @include flexVerticalGap(20);
+
+    &_heading {
+        > div > h1 {
+            text-align: center;
+            max-width: em(288);
+        }
+    }
+
+    &_list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: toRem(48);
+        column-gap: toRem(20);
+    }
+}

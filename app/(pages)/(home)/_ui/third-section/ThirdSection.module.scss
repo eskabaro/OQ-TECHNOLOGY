@@ -1,0 +1,48 @@
+@import '../../../../(app)/_styles/mixins.scss';
+@import '../../../../(app)/_styles/vaiables.scss';
+
+.wrapper {
+    @include flexVerticalGap(20);
+
+    &_heading {
+        @include flexHorizontalGap(5);
+
+        border-bottom: toRem(1) solid $shadowCharcoal;
+        justify-content: space-between;
+        align-items: center;
+
+        > .typography {
+            @include flexVerticalGap(1);
+
+            > div {
+                > p {
+                    @include fontSize(toRem(20), 4vw, toRem(20), 600);
+
+                    color: $mistySlate;
+                }
+
+                > h1 {
+                    @include fontSize(toRem(64), 4vw, toRem(64), 800);
+                }
+            }
+        }
+
+        > .btn-box {
+            @include flexHorizontalGap(8);
+
+            align-items: center;
+        }
+    }
+
+    &_slider {
+        @include flexHorizontalGap(12.5);
+    }
+}
+
+.article {
+    @include flexVerticalGap(12);
+
+    &_btn-box {
+        @include flexHorizontalGap(6);
+    }
+}

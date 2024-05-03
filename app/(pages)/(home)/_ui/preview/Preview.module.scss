@@ -1,0 +1,23 @@
+@import '../../../../(app)/_styles/mixins.scss';
+
+.wrapper {
+    padding-top: toRem(400);
+    padding-bottom: toRem(432);
+    background-image: url('/images/earth-5.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &_container {
+        @include flexVerticalGap(8);
+    }
+}
+
+.btn-box {
+    @include flexHorizontalGap(6);
+
+    justify-content: center;
+
+    > button:first-child {
+        color: white !important;
+    }
+}

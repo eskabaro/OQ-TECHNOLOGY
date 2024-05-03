@@ -5,7 +5,6 @@
     @include allAnimation(all, 0.1s);
 
     border-radius: toRem(38);
-    padding-block: toRem(22);
     max-height: toRem(62);
     background-color: $autumnBlaze;
 
@@ -30,6 +29,7 @@
         align-items: center;
         justify-content: center;
         min-width: toRem(280);
+        padding-block: toRem(16);
     }
 
     &.short {
@@ -39,5 +39,22 @@
         color: black;
         border-radius: toRem(100);
         width: fit-content;
+    }
+
+    &.dark {
+        @include fontSize(toRem(18), 4vw, toRem(18), 600, 150%);
+
+        color: white;
+        width: fit-content;
+        border-radius: toRem(10);
+        border: toRem(1) solid transparent;
+        background: linear-gradient(#2f2f37, #0b0b0b) padding-box, linear-gradient(170deg, #2f2f37, #0b0b0b) border-box;
+        text-wrap: nowrap;
+
+        > div {
+            border-radius: toRem(10);
+            padding: toRem(16) toRem(24);
+            background-color: $shadowCharcoal;
+        }
     }
 }

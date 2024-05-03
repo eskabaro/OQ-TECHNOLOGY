@@ -1,0 +1,29 @@
+@import '../../../(app)/_styles/mixins.scss';
+@import '../../../(app)/_styles/vaiables.scss';
+
+.wrapper {
+    padding: toRem(54) toRem(50);
+    border: 1px solid $shadowCharcoal;
+    // @include flexVerticalGap(8);
+
+    &_heading {
+        cursor: pointer;
+
+        &.open {
+        }
+    }
+
+    &_accordion {
+        transition: all 0.2s ease;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.2s cubic-bezier(0, 1, 0, 1);
+
+        &.open {
+            max-height: 100%;
+            transition: max-height 0.2s cubic-bezier(0, 1, 0, 1);
+            // max-height: 0;
+            // transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+        }
+    }
+}

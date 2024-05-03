@@ -1,0 +1,13 @@
+@import '../../../../(app)/_styles/mixins.scss';
+
+.wrapper {
+    background-image: url('/images/earth-6.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.list {
+    display: flex;
+    justify-content: space-between;
+    gap: toRem(20);
+}

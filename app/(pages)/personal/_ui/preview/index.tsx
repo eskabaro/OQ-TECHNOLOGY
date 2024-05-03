@@ -14,7 +14,7 @@ export const Preview: FC = () => {
         <section className={styles.wrapper}>
             <Container className={styles.wrapper_container}>
                 <div className={styles['left-side']}>
-                    <Title className={styles['left-side_title']} title='OQ FOR INDIVIDUALS​' text='Track Your Assets Globally Using Our Non-Terrestrial Network (NTN) narrowband connectivity for Internet-of-Things (IoT)​' />
+                    <Title size='XXL' className={styles['left-side_title']} title='OQ FOR INDIVIDUALS​' text='Track Your Assets Globally Using Our Non-Terrestrial Network (NTN) narrowband connectivity for Internet-of-Things (IoT)​' />
                     <div className={styles['left-side_btn-box']}>
                         <Button variant='short'>ORDER NOW</Button>
                         <Button withoutBg variant='short'>

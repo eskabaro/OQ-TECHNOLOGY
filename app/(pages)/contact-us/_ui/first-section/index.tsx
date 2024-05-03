@@ -37,6 +37,7 @@ export const FirstSection: FC = () => {
             <Container>
                 <div className={styles['content-box']}>
                     <Title
+                        size='XXL'
                         title='DO YOU HAVE ANY IDEA OR REMAINING QUESTION?'
                         text='Sit sit non ut adipiscing aliquet est consectetur risus. Velit integer urna ut mattis mauris augue. Nunc amet aliquam blandit risus massa. Scelerisque est sed eu.'
                     />

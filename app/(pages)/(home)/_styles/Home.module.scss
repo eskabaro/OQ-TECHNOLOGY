@@ -1,0 +1,7 @@
+@import '../../../(app)/_styles/mixins.scss';
+
+.wrapper {
+    @include flexVerticalGap(37.5);
+
+    padding-bottom: toRem(150);
+}

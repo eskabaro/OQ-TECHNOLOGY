@@ -1,0 +1,54 @@
+@import '../../../(app)/_styles/mixins.scss';
+@import '../../../(app)/_styles/vaiables.scss';
+
+.wrapper {
+    display: flex;
+    gap: toRem(10);
+    background-color: $midnightAbyss;
+    padding: toRem(10);
+    width: fit-content;
+    border-radius: toRem(100);
+    border: toRem(1) solid $shadowCharcoal;
+    height: fit-content;
+
+    &_item {
+        height: fit-content;
+        transition: all 0.2s ease;
+        overflow: hidden;
+        border: toRem(1) solid transparent;
+        border-radius: 50%;
+        background: linear-gradient(#0b0b0b, #2f2f37) padding-box, linear-gradient(to top, #0b0b0b, #2f2f37) border-box;
+
+        &.XL {
+            > a,
+            button {
+                height: 62px;
+                width: 62px;
+            }
+        }
+
+        > a,
+        button {
+            width: toRem(48);
+            height: toRem(48);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $shadowCharcoal;
+        }
+
+        &:first-child:hover {
+            border-top-right-radius: toRem(15) !important;
+            border-bottom-right-radius: toRem(15) !important;
+        }
+
+        &:hover:not(&:first-child, &:last-child) {
+            border-radius: toRem(15);
+        }
+
+        &:last-child:hover {
+            border-top-left-radius: toRem(15) !important;
+            border-bottom-left-radius: toRem(15) !important;
+        }
+    }
+}
