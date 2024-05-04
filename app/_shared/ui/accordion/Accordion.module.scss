@@ -2,28 +2,47 @@
 @import '../../../(app)/_styles/vaiables.scss';
 
 .wrapper {
-    padding: toRem(54) toRem(50);
-    border: 1px solid $shadowCharcoal;
-    // @include flexVerticalGap(8);
+    display: flex;
+    flex-direction: column;
+    border: toRem(1) solid $shadowCharcoal;
+}
 
-    &_heading {
-        cursor: pointer;
+.accordion {
+    cursor: pointer;
+    padding: toRem(42) toRem(50);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-        &.open {
+    &.active {
+        .accordion_btn {
+            transform: rotate(180deg);
         }
     }
 
-    &_accordion {
-        transition: all 0.2s ease;
-        overflow: hidden;
-        max-height: 0;
-        transition: max-height 0.2s cubic-bezier(0, 1, 0, 1);
+    &_title {
+        @include fontSize(toRem(20), 4vw, toRem(20), 600, 150%);
 
-        &.open {
-            max-height: 100%;
-            transition: max-height 0.2s cubic-bezier(0, 1, 0, 1);
-            // max-height: 0;
-            // transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
-        }
+        color: $mistyLavender;
+    }
+
+    &_btn {
+        @include transformAnimation;
+
+        border: toRem(1) solid $shadowCharcoal;
+        border-radius: 50%;
+        padding: toRem(14);
+    }
+
+    &_content {
+        @include allAnimation(max-height, 0.2s);
+
+        overflow: hidden;
+        transition: max-height 0.2s ease;
+    }
+
+    &_text {
+        @include fontSize(toRem(18), 4vw, toRem(18), 400, 150%);
+        padding: 0 toRem(50) toRem(42) toRem(50);
     }
 }

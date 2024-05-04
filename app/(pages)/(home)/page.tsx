@@ -16,7 +16,7 @@ const components = {
     ThirdSection,
     FourthSection,
     FifthSection,
-    // SixthSection,
+    SixthSection,
     SeventhSection
 }
 
