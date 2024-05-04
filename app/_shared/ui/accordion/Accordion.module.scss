@@ -4,14 +4,23 @@
 .wrapper {
     display: flex;
     flex-direction: column;
-    border: toRem(1) solid $shadowCharcoal;
+    border-bottom: none;
+    border-top: toRem(1) solid $shadowCharcoal;
+}
+
+.left {
+    border-right: toRem(0.5) solid $shadowCharcoal;
+}
+
+.right {
+    border-left: toRem(0.5) solid $shadowCharcoal;
 }
 
 .accordion {
     cursor: pointer;
     padding: toRem(42) toRem(50);
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: space-between;
 
     &.active {

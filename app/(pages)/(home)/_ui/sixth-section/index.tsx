@@ -22,16 +22,32 @@ export const SixthSection: FC = () => {
             </div>
             <div className={styles['wrapper_accordions-box']}>
                 <div>
-                    <Accordion title='Lorem ipsum dolor sit amet consectetur.'>Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.</Accordion>
-                    <Accordion title='Lorem ipsum dolor sit amet consectetur.'>Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.</Accordion>
-                    <Accordion title='Lorem ipsum dolor sit amet consectetur.'>Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.</Accordion>
-                    <Accordion title='Lorem ipsum dolor sit amet consectetur.'>Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.</Accordion>
+                    <Accordion borderNone='left' title='Lorem ipsum dolor sit amet consectetur.'>
+                        Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.
+                    </Accordion>
+                    <Accordion borderNone='left' title='Lorem ipsum dolor sit amet consectetur.'>
+                        Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.
+                    </Accordion>
+                    <Accordion borderNone='left' title='Lorem ipsum dolor sit amet consectetur.'>
+                        Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.
+                    </Accordion>
+                    <Accordion borderNone='left' title='Lorem ipsum dolor sit amet consectetur.'>
+                        Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.
+                    </Accordion>
                 </div>
                 <div>
-                    <Accordion title='Lorem ipsum dolor sit amet consectetur.'>Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.</Accordion>
-                    <Accordion title='Lorem ipsum dolor sit amet consectetur.'>Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.</Accordion>
-                    <Accordion title='Lorem ipsum dolor sit amet consectetur.'>Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.</Accordion>
-                    <Accordion title='Lorem ipsum dolor sit amet consectetur.'>Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.</Accordion>
+                    <Accordion borderNone='right' title='Lorem ipsum dolor sit amet consectetur.'>
+                        Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.
+                    </Accordion>
+                    <Accordion borderNone='right' title='Lorem ipsum dolor sit amet consectetur.'>
+                        Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.
+                    </Accordion>
+                    <Accordion borderNone='right' title='Lorem ipsum dolor sit amet consectetur.'>
+                        Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.
+                    </Accordion>
+                    <Accordion borderNone='right' title='Lorem ipsum dolor sit amet consectetur.'>
+                        Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.
+                    </Accordion>
                 </div>
             </div>
         </Container>

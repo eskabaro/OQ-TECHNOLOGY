@@ -10,9 +10,10 @@ import styles from './Accordion.module.scss'
 
 interface IAccordionProps extends PropsWithChildren<unknown> {
     title: string
+    borderNone: 'left' | 'right'
 }
 
-export const Accordion: FC<IAccordionProps> = ({ title, children }) => {
+export const Accordion: FC<IAccordionProps> = ({ title, borderNone, children }) => {
     const content = useRef<HTMLDivElement>(null)
     const [active, setActive] = useState<boolean>(false)
     const [height, setHeight] = useState<string>('0px')
@@ -25,7 +26,7 @@ export const Accordion: FC<IAccordionProps> = ({ title, children }) => {
     return (
         <div className={styles.wrapper}>
             <div
-                className={cn(styles.accordion, {
+                className={cn(styles.accordion, styles[borderNone], {
                     [styles.active]: active
                 })}
                 onClick={toggleAccordion}
