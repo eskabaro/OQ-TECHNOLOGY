@@ -1,17 +1,17 @@
 'use client'
 
 import { FC } from 'react'
+import Image from 'next/image'
 
 import { Container } from '@/app/(app)/_components/container'
 import { HeadingAnimate } from '@/app/_shared/ui/heading-animate'
 import { ButtonGroup } from '@/app/_shared/ui/button-group'
 import { Text } from '@/app/_shared/ui/typography/text'
-
-import styles from './ThirdSection.module.scss'
 import { Button } from '@/app/_shared/ui/button'
 import { Icon } from '@/app/_shared/ui/icon'
 import { Article } from '@/app/_shared/ui/typography/article'
-import Image from 'next/image'
+
+import styles from './ThirdSection.module.scss'
 
 export const ThirdSection: FC = () => {
     return (
@@ -57,6 +57,7 @@ export const ThirdSection: FC = () => {
                         </Button>
                     </div>
                 </div>
+
                 <Image src='/home/innovation/slide-1.webp' height={666} width={773} priority alt='' />
             </div>
         </Container>
