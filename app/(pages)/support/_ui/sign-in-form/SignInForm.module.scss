@@ -1,0 +1,76 @@
+@import '../../../../(app)/_styles/mixins.scss';
+@import '../../../../(app)/_styles/vaiables.scss';
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.form-box {
+    @include flexVerticalGap(8);
+
+    background-color: $midnightSlate;
+
+    max-width: em(1000);
+    width: 100%;
+    padding: toRem(64) toRem(84);
+    border-radius: toRem(32);
+    border-right: toRem(1) solid $autumnBlaze;
+
+    &_heading {
+        @include fontSize(toRem(48), 4vw, toRem(48), 800);
+
+        text-align: center;
+    }
+
+    &_form {
+        @include flexVerticalGap(8);
+
+        margin: auto;
+        width: 100%;
+        max-width: em(560);
+        align-items: center;
+
+        > label {
+            width: 100%;
+            max-width: none !important;
+        }
+    }
+
+    &_helpers {
+        @include fontSize(toRem(22), 4vw, toRem(22), 600);
+        @include flexVerticalGap(6);
+
+        align-items: center;
+
+        > span {
+            color: white;
+            > a {
+                color: $autumnBlaze;
+                text-decoration: underline;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+.btn {
+    @include flexHorizontalGap(5);
+    @include fontSize(toRem(16), 4vw, toRem(16), 600);
+
+    margin-top: toRem(16);
+    justify-content: center;
+    color: white !important;
+    max-width: em(280) !important;
+    width: 100% !important;
+}
+
+.btn-circle {
+    width: toRem(20);
+    height: toRem(20);
+    background-color: white;
+    border-radius: 50%;
+}
