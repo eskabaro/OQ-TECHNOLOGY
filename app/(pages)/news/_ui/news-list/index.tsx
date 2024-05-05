@@ -25,7 +25,7 @@ export const NewsList: FC = () => {
     return (
         <section className={styles.wrapper}>
             <Container className={styles.wrapper_container}>
-                <Title size='XXL' title='OQ NEWS' />
+                <Title isObserver size='XXL' title='OQ NEWS' />
 
                 <ul className={styles.list}>
                     {currentTableData.map((item) => {

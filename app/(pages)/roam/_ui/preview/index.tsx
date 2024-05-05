@@ -12,7 +12,7 @@ export const Preview: FC = () => {
     return (
         <section className={styles.wrapper}>
             <Container className={styles.wrapper_container}>
-                <Title size='XXL' title='OQ FOR MNOS/MVNOS​' text='Enable global roaming for your users over our NTN satellite constellation' />
+                <Title isObserver size='XXL' title='OQ FOR MNOS/MVNOS​' text='Enable global roaming for your users over our NTN satellite constellation' />
                 <div className={styles['btn-box']}>
                     <Button withoutBg variant='short'>
                         BOOK A CONSULTATION

@@ -18,10 +18,10 @@ export const ThirdSection: FC = () => {
         <Container as='section' className={styles.wrapper}>
             <div className={styles.wrapper_heading}>
                 <div className={styles.typography}>
-                    <HeadingAnimate isObserver>
+                    <HeadingAnimate>
                         <Text as='p'>PRODUCTS</Text>
                     </HeadingAnimate>
-                    <HeadingAnimate isObserver duration={200}>
+                    <HeadingAnimate duration={200}>
                         <Text as='h1'>OUR INNOVATION PRODUCTS</Text>
                     </HeadingAnimate>
                 </div>

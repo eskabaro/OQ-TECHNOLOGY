@@ -21,18 +21,33 @@ interface ITitleProps {
 export const Title: FC<ITitleProps> = ({ size, title, text, isObserver, className }) => {
     return (
         <div className={cn(styles.heading, className)}>
-            <HeadingAnimate isObserver={isObserver}>
-                <Text className={cn([styles[size]])} as='h1'>
-                    {title}
-                </Text>
-            </HeadingAnimate>
-            {text && (
-                <HeadingAnimate isObserver={isObserver} duration={200}>
-                    <Text className={cn([styles[size]])} as='p'>
-                        {text}
+            {isObserver ? (
+                <HeadingAnimate>
+                    <Text className={cn([styles[size]])} as='h1'>
+                        {title}
                     </Text>
                 </HeadingAnimate>
+            ) : (
+                <div>
+                    <Text className={cn([styles[size]])} as='h1'>
+                        {title}
+                    </Text>
+                </div>
             )}
+            {text &&
+                (isObserver ? (
+                    <HeadingAnimate duration={200}>
+                        <Text className={cn([styles[size]])} as='p'>
+                            {text}
+                        </Text>
+                    </HeadingAnimate>
+                ) : (
+                    <div>
+                        <Text className={cn([styles[size]])} as='p'>
+                            {text}
+                        </Text>
+                    </div>
+                ))}
         </div>
     )
 }

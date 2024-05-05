@@ -13,10 +13,10 @@ export const FourthSection: FC = () => {
     return (
         <div className={styles.wrapper}>
             <div className={styles.wrapper_heading}>
-                <HeadingAnimate isObserver>
+                <HeadingAnimate>
                     <Text as='p'>TECHNOLOGY</Text>
                 </HeadingAnimate>
-                <HeadingAnimate isObserver duration={200}>
+                <HeadingAnimate duration={200}>
                     <Text as='h1'>LEARN MORE FROM OUR PROFESSIONALS</Text>
                 </HeadingAnimate>
             </div>

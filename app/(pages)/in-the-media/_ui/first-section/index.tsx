@@ -11,7 +11,7 @@ import styles from './FirstSection.module.scss'
 export const FirstSection: FC = () => {
     return (
         <div className={styles.wrapper}>
-            <Title size='XXL' title='OQ MEDIA' text='Sit sit non ut adipiscing aliquet est consectetur risus. Velit integer urna ut mattis mauris augue. Nunc amet aliquam blandit risus massa. Scelerisque est sed eu.' />
+            <Title isObserver size='XXL' title='OQ MEDIA' text='Sit sit non ut adipiscing aliquet est consectetur risus. Velit integer urna ut mattis mauris augue. Nunc amet aliquam blandit risus massa. Scelerisque est sed eu.' />
 
             <ul className={styles.wrapper_list}>
                 {video.map((e) => (

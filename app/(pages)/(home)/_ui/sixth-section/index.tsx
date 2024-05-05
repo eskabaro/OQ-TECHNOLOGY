@@ -13,10 +13,10 @@ export const SixthSection: FC = () => {
     return (
         <Container className={styles.wrapper} as='section'>
             <div className={styles.wrapper_heading}>
-                <HeadingAnimate isObserver>
+                <HeadingAnimate>
                     <Text as='p'>FAQ’S</Text>
                 </HeadingAnimate>
-                <HeadingAnimate isObserver duration={200}>
+                <HeadingAnimate duration={200}>
                     <Text as='h1'>FREQUENTLY ASKED QUESTIONS</Text>
                 </HeadingAnimate>
             </div>

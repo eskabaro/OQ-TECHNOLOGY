@@ -12,7 +12,7 @@ export const FirstSection: FC = () => {
     return (
         <section className={styles.wrapper}>
             <Container className={styles.wrapper_heading}>
-                <Title size='XXL' title='SATELLITE MAP' text='Sit sit non ut adipiscing aliquet est consectetur risus. Velit integer urna ut mattis mauris augue. Nunc amet aliquam blandit risus massa. Scelerisque est sed eu.' />
+                <Title isObserver size='XXL' title='SATELLITE MAP' text='Sit sit non ut adipiscing aliquet est consectetur risus. Velit integer urna ut mattis mauris augue. Nunc amet aliquam blandit risus massa. Scelerisque est sed eu.' />
             </Container>
 
             <div className={styles['wrapper_image-box']}>

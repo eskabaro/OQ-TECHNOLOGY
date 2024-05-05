@@ -9,7 +9,7 @@ export const FirstSection: FC = () => {
         <section className={styles.wrapper}>
             <div className={styles.wrapper_container}>
                 <div className={styles.heading}>
-                    <Title size='XXL' title='SERVICE PLANS' text='Sit sit non ut adipiscing aliquet est consectetur risus. Velit integer urna ut mattis mauris augue. Nunc amet aliquam blandit risus massa. Scelerisque est sed eu.' />
+                    <Title isObserver size='XXL' title='SERVICE PLANS' text='Sit sit non ut adipiscing aliquet est consectetur risus. Velit integer urna ut mattis mauris augue. Nunc amet aliquam blandit risus massa. Scelerisque est sed eu.' />
                 </div>
             </div>
         </section>
