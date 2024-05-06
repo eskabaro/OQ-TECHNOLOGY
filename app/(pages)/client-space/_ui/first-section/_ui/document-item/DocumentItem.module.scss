@@ -1,0 +1,17 @@
+@import '../../../../../../(app)/_styles/mixins.scss';
+@import '../../../../../../(app)/_styles/vaiables.scss';
+
+.wrapper {
+    @include flexVerticalGap(12);
+    @include allAnimation(all, 0.2s);
+
+    align-items: center;
+    padding: toRem(32) toRem(24) toRem(48) toRem(24);
+    border-radius: toRem(16);
+    border: toRem(1) solid $shadowCharcoal;
+
+    &.active {
+        border-color: $autumnBlaze;
+        box-shadow: 0 0 toRem(35) 0 rgba(250, 160, 85, 0.5);
+    }
+}

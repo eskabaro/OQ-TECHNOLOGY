@@ -1,0 +1,17 @@
+@import '../../../(app)/_styles/mixins.scss';
+@import '../../../(app)/_styles/vaiables.scss';
+
+.textarea {
+    @include fontSize(toRem(18), 4vw, toRem(18), 400, 150%);
+    @include allAnimation(all, 0.2s);
+
+    backdrop-filter: blur(toRem(4));
+    background: transparent;
+    color: white;
+
+    &.error {
+        &::placeholder {
+            color: red;
+        }
+    }
+}

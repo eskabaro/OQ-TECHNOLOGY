@@ -1,0 +1,128 @@
+@import '../../../../(app)/_styles/mixins.scss';
+@import '../../../../(app)/_styles/vaiables.scss';
+
+@mixin contentBox {
+    @include flexVerticalGap(8);
+
+    width: 100%;
+
+    > h2 {
+        @include fontSize(toRem(44), 4vw, toRem(44), 600);
+    }
+}
+
+.wrapper {
+    @include flexVerticalGap(20);
+
+    &_heading {
+        @include flexVerticalGap(1);
+
+        border-bottom: toRem(1) solid $shadowCharcoal;
+
+        > div {
+            > p {
+                @include fontSize(toRem(20), 4vw, toRem(20), 600);
+
+                color: $mistySlate;
+            }
+
+            > h1 {
+                @include fontSize(toRem(58), 4vw, toRem(58), 600);
+            }
+        }
+    }
+}
+
+.content {
+    @include flexHorizontalGap(12.5);
+
+    &_list {
+        @include contentBox;
+
+        position: relative;
+        height: 100%;
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: toRem(42);
+            background: linear-gradient(0deg, #131313 0%, rgba(19, 19, 19, 0) 100%);
+        }
+
+        > ul {
+            @include flexVerticalGap(4);
+
+            max-height: em(508);
+            overflow: auto;
+
+            &::-webkit-scrollbar {
+                width: 0;
+            }
+        }
+    }
+
+    &_form {
+        @include contentBox;
+    }
+}
+
+.form {
+    @include flexVerticalGap(6);
+
+    &_fields-box {
+        @include flexVerticalGap(6);
+        @include allAnimation(all, 0.2s);
+
+        padding: toRem(24);
+        border-radius: toRem(16);
+        border: toRem(1) solid $shadowSlate;
+        background-color: $midnightSlate;
+
+        &.error {
+            border-color: red;
+        }
+
+        input {
+            display: none;
+        }
+
+        > textarea {
+            height: em(236);
+        }
+    }
+
+    &_submit-btn {
+        @include fontSize(toRem(16), 4vw, toRem(16), 600);
+
+        letter-spacing: 0.09em;
+        padding-block: toRem(32) !important;
+        max-height: none !important;
+    }
+}
+
+.circle-btn {
+    width: toRem(20);
+    height: toRem(20);
+    border-radius: 50%;
+    background-color: white;
+}
+
+.input-box {
+    @include flexHorizontalGap(3);
+    @include opacityAnimation;
+
+    max-height: toRem(64);
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    color: $autumnBlaze;
+    padding: toRem(24);
+    border-radius: toRem(37);
+    border: toRem(1) solid $autumnBlaze;
+
+    &:hover {
+        opacity: 0.75;
+    }
+}

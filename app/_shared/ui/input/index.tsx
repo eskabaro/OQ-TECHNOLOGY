@@ -8,7 +8,7 @@ type VariantType = 'first' | 'second'
 
 interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
     variant: VariantType
-    placeholder: string
+    placeholder?: string
     error: boolean
 }
 

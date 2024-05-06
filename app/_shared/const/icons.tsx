@@ -106,6 +106,12 @@ export const icons = {
             <path d='M12.75 8.5L21.25 17L12.75 25.5' stroke='white' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round' />
         </svg>
     ),
+    plus: (props: SVGProps<SVGSVGElement>) => (
+        <svg width='17' height='16' viewBox='0 0 17 16' fill='none' {...props}>
+            <path d='M0.5 8H16.5' stroke='#FAA055' strokeWidth='1.5' />
+            <path d='M8.5 0L8.5 16' stroke='#FAA055' strokeWidth='1.5' />
+        </svg>
+    ),
     'arrow-down-v2': (props: SVGProps<SVGSVGElement>) => (
         <svg width='24' height='24' viewBox='0 0 24 24' fill='none' {...props}>
             <path d='M18 9L12 15L6 9' stroke='#CACACE' strokeWidth='2' />

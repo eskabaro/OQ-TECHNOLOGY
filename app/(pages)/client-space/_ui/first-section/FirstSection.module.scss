@@ -1,0 +1,11 @@
+@import '../../../../(app)/_styles/mixins.scss';
+
+.wrapper {
+    @include flexVerticalGap(37.5);
+
+    &_list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: toRem(32);
+    }
+}

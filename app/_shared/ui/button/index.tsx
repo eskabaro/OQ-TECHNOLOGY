@@ -9,12 +9,14 @@ type VariantType = 'long' | 'short' | 'dark'
 interface IButtonProps extends PropsWithChildren<HTMLAttributes<HTMLButtonElement>> {
     variant: VariantType
     withoutBg?: boolean
+    type?: 'submit' | 'reset' | 'button' | undefined
 }
 
-export const Button: FC<IButtonProps> = ({ children, variant, className, withoutBg, ...props }) => {
+export const Button: FC<IButtonProps> = ({ children, variant, className, withoutBg, type, ...props }) => {
     return (
         <button
             {...props}
+            type={type}
             className={cn(styles.button, className, styles[variant], {
                 [styles['without-bg']]: withoutBg
             })}
