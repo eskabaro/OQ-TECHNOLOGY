@@ -1,19 +1,32 @@
 @import '../../../../(app)/_styles/mixins.scss';
 
+@mixin header-styles($font-size, $font-size-p, $font-weight) {
+    > h1,
+    > h2,
+    > h3,
+    > h4,
+    > h5,
+    > h6 {
+        @include fontSize(toRem($font-size), 4vw, toRem($font-size), $font-weight);
+    }
+
+    > p {
+        @include fontSize(toRem($font-size-p), 4vw, toRem($font-size-p), 400, 150%);
+
+        &:first-of-type {
+            padding-top: toRem(8);
+        }
+    }
+}
+
 .wrapper {
     @include flexVerticalGap(4);
 
     justify-content: center;
 
-    > h2 {
-        @include fontSize(toRem(44), 4vw, toRem(44), 600);
-    }
+    @include header-styles(44, 18, 800);
 
-    > p {
-        @include fontSize(toRem(18), 4vw, toRem(18), 400, 150%);
-
-        &:first-of-type {
-            padding-top: toRem(8);
-        }
+    &.XL {
+        @include header-styles(62, 20, 800);
     }
 }

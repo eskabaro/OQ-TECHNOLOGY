@@ -1,0 +1,10 @@
+@import '../../../(app)/_styles/mixins.scss';
+
+.wrapper {
+    @include flexVerticalGap(9);
+
+    background-image: url('/images/earth-9.svg');
+    background-repeat: no-repeat;
+    background-position-y: 270%;
+    padding-top: toRem(260);
+}
