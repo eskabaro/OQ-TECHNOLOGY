@@ -43,11 +43,25 @@ export const ThirdSection: FC = () => {
             </Container>
             <div className={styles.wrapper_slider}>
                 <Container className={styles['slider-container']}>
-                    <div className={styles.slide}>
+                    <div className={styles['slider-container_slide']}>
                         <Image src={'/about-us/slide-1.webp'} width={923} height={616} alt='' />
+                        <div className={styles.btn}>
+                            <Icon name='play-v2' />
+                            <div className={styles['btn-typography']}>
+                                <Text as='span'>Lorem ipsum dolar</Text>
+                                <Text as='p'>Lorem</Text>
+                            </div>
+                        </div>
                     </div>
-                    <div className={styles.slide}>
+                    <div className={styles['slider-container_slide']}>
                         <Image src={'/about-us/slide-2.webp'} width={923} height={616} alt='' />
+                        <div className={styles.btn}>
+                            <Icon name='play-v2' />
+                            <div className={styles['btn-typography']}>
+                                <Text as='span'>Lorem ipsum dolar</Text>
+                                <Text as='p'>Lorem</Text>
+                            </div>
+                        </div>
                     </div>
                 </Container>
             </div>

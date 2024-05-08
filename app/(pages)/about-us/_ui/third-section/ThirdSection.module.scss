@@ -13,6 +13,41 @@
 
 .slider-container {
     @include flexHorizontalGap(8);
+
+    &_slide {
+        position: relative;
+
+        > .btn {
+            @include flexHorizontalGap(4);
+
+            align-items: center;
+            position: absolute;
+            bottom: toRem(40);
+            right: toRem(40);
+            background-color: $midnightMoss;
+            border-radius: toRem(100);
+            padding-right: toRem(32);
+
+            > svg {
+                cursor: pointer;
+
+                > circle {
+                    fill: $twilightAsh;
+                }
+                > path {
+                    fill: white;
+                }
+            }
+        }
+    }
+}
+
+.btn-typography {
+    @include fontSize(toRem(16), 4vw, toRem(16), 600);
+
+    > p {
+        color: $mistySlate;
+    }
 }
 
 .container {
