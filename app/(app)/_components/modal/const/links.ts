@@ -32,18 +32,30 @@ export const links: ILink[] = [
     },
     {
         id: 5,
+        title: 'price comparison',
+        href: 'price-comparison',
+        childrens: []
+    },
+    {
+        id: 6,
         title: 'investors',
         href: 'investors',
         childrens: []
     },
     {
-        id: 6,
+        id: 7,
         title: 'support',
         href: 'support',
         childrens: []
     },
     {
-        id: 7,
+        id: 8,
+        title: 'about us',
+        href: 'about-us',
+        childrens: []
+    },
+    {
+        id: 9,
         title: 'news and media',
         href: '',
         childrens: [
@@ -62,7 +74,7 @@ export const links: ILink[] = [
         ]
     },
     {
-        id: 8,
+        id: 10,
         title: 'contact us',
         href: 'contact-us',
         childrens: []

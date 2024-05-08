@@ -1,0 +1,15 @@
+@import '../../../(app)/_styles/mixins.scss';
+
+.wrapper {
+    @include flexVerticalGap(20);
+
+    padding-top: toRem(260);
+    padding-bottom: toRem(150);
+
+    &_content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: toRem(32);
+    }
+}

@@ -112,6 +112,17 @@ export const icons = {
             <path d='M8.5 0L8.5 16' stroke='#FAA055' strokeWidth='1.5' />
         </svg>
     ),
+    star: (props: SVGProps<SVGSVGElement>) => (
+        <svg width='39' height='40' viewBox='0 0 39 40' fill='none' {...props}>
+            <path d='M19.5 0L22.2577 17.1716L39 20L22.2577 22.8284L19.5 40L16.7423 22.8284L0 20L16.7423 17.1716L19.5 0Z' fill='#FAA055' />
+        </svg>
+    ),
+    'play-v2': (props: SVGProps<SVGSVGElement>) => (
+        <svg width='80' height='80' viewBox='0 0 80 80' fill='none' {...props}>
+            <circle cx='40' cy='40' r='40' fill='white' />
+            <path d='M56.25 37.904C57.9167 38.8355 57.9167 41.1645 56.25 42.096L33.75 54.6721C32.0833 55.6037 30 54.4392 30 52.5761L30 27.4239C30 25.5608 32.0833 24.3963 33.75 25.3279L56.25 37.904Z' fill='black' />
+        </svg>
+    ),
     'arrow-down-v2': (props: SVGProps<SVGSVGElement>) => (
         <svg width='24' height='24' viewBox='0 0 24 24' fill='none' {...props}>
             <path d='M18 9L12 15L6 9' stroke='#CACACE' strokeWidth='2' />
@@ -131,6 +142,11 @@ export const icons = {
     'mini-arrow': (props: SVGProps<SVGSVGElement>) => (
         <svg width='10' height='18' viewBox='0 0 10 18' fill='none' {...props}>
             <path d='M9 1L5 5L1 9L9 17' stroke='black' />
+        </svg>
+    ),
+    'counter-arrow': (props: SVGProps<SVGSVGElement>) => (
+        <svg width='13' height='8' viewBox='0 0 13 8' fill='none' {...props}>
+            <path d='M12.5 1L6.5 7L0.500001 0.999999' stroke='#FAA055' strokeLinecap='round' strokeLinejoin='round' />
         </svg>
     )
 } as const

@@ -8,6 +8,9 @@
     > h5,
     > h6 {
         @include fontSize(toRem($font-size), 4vw, toRem($font-size), $font-weight);
+        @include flexHorizontalGap(2);
+
+        align-items: center;
     }
 
     > p {
@@ -21,10 +24,9 @@
 
 .wrapper {
     @include flexVerticalGap(4);
+    @include header-styles(44, 18, 800);
 
     justify-content: center;
-
-    @include header-styles(44, 18, 800);
 
     &.XL {
         @include header-styles(62, 20, 800);

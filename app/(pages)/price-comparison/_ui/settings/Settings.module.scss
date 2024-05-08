@@ -1,0 +1,21 @@
+@import '../../../../(app)/_styles/mixins.scss';
+@import '../../../../(app)/_styles/vaiables.scss';
+
+.wrapper {
+    @include flexVerticalGap(6);
+
+    hr {
+        height: toRem(2);
+        background-color: rgba($color: $autumnBlaze, $alpha: 0.05);
+    }
+
+    padding: toRem(48) toRem(32);
+    border-radius: toRem(16);
+    background-color: black;
+}
+
+.radios-net {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}

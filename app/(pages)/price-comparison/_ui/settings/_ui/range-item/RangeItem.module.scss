@@ -1,0 +1,71 @@
+@import '../../../../../../(app)/_styles/mixins.scss';
+@import '../../../../../../(app)/_styles/vaiables.scss';
+
+.wrapper {
+    @include flexVerticalGap(8);
+
+    > h2 {
+        @include fontSize(toRem(24), 4vw, toRem(24), 600);
+    }
+
+    &_counter {
+        @include flexHorizontalGap(6);
+
+        align-items: center;
+    }
+}
+
+.counter-controls {
+    display: flex;
+    align-items: center;
+    border-radius: toRem(4);
+    border: toRem(1) solid $autumnBlaze;
+    justify-content: space-between;
+    min-width: toRem(110);
+
+    > span {
+        margin: toRem(14) toRem(8);
+    }
+}
+
+.range {
+    height: toRem(8);
+    appearance: none;
+    border-radius: toRem(10);
+
+    &::-webkit-slider-thumb {
+        border: toRem(1) solid black;
+        width: toRem(16);
+        height: toRem(16);
+        border-radius: 50%;
+        cursor: ew-resize;
+        background: $autumnBlaze;
+        appearance: none;
+    }
+}
+
+.btn-box {
+    display: flex;
+    flex-direction: column;
+    border-left: toRem(1) solid $autumnBlaze;
+    height: 100%;
+
+    > button {
+        @include allAnimation(background-color, 0.1s);
+
+        background-color: rgba($color: $autumnBlaze, $alpha: 0.2);
+        padding: toRem(9) toRem(10);
+
+        &:hover {
+            background-color: rgba($color: $autumnBlaze, $alpha: 0.4);
+        }
+
+        &:first-child {
+            border-bottom: toRem(1) solid $autumnBlaze;
+
+            > svg {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
