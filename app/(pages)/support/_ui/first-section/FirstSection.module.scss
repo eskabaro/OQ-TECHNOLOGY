@@ -1,4 +1,5 @@
 @import '../../../../(app)/_styles/mixins.scss';
+@import '../../../../(app)/_styles/vaiables.scss';
 
 .wrapper {
     @include flexVerticalGap(37.5);
@@ -26,4 +27,9 @@
             }
         }
     }
+}
+
+.border {
+    width: toRem(1);
+    background-color: $shadowCharcoal;
 }

@@ -13,33 +13,18 @@ export const SixthSection: FC = () => {
         <Container className={styles.wrapper} as='section'>
             <SubTitle upTitle='FAQ’S' title='FREQUENTLY ASKED QUESTIONS' isUnderline />
             <div className={styles['wrapper_accordions-box']}>
-                <div>
-                    <Accordion borderNone='left' title='Lorem ipsum dolor sit amet consectetur.'>
-                        Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.
-                    </Accordion>
-                    <Accordion borderNone='left' title='Lorem ipsum dolor sit amet consectetur.'>
-                        Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.
-                    </Accordion>
-                    <Accordion borderNone='left' title='Lorem ipsum dolor sit amet consectetur.'>
-                        Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.
-                    </Accordion>
-                    <Accordion borderNone='left' title='Lorem ipsum dolor sit amet consectetur.'>
-                        Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.
-                    </Accordion>
+                <div className={styles['left-side']}>
+                    <Accordion title='Lorem ipsum dolor sit amet consectetur.'>Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.</Accordion>
+                    <Accordion title='Lorem ipsum dolor sit amet consectetur.'>Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.</Accordion>
+                    <Accordion title='Lorem ipsum dolor sit amet consectetur.'>Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.</Accordion>
+                    <Accordion title='Lorem ipsum dolor sit amet consectetur.'>Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.</Accordion>
                 </div>
-                <div>
-                    <Accordion borderNone='right' title='Lorem ipsum dolor sit amet consectetur.'>
-                        Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.
-                    </Accordion>
-                    <Accordion borderNone='right' title='Lorem ipsum dolor sit amet consectetur.'>
-                        Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.
-                    </Accordion>
-                    <Accordion borderNone='right' title='Lorem ipsum dolor sit amet consectetur.'>
-                        Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.
-                    </Accordion>
-                    <Accordion borderNone='right' title='Lorem ipsum dolor sit amet consectetur.'>
-                        Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.
-                    </Accordion>
+                <hr className={styles.border} />
+                <div className={styles['right-side']}>
+                    <Accordion title='Lorem ipsum dolor sit amet consectetur.'>Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.</Accordion>
+                    <Accordion title='Lorem ipsum dolor sit amet consectetur.'>Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.</Accordion>
+                    <Accordion title='Lorem ipsum dolor sit amet consectetur.'>Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.</Accordion>
+                    <Accordion title='Lorem ipsum dolor sit amet consectetur.'>Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.</Accordion>
                 </div>
             </div>
         </Container>

@@ -28,14 +28,15 @@ export const FirstSection: FC = () => {
                 <div className={styles['accordions-box_wrapper']}>
                     <div>
                         {accordions.slice(0, Math.ceil(accordions.length / 2)).map((e) => (
-                            <Accordion key={e.id} borderNone='left' title={e.title}>
+                            <Accordion key={e.id} title={e.title}>
                                 {e.text}
                             </Accordion>
                         ))}
                     </div>
+                    <hr className={styles.border} />
                     <div>
                         {accordions.slice(Math.ceil(accordions.length / 2)).map((e) => (
-                            <Accordion key={e.id} borderNone='right' title={e.title}>
+                            <Accordion key={e.id} title={e.title}>
                                 {e.text}
                             </Accordion>
                         ))}

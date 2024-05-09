@@ -8,14 +8,6 @@
     border-top: toRem(1) solid $shadowCharcoal;
 }
 
-.left {
-    border-right: toRem(0.5) solid $shadowCharcoal;
-}
-
-.right {
-    border-left: toRem(0.5) solid $shadowCharcoal;
-}
-
 .accordion {
     cursor: pointer;
     padding: toRem(42) toRem(50);
@@ -45,7 +37,7 @@
 
     &_content {
         @include allAnimation(max-height, 0.2s);
-
+        /* border-left: toRem(0.5) solid $shadowCharcoal; */
         overflow: hidden;
         transition: max-height 0.2s ease;
     }
