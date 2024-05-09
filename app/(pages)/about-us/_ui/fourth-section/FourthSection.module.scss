@@ -9,46 +9,6 @@
     }
 }
 
-.container {
-    &_heading {
-        @include flexHorizontalGap(5);
-
-        border-bottom: toRem(1) solid $shadowCharcoal;
-        justify-content: space-between;
-        align-items: center;
-
-        padding-bottom: toRem(14);
-
-        > .typography {
-            @include flexVerticalGap(1);
-
-            > div {
-                > span {
-                    @include fontSize(toRem(20), 4vw, toRem(20), 600);
-
-                    color: $mistySlate;
-                }
-
-                > h1 {
-                    @include fontSize(toRem(64), 4vw, toRem(64), 800);
-                }
-
-                > p {
-                    @include fontSize(toRem(24), 4vw, toRem(24), 600, 150%);
-
-                    max-width: em(660);
-                }
-            }
-        }
-
-        > .btn-box {
-            @include flexHorizontalGap(8);
-
-            align-items: center;
-        }
-    }
-}
-
 .slider_container {
     @include flexHorizontalGap(8);
 }

@@ -4,22 +4,14 @@ import { FC } from 'react'
 
 import { Container } from '@/app/(app)/_components/container'
 import { Accordion } from '@/app/_shared/ui/accordion'
-import { HeadingAnimate } from '@/app/_shared/ui/heading-animate'
-import { Text } from '@/app/_shared/ui/typography/text'
+import { SubTitle } from '@/app/_shared/ui/sub-title'
 
 import styles from './SixthSection.module.scss'
 
 export const SixthSection: FC = () => {
     return (
         <Container className={styles.wrapper} as='section'>
-            <div className={styles.wrapper_heading}>
-                <HeadingAnimate>
-                    <Text as='p'>FAQ’S</Text>
-                </HeadingAnimate>
-                <HeadingAnimate duration={200}>
-                    <Text as='h1'>FREQUENTLY ASKED QUESTIONS</Text>
-                </HeadingAnimate>
-            </div>
+            <SubTitle upTitle='FAQ’S' title='FREQUENTLY ASKED QUESTIONS' isUnderline />
             <div className={styles['wrapper_accordions-box']}>
                 <div>
                     <Accordion borderNone='left' title='Lorem ipsum dolor sit amet consectetur.'>

@@ -3,26 +3,17 @@
 import { FC } from 'react'
 import Image from 'next/image'
 
-import { Text } from '@/app/_shared/ui/typography/text'
 import { Button } from '@/app/_shared/ui/button'
 import { Article } from '@/app/_shared/ui/typography/article'
 import { Container } from '@/app/(app)/_components/container'
-import { HeadingAnimate } from '@/app/_shared/ui/heading-animate'
+import { SubTitle } from '@/app/_shared/ui/sub-title'
 
 import styles from './SecondSection.module.scss'
 
 export const SecondSection: FC = () => {
     return (
         <Container className={styles.wrapper} as='section'>
-            <div className={styles.wrapper_heading}>
-                <HeadingAnimate>
-                    <Text as='p'>ABOUT US</Text>
-                </HeadingAnimate>
-                <HeadingAnimate duration={200}>
-                    <Text as='h1'>SPACE LEVEL</Text>
-                </HeadingAnimate>
-            </div>
-
+            <SubTitle upTitle='ABOUT US' title='SPACE LEVEL' />
             <div className={styles.wrapper_content}>
                 <Image src={'/about-us/image-1.webp'} width={783} height={710} alt='' />
                 <div className={styles.article}>

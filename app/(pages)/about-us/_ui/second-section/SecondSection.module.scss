@@ -4,24 +4,6 @@
 .wrapper {
     @include flexVerticalGap(20);
 
-    &_heading {
-        @include flexVerticalGap(1);
-
-        border-bottom: toRem(1) solid $shadowCharcoal;
-
-        > div {
-            > p {
-                @include fontSize(toRem(20), 4vw, toRem(20), 600);
-
-                color: $mistySlate;
-            }
-
-            > h1 {
-                @include fontSize(toRem(58), 4vw, toRem(58), 600);
-            }
-        }
-    }
-
     &_content {
         @include flexHorizontalGap(18.5);
 

@@ -3,8 +3,7 @@
 import { FC } from 'react'
 import Image from 'next/image'
 
-import { Text } from '@/app/_shared/ui/typography/text'
-import { HeadingAnimate } from '@/app/_shared/ui/heading-animate'
+import { SubTitle } from '@/app/_shared/ui/sub-title'
 import { Article } from '@/app/_shared/ui/typography/article'
 
 import styles from './SecondSection.module.scss'
@@ -12,14 +11,7 @@ import styles from './SecondSection.module.scss'
 export const SecondSection: FC = () => {
     return (
         <div className={styles.wrapper}>
-            <div className={styles.wrapper_heading}>
-                <HeadingAnimate>
-                    <Text as='p'>TECHNOLOGY</Text>
-                </HeadingAnimate>
-                <HeadingAnimate duration={200}>
-                    <Text as='h1'>SAT-CP</Text>
-                </HeadingAnimate>
-            </div>
+            <SubTitle upTitle='TECHNOLOGY' title='SAT-CP' />
             <div className={styles['wrapper_box']}>
                 <Article
                     titleTag='h2'

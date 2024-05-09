@@ -3,23 +3,15 @@
 import { FC } from 'react'
 import Image from 'next/image'
 
-import { HeadingAnimate } from '@/app/_shared/ui/heading-animate'
-import { Text } from '@/app/_shared/ui/typography/text'
 import { Article } from '@/app/_shared/ui/typography/article'
+import { SubTitle } from '@/app/_shared/ui/sub-title'
 
 import styles from './Third.module.scss'
 
 export const ThirdSection: FC = () => {
     return (
         <div className={styles.wrapper}>
-            <div className={styles.wrapper_heading}>
-                <HeadingAnimate>
-                    <Text as='p'>TECHNOLOGY</Text>
-                </HeadingAnimate>
-                <HeadingAnimate duration={200}>
-                    <Text as='h1'>HIGH ALTITUDE PLATFORMS AND DRONES</Text>
-                </HeadingAnimate>
-            </div>
+            <SubTitle upTitle='TECHNOLOGY' title='HIGH ALTITUDE PLATFORMS AND DRONES' />
 
             <div className={styles.wrapper_content}>
                 <Article

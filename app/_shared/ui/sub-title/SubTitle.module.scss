@@ -1,0 +1,45 @@
+@import '../../../(app)/_styles/mixins.scss';
+@import '../../../(app)/_styles/vaiables.scss';
+
+.sub-title {
+    @include flexHorizontalGap(5);
+
+    justify-content: space-between;
+    align-items: center;
+
+    &.underline {
+        border-bottom: toRem(1) solid $shadowCharcoal;
+    }
+
+    &.PB {
+        padding-bottom: toRem(14);
+    }
+
+    &_typography {
+        @include flexVerticalGap(1);
+
+        > span {
+            @include fontSize(toRem(20), 4vw, toRem(20), 600);
+
+            color: $mistySlate;
+        }
+
+        > div {
+            > h1 {
+                @include fontSize(toRem(64), 4vw, toRem(64), 800);
+            }
+
+            > p {
+                @include fontSize(toRem(24), 4vw, toRem(24), 600, 150%);
+
+                max-width: em(660);
+            }
+        }
+    }
+
+    &_btn-box {
+        @include flexHorizontalGap(8);
+
+        align-items: center;
+    }
+}

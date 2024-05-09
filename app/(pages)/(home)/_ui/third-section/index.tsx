@@ -4,41 +4,16 @@ import { FC } from 'react'
 import Image from 'next/image'
 
 import { Container } from '@/app/(app)/_components/container'
-import { HeadingAnimate } from '@/app/_shared/ui/heading-animate'
-import { ButtonGroup } from '@/app/_shared/ui/button-group'
-import { Text } from '@/app/_shared/ui/typography/text'
 import { Button } from '@/app/_shared/ui/button'
-import { Icon } from '@/app/_shared/ui/icon'
 import { Article } from '@/app/_shared/ui/typography/article'
+import { SubTitle } from '@/app/_shared/ui/sub-title'
 
 import styles from './ThirdSection.module.scss'
 
 export const ThirdSection: FC = () => {
     return (
         <Container as='section' className={styles.wrapper}>
-            <div className={styles.wrapper_heading}>
-                <div className={styles.typography}>
-                    <HeadingAnimate>
-                        <Text as='p'>PRODUCTS</Text>
-                    </HeadingAnimate>
-                    <HeadingAnimate duration={200}>
-                        <Text as='h1'>OUR INNOVATION PRODUCTS</Text>
-                    </HeadingAnimate>
-                </div>
-                <div className={styles['btn-box']}>
-                    <ButtonGroup size='XL'>
-                        <button>
-                            <Icon name='next' />
-                        </button>
-                        <button>
-                            <Icon name='prev' />
-                        </button>
-                    </ButtonGroup>
-                    <Button variant='dark'>
-                        <div>{'Check More ->'}</div>
-                    </Button>
-                </div>
-            </div>
+            <SubTitle upTitle='PRODUCTS' title='OUR INNOVATION PRODUCTS' isButtonGroup auxiliaryBtn />
             <div className={styles.wrapper_slider}>
                 <div className={styles.article}>
                     <Article

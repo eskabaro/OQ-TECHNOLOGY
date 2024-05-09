@@ -4,9 +4,7 @@ import { FC } from 'react'
 import Image from 'next/image'
 
 import { Container } from '@/app/(app)/_components/container'
-import { ButtonGroup } from '@/app/_shared/ui/button-group'
-import { HeadingAnimate } from '@/app/_shared/ui/heading-animate'
-import { Icon } from '@/app/_shared/ui/icon'
+import { SubTitle } from '@/app/_shared/ui/sub-title'
 import { Text } from '@/app/_shared/ui/typography/text'
 
 import styles from './FourthSection.module.scss'
@@ -15,32 +13,10 @@ export const FourthSection: FC = () => {
     return (
         <div className={styles.wrapper}>
             <Container className={styles.container}>
-                <div className={styles.container_heading}>
-                    <div className={styles.typography}>
-                        <HeadingAnimate>
-                            <Text as='span'>ABOUT US</Text>
-                        </HeadingAnimate>
-                        <HeadingAnimate duration={200}>
-                            <Text as='h1'>CORE TEAM</Text>
-                        </HeadingAnimate>
-                        <HeadingAnimate duration={400}>
-                            <Text as='p'>
-                                Dolor lobortis ullamcorper sollicitudin tellus. Pulvinar nunc aliquam id blandit integer diam tellus. Iaculis elementum est ante tempus aliquet facilisis. Arcu ac convallis integer elementum a adipiscing. Laoreet
-                                commodo sed est quisque. Elit tristique.
-                            </Text>
-                        </HeadingAnimate>
-                    </div>
-                    <div className={styles['btn-box']}>
-                        <ButtonGroup size='XL'>
-                            <button>
-                                <Icon name='next' />
-                            </button>
-                            <button>
-                                <Icon name='prev' />
-                            </button>
-                        </ButtonGroup>
-                    </div>
-                </div>
+                <SubTitle upTitle='ABOUT US' title='CORE TEAM' isButtonGroup>
+                    Dolor lobortis ullamcorper sollicitudin tellus. Pulvinar nunc aliquam id blandit integer diam tellus. Iaculis elementum est ante tempus aliquet facilisis. Arcu ac convallis integer elementum a adipiscing. Laoreet commodo sed est
+                    quisque. Elit tristique.
+                </SubTitle>
             </Container>
             <div className={styles.wrapper_slider}>
                 <Container className={styles.slider_container}>

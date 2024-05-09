@@ -4,7 +4,7 @@ import { FC } from 'react'
 import Image from 'next/image'
 
 import { Container } from '@/app/(app)/_components/container'
-import { HeadingAnimate } from '@/app/_shared/ui/heading-animate'
+import { SubTitle } from '@/app/_shared/ui/sub-title'
 import { Text } from '@/app/_shared/ui/typography/text'
 import { Icon } from '@/app/_shared/ui/icon'
 
@@ -13,19 +13,9 @@ import styles from './FifthSection.module.scss'
 export const FifthSection: FC = () => {
     return (
         <Container className={styles.wrapper} as='section'>
-            <div className={styles.wrapper_heading}>
-                <div className={styles.typography}>
-                    <HeadingAnimate>
-                        <Text as='span'>ABOUT US</Text>
-                    </HeadingAnimate>
-                    <HeadingAnimate duration={200}>
-                        <Text as='h1'>OUR SATELLITE MISSIONS</Text>
-                    </HeadingAnimate>
-                    <HeadingAnimate duration={400}>
-                        <Text as='p'>With already 3 satellites in space and 7 more to be added to our constellation by the end of 2023 we continue to be pioneers in the field of 5G NB-IoT.</Text>
-                    </HeadingAnimate>
-                </div>
-            </div>
+            <SubTitle upTitle='ABOUT US' title='OUR SATELLITE MISSIONS'>
+                With already 3 satellites in space and 7 more to be added to our constellation by the end of 2023 we continue to be pioneers in the field of 5G NB-IoT.
+            </SubTitle>
 
             <div className={styles.wrapper_video}>
                 <Image src={'/about-us/video-2.webp'} width={1600} height={730} alt='' priority />
