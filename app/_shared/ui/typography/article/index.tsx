@@ -1,8 +1,8 @@
 'use client'
 
 import { FC } from 'react'
-import cn from 'classnames'
 
+import { cn } from '@/app/_shared/lib/classnames'
 import { Text } from '../text'
 import { Icon } from '../../icon'
 import { IconsType } from '@/app/_shared/const/icons'

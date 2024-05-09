@@ -2,11 +2,12 @@
 
 import { FC } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 import { Text } from '@/app/_shared/ui/typography/text'
-import styles from './Country.module.scss'
 import { Icon } from '@/app/_shared/ui/icon'
-import Link from 'next/link'
+
+import styles from './Country.module.scss'
 
 interface ICountryProps {
     countryFlagSrc: string

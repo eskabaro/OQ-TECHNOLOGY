@@ -1,8 +1,8 @@
 'use client'
 
 import { FC, PropsWithChildren, useRef, useState } from 'react'
-import cn from 'classnames'
 
+import { cn } from '../../lib/classnames'
 import { Icon } from '../icon'
 import { Text } from '../typography/text'
 
@@ -14,22 +14,18 @@ interface IAccordionProps extends PropsWithChildren<unknown> {
 
 export const Accordion: FC<IAccordionProps> = ({ title, children }) => {
     const content = useRef<HTMLDivElement>(null)
-    const [active, setActive] = useState<boolean>(false)
+
+    const [isActive, setIsActive] = useState<boolean>(false)
     const [height, setHeight] = useState<string>('0px')
 
     const toggleAccordion = () => {
-        setActive(!active)
-        setHeight(active ? '0px' : `${content.current?.scrollHeight}px`)
+        setIsActive(!isActive)
+        setHeight(isActive ? '0px' : `${content.current?.scrollHeight}px`)
     }
 
     return (
         <div className={styles.wrapper}>
-            <div
-                onClick={toggleAccordion}
-                className={cn(styles.accordion, {
-                    [styles.active]: active
-                })}
-            >
+            <div onClick={toggleAccordion} className={cn(styles.accordion, isActive && styles.active)}>
                 <Text className={styles.accordion_title} as='p'>
                     {title}
                 </Text>
@@ -37,7 +33,7 @@ export const Accordion: FC<IAccordionProps> = ({ title, children }) => {
                     <Icon name='arrow-down-v2' />
                 </button>
             </div>
-            <div ref={content} style={{ maxHeight: height }} className={cn(styles.accordion_content)}>
+            <div ref={content} style={{ maxHeight: height }} className={styles.accordion_content}>
                 <div className={styles.accordion_text}>{children}</div>
             </div>
         </div>

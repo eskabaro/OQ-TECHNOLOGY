@@ -2,8 +2,8 @@
 
 import { FC, useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
-import cn from 'classnames'
 
+import { cn } from '@/app/_shared/lib/classnames'
 import { Container } from '@/app/(app)/_components/container'
 import { HeadingAnimate } from '@/app/_shared/ui/heading-animate'
 import { Text } from '@/app/_shared/ui/typography/text'
@@ -59,11 +59,7 @@ export const SecondSection: FC = () => {
                 <div className={styles.content_form}>
                     <Text as='h2'>HAVE ANY QUESTION?</Text>
                     <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
-                        <div
-                            className={cn(styles['form_fields-box'], {
-                                [styles.error]: !!errors.message
-                            })}
-                        >
+                        <div className={cn(styles['form_fields-box'], !!errors.message && styles.error)}>
                             <Textarea {...register('message', { required: true })} placeholder='Your message *' error={!!errors.message} />
                             <label htmlFor='input-file' className={styles['input-box']}>
                                 {!files?.length && <Icon name='plus' />}

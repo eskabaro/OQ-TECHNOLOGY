@@ -1,8 +1,8 @@
 'use client'
 
 import { FC, HTMLAttributes, PropsWithChildren, useEffect, useRef, useState } from 'react'
+import { cn } from '../../lib/classnames'
 import styles from './HeadingAnimation.module.scss'
-import cn from 'classnames'
 
 interface IHeadingAnimateProps extends PropsWithChildren<HTMLAttributes<HTMLDivElement>> {
     duration?: number
@@ -13,6 +13,7 @@ const options = { root: null, rootMargin: '0px', threshold: 0.9 }
 
 export const HeadingAnimate: FC<IHeadingAnimateProps> = ({ children, duration = 0, className, ...props }) => {
     const ref = useRef<HTMLDivElement>(null)
+
     const [isVisible, setIsVisible] = useState<boolean>(false)
     const [animationTriggered, setAnimationTriggered] = useState<boolean>(false)
 
@@ -38,13 +39,7 @@ export const HeadingAnimate: FC<IHeadingAnimateProps> = ({ children, duration = 
     }, [isVisible])
 
     return (
-        <div
-            ref={ref}
-            className={cn(styles.wrapper, className, {
-                [styles.active]: isVisible
-            })}
-            {...props}
-        >
+        <div ref={ref} className={cn(styles.wrapper, className, isVisible && styles.active)} {...props}>
             {children}
         </div>
     )

@@ -2,6 +2,7 @@
 
 import { FC } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
+import Link from 'next/link'
 
 import { Container } from '@/app/(app)/_components/container'
 import { Text } from '@/app/_shared/ui/typography/text'
@@ -9,7 +10,6 @@ import { Input } from '@/app/_shared/ui/input'
 import { Button } from '@/app/_shared/ui/button'
 
 import styles from './SignInForm.module.scss'
-import Link from 'next/link'
 
 interface IFormInput {
     email: string

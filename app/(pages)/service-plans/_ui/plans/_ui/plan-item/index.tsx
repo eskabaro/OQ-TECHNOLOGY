@@ -1,8 +1,8 @@
 'use client'
 
 import { Dispatch, FC, SetStateAction } from 'react'
-import cn from 'classnames'
 
+import { cn } from '@/app/_shared/lib/classnames'
 import { IPlan } from '../../../second-section/const/plans'
 import { Text } from '@/app/_shared/ui/typography/text'
 import { Icon } from '@/app/_shared/ui/icon'
@@ -18,12 +18,7 @@ interface IPlanItemProps extends IPlan {
 
 export const PlanItem: FC<IPlanItemProps> = ({ title, price, services, index, selectIdx, setSelectIdx }) => {
     return (
-        <li
-            onClick={() => setSelectIdx(index)}
-            className={cn(styles.wrapper, {
-                [styles.active]: index === selectIdx
-            })}
-        >
+        <li onClick={() => setSelectIdx(index)} className={cn(styles.wrapper, index === selectIdx && styles.active)}>
             <div className={styles.wrapper_heading}>
                 <Text as='h2'>{title}</Text>
                 <Text as='span'>Description of a plan</Text>

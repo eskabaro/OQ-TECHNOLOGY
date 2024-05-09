@@ -1,8 +1,8 @@
 'use client'
 
 import { FC } from 'react'
-import cn from 'classnames'
 
+import { cn } from '@/app/_shared/lib/classnames'
 import { HeadingAnimate } from '../../heading-animate'
 import { Text } from '../text'
 
@@ -23,13 +23,13 @@ export const Title: FC<ITitleProps> = ({ size, title, text, isObserver, classNam
         <div className={cn(styles.heading, className)}>
             {isObserver ? (
                 <HeadingAnimate>
-                    <Text className={cn([styles[size]])} as='h1'>
+                    <Text className={styles[size]} as='h1'>
                         {title}
                     </Text>
                 </HeadingAnimate>
             ) : (
                 <div>
-                    <Text className={cn([styles[size]])} as='h1'>
+                    <Text className={styles[size]} as='h1'>
                         {title}
                     </Text>
                 </div>
@@ -37,13 +37,13 @@ export const Title: FC<ITitleProps> = ({ size, title, text, isObserver, classNam
             {text &&
                 (isObserver ? (
                     <HeadingAnimate duration={200}>
-                        <Text className={cn([styles[size]])} as='p'>
+                        <Text className={styles[size]} as='p'>
                             {text}
                         </Text>
                     </HeadingAnimate>
                 ) : (
                     <div>
-                        <Text className={cn([styles[size]])} as='p'>
+                        <Text className={styles[size]} as='p'>
                             {text}
                         </Text>
                     </div>

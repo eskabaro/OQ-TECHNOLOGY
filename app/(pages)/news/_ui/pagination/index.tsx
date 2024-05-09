@@ -1,11 +1,13 @@
 'use client'
 
-import React, { FC } from 'react'
-import cn from 'classnames'
+import { FC } from 'react'
+
+import { cn } from '@/app/_shared/lib/classnames'
 import { usePagination, DOTS } from '../../../../_shared/lib/hooks/usePagination'
-import styles from './Pagination.module.scss'
 import { Icon } from '@/app/_shared/ui/icon'
 import { Text } from '@/app/_shared/ui/typography/text'
+
+import styles from './Pagination.module.scss'
 
 interface IPaginationProps {
     onPageChange: (page: number) => void
@@ -15,7 +17,7 @@ interface IPaginationProps {
     pageSize: number
 }
 
-const Pagination: FC<IPaginationProps> = ({ onPageChange, totalCount, siblingCount = 1, currentPage, pageSize }) => {
+export const Pagination: FC<IPaginationProps> = ({ onPageChange, totalCount, siblingCount = 1, currentPage, pageSize }) => {
     const paginationRange = usePagination({
         currentPage,
         totalCount,
@@ -39,12 +41,7 @@ const Pagination: FC<IPaginationProps> = ({ onPageChange, totalCount, siblingCou
 
     return (
         <ul className={styles.wrapper}>
-            <li
-                onClick={onPrevious}
-                className={cn(styles.wrapper_prev, {
-                    [styles.disabled]: currentPage === 1
-                })}
-            >
+            <li onClick={onPrevious} className={cn(styles.wrapper_prev, currentPage === 1 && styles.disabled)}>
                 <Icon name='mini-arrow' />
             </li>
 
@@ -70,51 +67,55 @@ const Pagination: FC<IPaginationProps> = ({ onPageChange, totalCount, siblingCou
                 )
             })} */}
             <li
-                className={cn(styles.wrapper_count, {
-                    // [styles.selected]: pageNumber === currentPage
-                })}
+                // className={cn(styles.wrapper_count, {
+                //     // [styles.selected]: pageNumber === currentPage
+                // })}
+                className={cn(styles.wrapper_count)}
             >
                 <Text as='span'>1</Text>
             </li>
             <li
-                className={cn(styles.wrapper_count, {
-                    [styles.selected]: currentPage
-                })}
+                // className={cn(styles.wrapper_count, {
+                //     [styles.selected]: currentPage
+                // })}
+                className={cn(styles.wrapper_count, currentPage && styles.selected)}
             >
                 <Text as='span'>2</Text>
             </li>
             <li
-                className={cn(styles.wrapper_count, {
-                    // [styles.selected]: pageNumber === currentPage
-                })}
+                // className={cn(styles.wrapper_count, {
+                //     // [styles.selected]: pageNumber === currentPage
+                // })}
+                className={cn(styles.wrapper_count)}
             >
                 <Text as='span'>3</Text>
             </li>
             <li
-                className={cn(styles.wrapper_count, {
-                    // [styles.selected]: pageNumber === currentPage
-                })}
+                // className={cn(styles.wrapper_count, {
+                //     // [styles.selected]: pageNumber === currentPage
+                // })}
+                className={cn(styles.wrapper_count)}
             >
                 <Text as='span'>...</Text>
             </li>
             <li
-                className={cn(styles.wrapper_count, {
-                    // [styles.selected]: pageNumber === currentPage
-                })}
+                // className={cn(styles.wrapper_count, {
+                //     // [styles.selected]: pageNumber === currentPage
+                // })}
+                className={cn(styles.wrapper_count)}
             >
                 <Text as='span'>25</Text>
             </li>
 
             <li
                 onClick={onNext}
-                className={cn(styles.wrapper_next, {
-                    [styles.disabled]: currentPage === lastPage
-                })}
+                // className={cn(styles.wrapper_next, {
+                //     [styles.disabled]: currentPage === lastPage
+                // })}
+                className={cn(styles.wrapper_next)}
             >
                 <Icon name='mini-arrow' />
             </li>
         </ul>
     )
 }
-
-export default Pagination

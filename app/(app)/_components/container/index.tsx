@@ -1,7 +1,7 @@
 'use client'
 
 import { FC, HTMLAttributes, PropsWithChildren } from 'react'
-import cn from 'classnames'
+import { cn } from '@/app/_shared/lib/classnames'
 import styles from './Container.module.scss'
 
 type ContainerTagType = 'section' | 'div'

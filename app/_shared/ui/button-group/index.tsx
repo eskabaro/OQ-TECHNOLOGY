@@ -1,7 +1,7 @@
 'use client'
 
 import { Children, FC, PropsWithChildren } from 'react'
-import cn from 'classnames'
+import { cn } from '../../lib/classnames'
 
 import styles from './ButtonGroup.module.scss'
 
@@ -14,7 +14,7 @@ export const ButtonGroup: FC<IButtonGroupProps> = ({ size, children }) => {
         <ul className={styles.wrapper}>
             {Children.map(children, (child, index) => {
                 return (
-                    <li className={cn(styles.wrapper_item, [styles[size]])} key={index}>
+                    <li className={cn(styles.wrapper_item, styles[size])} key={index}>
                         {child}
                     </li>
                 )

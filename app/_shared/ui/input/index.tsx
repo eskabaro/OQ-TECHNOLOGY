@@ -1,7 +1,7 @@
 'use client'
 
 import { FC, ForwardedRef, InputHTMLAttributes, forwardRef } from 'react'
-import cn from 'classnames'
+import { cn } from '../../lib/classnames'
 import styles from './Input.module.scss'
 
 type VariantType = 'first' | 'second'
@@ -21,10 +21,7 @@ export const Input: FC<IInputProps> = forwardRef(({ variant, placeholder, error,
                 {...props}
                 ref={ref}
                 placeholder={placeholder}
-                className={cn(styles.input, {
-                    [styles.error]: error,
-                    [styles[variant]]: variant
-                })}
+                className={cn(styles.input, error && styles.error, variant && styles[variant])}
                 // onChange={(e) => setIsActive(!!e.target.value)}
             />
             {/* <span
