@@ -6,6 +6,9 @@
 
     &_slider {
         @include flexHorizontalGap(12.5);
+        @include adaptiveValue('height', 666, 500, 1920, 1000, 1);
+
+        position: relative;
 
         > img {
             max-width: 100%;
@@ -14,8 +17,32 @@
     }
 }
 
+.slide {
+    @include flexHorizontalGap(12.5);
+
+    height: auto;
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out;
+    position: absolute;
+    inset: 0;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    > img {
+        max-width: 100%;
+        object-fit: fill;
+    }
+}
+
 .article {
     @include flexVerticalGap(12);
+
+    justify-content: center;
 
     &_btn-box {
         @include flexHorizontalGap(6);

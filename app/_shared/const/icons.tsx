@@ -98,12 +98,12 @@ export const icons = {
     ),
     next: (props: SVGProps<SVGSVGElement>) => (
         <svg width='34' height='34' viewBox='0 0 34 34' fill='none' {...props}>
-            <path d='M21.25 8.5L12.75 17L21.25 25.5' stroke='white' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round' />
+            <path d='M12.75 8.5L21.25 17L12.75 25.5' stroke='white' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round' />
         </svg>
     ),
     prev: (props: SVGProps<SVGSVGElement>) => (
         <svg width='34' height='34' viewBox='0 0 34 34' fill='none' {...props}>
-            <path d='M12.75 8.5L21.25 17L12.75 25.5' stroke='white' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round' />
+            <path d='M21.25 8.5L12.75 17L21.25 25.5' stroke='white' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round' />
         </svg>
     ),
     plus: (props: SVGProps<SVGSVGElement>) => (

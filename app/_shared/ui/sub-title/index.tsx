@@ -17,9 +17,11 @@ interface ISubTitleProps extends PropsWithChildren<unknown> {
     isButtonGroup?: boolean
     isUnderline?: boolean
     auxiliaryBtn?: boolean
+    nextSlideFn?: () => void
+    prevSlideFn?: () => void
 }
 
-export const SubTitle: FC<ISubTitleProps> = ({ upTitle, title, isButtonGroup, isUnderline, auxiliaryBtn, children }) => {
+export const SubTitle: FC<ISubTitleProps> = ({ upTitle, title, isButtonGroup, isUnderline, auxiliaryBtn, nextSlideFn, prevSlideFn, children }) => {
     return (
         <div className={cn(styles['sub-title'], !!children && styles.PB, !isUnderline && styles.underline)}>
             <div className={styles['sub-title_typography']}>
@@ -36,11 +38,11 @@ export const SubTitle: FC<ISubTitleProps> = ({ upTitle, title, isButtonGroup, is
             {isButtonGroup && (
                 <div className={styles['sub-title_btn-box']}>
                     <ButtonGroup size='XL'>
-                        <button>
-                            <Icon name='next' />
-                        </button>
-                        <button>
+                        <button onClick={prevSlideFn}>
                             <Icon name='prev' />
+                        </button>
+                        <button onClick={nextSlideFn}>
+                            <Icon name='next' />
                         </button>
                     </ButtonGroup>
                     {auxiliaryBtn && (
