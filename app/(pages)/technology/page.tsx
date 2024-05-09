@@ -3,17 +3,22 @@ import { FirstSection } from './_ui/first-section'
 import { SecondSection } from './_ui/second-section'
 import { ThirdSection } from './_ui/third-section'
 import { FourthSection } from './_ui/fourth-section'
-
 import styles from './_styles/Technology.module.scss'
+
+const components = {
+    FirstSection,
+    SecondSection,
+    ThirdSection,
+    FourthSection
+}
 
 export default function TechnologyPage() {
     return (
         <section className={styles.wrapper}>
             <Container className={styles.wrapper_container}>
-                <FirstSection />
-                <SecondSection />
-                <ThirdSection />
-                <FourthSection />
+                {Object.values(components).map((Component) => (
+                    <Component key={Component.name} />
+                ))}
             </Container>
         </section>
     )

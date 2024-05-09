@@ -2,10 +2,9 @@ import { Preview } from './_ui/preview'
 import { FirstSection } from './_ui/first-section'
 import { SecondSection } from './_ui/second-section'
 import { ThirdSection } from './_ui/third-section'
-import { FourthSection } from './_ui/fourth-section'
+import { FourthSection } from './_ui/fourht-section'
 import { FifthSection } from './_ui/fifth-section'
 import { SixthSection } from './_ui/sixth-section'
-import { SeventhSection } from './_ui/seventh-section'
 
 import styles from './_styles/Home.module.scss'
 
@@ -16,8 +15,7 @@ const components = {
     ThirdSection,
     FourthSection,
     FifthSection,
-    SixthSection,
-    SeventhSection
+    SixthSection
 }
 
 export default function HomePage() {

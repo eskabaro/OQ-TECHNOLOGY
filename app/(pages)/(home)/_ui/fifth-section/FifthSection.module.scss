@@ -1,31 +1,30 @@
 @import '../../../../(app)/_styles/mixins.scss';
 
 .wrapper {
-    @include flexVerticalGap(12);
-    align-items: center;
-    padding-block: toRem(120);
-    background-color: blueviolet;
+    @include flexVerticalGap(12.5);
 
     &_heading {
-        > div:first-child > h1 {
-            color: $autumnBlaze;
-        }
-    }
+        @include flexVerticalGap(1);
 
-    &_form {
-        @include flexVerticalGap(6);
+        > div {
+            > p {
+                @include fontSize(toRem(20), 4vw, toRem(20), 600);
 
-        align-items: center;
-        max-width: em(480);
-        width: 100%;
+                color: $mistySlate;
+            }
 
-        > label {
-            max-width: none !important;
-            width: 100%;
-
-            > input {
-                border-color: $autumnBlaze;
+            > h1 {
+                @include fontSize(toRem(64), 4vw, toRem(64), 800);
             }
         }
     }
+
+    &_accordions-box {
+        display: flex;
+    }
+}
+
+.border {
+    width: toRem(1);
+    background-color: $shadowCharcoal;
 }

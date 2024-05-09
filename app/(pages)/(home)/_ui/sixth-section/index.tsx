@@ -3,29 +3,17 @@
 import { FC } from 'react'
 
 import { Container } from '@/app/(app)/_components/container'
-import { Accordion } from '@/app/_shared/ui/accordion'
-import { SubTitle } from '@/app/_shared/ui/sub-title'
+import { Text } from '@/app/_shared/ui/typography/text'
+import { Form } from '@/app/_shared/ui/form'
 
 import styles from './SixthSection.module.scss'
 
 export const SixthSection: FC = () => {
     return (
-        <Container className={styles.wrapper} as='section'>
-            <SubTitle upTitle='FAQ’S' title='FREQUENTLY ASKED QUESTIONS' isUnderline />
-            <div className={styles['wrapper_accordions-box']}>
-                <div className={styles['left-side']}>
-                    <Accordion title='Lorem ipsum dolor sit amet consectetur.'>Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.</Accordion>
-                    <Accordion title='Lorem ipsum dolor sit amet consectetur.'>Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.</Accordion>
-                    <Accordion title='Lorem ipsum dolor sit amet consectetur.'>Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.</Accordion>
-                    <Accordion title='Lorem ipsum dolor sit amet consectetur.'>Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.</Accordion>
-                </div>
-                <hr className={styles.border} />
-                <div className={styles['right-side']}>
-                    <Accordion title='Lorem ipsum dolor sit amet consectetur.'>Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.</Accordion>
-                    <Accordion title='Lorem ipsum dolor sit amet consectetur.'>Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.</Accordion>
-                    <Accordion title='Lorem ipsum dolor sit amet consectetur.'>Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.</Accordion>
-                    <Accordion title='Lorem ipsum dolor sit amet consectetur.'>Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.</Accordion>
-                </div>
+        <Container as='section'>
+            <div className={styles['form-box']}>
+                <Text as='h1'>Do You Have Any Idea Or Remaining Question ?</Text>
+                <Form />
             </div>
         </Container>
     )

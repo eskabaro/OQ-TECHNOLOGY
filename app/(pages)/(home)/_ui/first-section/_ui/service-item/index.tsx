@@ -6,11 +6,11 @@ import Image from 'next/image'
 import { IListItem } from '@/app/(pages)/(home)/const/lists'
 import { Text } from '@/app/_shared/ui/typography/text'
 
-import styles from './ListItem.module.scss'
+import styles from './ServiceItem.module.scss'
 
-interface IListItemProps extends IListItem {}
+interface IServiceItemProps extends IListItem {}
 
-export const ListItem: FC<IListItemProps> = ({ imgSrc, title, subTitile }) => {
+export const ServiceItem: FC<IServiceItemProps> = ({ imgSrc, title, subTitile }) => {
     return (
         <li className={styles.wrapper}>
             <Image src={imgSrc} width={144} height={144} alt={title} />

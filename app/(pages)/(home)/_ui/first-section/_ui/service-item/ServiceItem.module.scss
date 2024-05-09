@@ -1,0 +1,22 @@
+@import '../../../../../../(app)/_styles/mixins.scss';
+
+.wrapper {
+    @include flexVerticalGap(8);
+
+    align-items: center;
+    max-width: em(470);
+
+    &_heading {
+        @include flexVerticalGap(4);
+
+        text-align: center;
+
+        > h1 {
+            @include fontSize(toRem(32), 4vw, toRem(32), 600);
+        }
+
+        > p {
+            @include fontSize(toRem(24), 4vw, toRem(24), 400, 150%);
+        }
+    }
+}

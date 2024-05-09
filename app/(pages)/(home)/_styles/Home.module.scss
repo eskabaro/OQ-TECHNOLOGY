@@ -2,6 +2,10 @@
 
 .wrapper {
     @include flexVerticalGap(37.5);
+    @include adaptiveValue('background-size', 1100, 900, 1920, 1000);
 
     padding-bottom: toRem(150);
+    background-image: url('/images/earth-11.svg');
+    background-repeat: no-repeat;
+    background-position-y: 13.5%;
 }

@@ -1,19 +1,23 @@
 @import '../../../../(app)/_styles/mixins.scss';
+@import '../../../../(app)/_styles/vaiables.scss';
 
 .wrapper {
     @include flexVerticalGap(20);
 
-    &_heading {
-        > div > h1 {
-            text-align: center;
-            max-width: em(288);
+    &_slider {
+        @include flexHorizontalGap(12.5);
+
+        > img {
+            max-width: 100%;
+            height: auto;
         }
     }
+}
 
-    &_list {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        row-gap: toRem(48);
-        column-gap: toRem(20);
+.article {
+    @include flexVerticalGap(12);
+
+    &_btn-box {
+        @include flexHorizontalGap(6);
     }
 }

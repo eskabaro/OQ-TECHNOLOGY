@@ -1,13 +1,26 @@
 @import '../../../../(app)/_styles/mixins.scss';
 
 .wrapper {
-    background-image: url('/images/earth-6.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-}
+    @include flexVerticalGap(20);
 
-.list {
-    display: flex;
-    justify-content: space-between;
-    gap: toRem(20);
+    &_services {
+        @include flexHorizontalGap(5);
+
+        justify-content: space-between;
+        margin-bottom: toRem(70);
+    }
+
+    &_heading {
+        > div > h1 {
+            text-align: center;
+            max-width: em(288);
+        }
+    }
+
+    &_list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: toRem(48);
+        column-gap: toRem(20);
+    }
 }
