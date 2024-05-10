@@ -6,6 +6,7 @@
     background-image: url('/images/earth-5.svg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position-x: center;
 
     &_container {
         @include flexVerticalGap(8);

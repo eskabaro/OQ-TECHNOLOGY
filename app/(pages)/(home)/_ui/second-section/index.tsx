@@ -38,7 +38,9 @@ export const SecondSection: FC = () => {
                             </div>
                         </div>
 
-                        <Image src={item.imgSrc} height={666} width={773} priority alt='' />
+                        <div className={styles['image-box']}>
+                            <Image src={item.imgSrc} height={666} width={773} priority alt='' />
+                        </div>
                     </div>
                 ))}
             </div>
