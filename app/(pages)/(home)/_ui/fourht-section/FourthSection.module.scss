@@ -4,6 +4,7 @@
     @include flexVerticalGap(12);
     align-items: center;
     padding-block: toRem(120);
+    border-radius: toRem(16);
     background-image: url('/home/starry-sky.png');
     background-size: cover;
 
