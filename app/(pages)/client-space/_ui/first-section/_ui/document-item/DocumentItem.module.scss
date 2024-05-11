@@ -9,9 +9,11 @@
     padding: toRem(32) toRem(24) toRem(48) toRem(24);
     border-radius: toRem(16);
     border: toRem(1) solid $shadowCharcoal;
+    background-color: $midnightSlate;
 
     &.active {
         border-color: $autumnBlaze;
         box-shadow: 0 0 toRem(35) 0 rgba(250, 160, 85, 0.5);
+        background-color: black;
     }
 }
