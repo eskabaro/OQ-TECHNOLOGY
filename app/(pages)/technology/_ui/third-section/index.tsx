@@ -25,8 +25,8 @@ export const ThirdSection: FC = () => {
                 />
 
                 <div className={styles['images-box']}>
-                    <Image src={'/technology/ballon-1.webp'} width={630} height={280} alt='' />
-                    <Image src={'/technology/ballon-2.webp'} width={630} height={280} alt='' />
+                    <Image src={require('../../_assets/ballon-1.webp')} width={630} height={280} alt='' />
+                    <Image src={require('../../_assets/ballon-2.webp')} width={630} height={280} alt='' />
                 </div>
             </div>
         </div>

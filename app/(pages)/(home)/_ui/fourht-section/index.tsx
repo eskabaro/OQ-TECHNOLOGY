@@ -29,7 +29,13 @@ export const FourthSection: FC = () => {
 
     return (
         <Container as='section' className={styles.wrapper}>
-            <Title isObserver size='XXL' className={styles.wrapper_heading} title='30 DAY TRIAL' text='TRY OQ SERVICE FOR 30 DAYS AND IF NOT SATISFIED, GET A FULL REFUND.' />
+            <Title
+                isObserver
+                size='XXL'
+                className={styles.wrapper_heading}
+                title='30 DAY TRIAL'
+                text='TRY OQ SERVICE FOR 30 DAYS AND IF NOT SATISFIED, GET A FULL REFUND.'
+            />
 
             <form onSubmit={handleSubmit(onSubmit)} className={styles.wrapper_form}>
                 <Input {...register('email', { required: true })} error={!!errors.email} variant='first' placeholder='Email' type='email' />

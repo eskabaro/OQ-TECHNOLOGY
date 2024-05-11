@@ -1,2 +1,1 @@
-=== replace image folders
 === fixed auto-slider-banner 

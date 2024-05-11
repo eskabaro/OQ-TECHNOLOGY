@@ -15,7 +15,7 @@ export const ThirdSection: FC = () => {
         <Container as='section' className={styles.wrapper}>
             <SubTitle upTitle='PRODUCTS' title='SERVICES THAT WE PROVIDE' isButtonGroup />
             <div className={styles.wrapper_slider}>
-                <PlanBoard title='DATA PLANS' imgSrc='/service-plans/rectangle.webp' />
+                <PlanBoard title='DATA PLANS' imgSrc={require('../../_assets/banner-1.webp')} />
                 <Plans />
                 <Button withoutBg variant='short' className={styles.btn}>
                     SET UP A CONSULTATION

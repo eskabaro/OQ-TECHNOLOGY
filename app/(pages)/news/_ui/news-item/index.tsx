@@ -4,9 +4,9 @@ import { FC } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
-import { INews } from '@/app/_shared/const/news'
 import { Text } from '@/app/_shared/ui/typography/text'
 import { Icon } from '@/app/_shared/ui/icon'
+import { INews } from '../../_const/news'
 
 import styles from './NewsItem.module.scss'
 

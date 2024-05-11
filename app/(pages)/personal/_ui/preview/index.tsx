@@ -14,7 +14,13 @@ export const Preview: FC = () => {
         <section className={styles.wrapper}>
             <Container className={styles.wrapper_container}>
                 <div className={styles['left-side']}>
-                    <Title isObserver size='XXL' className={styles['left-side_title']} title='OQ FOR INDIVIDUALS​' text='Track Your Assets Globally Using Our Non-Terrestrial Network (NTN) narrowband connectivity for Internet-of-Things (IoT)​' />
+                    <Title
+                        isObserver
+                        size='XXL'
+                        className={styles['left-side_title']}
+                        title='OQ FOR INDIVIDUALS​'
+                        text='Track Your Assets Globally Using Our Non-Terrestrial Network (NTN) narrowband connectivity for Internet-of-Things (IoT)​'
+                    />
                     <div className={styles['left-side_btn-box']}>
                         <Button variant='short'>ORDER NOW</Button>
                         <Button withoutBg variant='short'>
@@ -23,7 +29,7 @@ export const Preview: FC = () => {
                     </div>
                 </div>
                 <div className={styles['right-side']}>
-                    <Image src='/personal/img.webp' width={655} height={560} priority alt='' />
+                    <Image src={require('../../_assets/product.webp')} width={655} height={560} priority alt='' />
                 </div>
             </Container>
         </section>

@@ -3,7 +3,7 @@
 import { FC } from 'react'
 import Image from 'next/image'
 
-import { IListItem } from '@/app/(pages)/(home)/const/lists'
+import { IListItem } from '@/app/(pages)/(home)/_const/lists'
 import { Title } from '@/app/_shared/ui/typography/title'
 
 import styles from './ListItem.module.scss'

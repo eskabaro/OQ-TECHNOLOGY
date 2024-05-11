@@ -3,7 +3,7 @@
 import { FC, useMemo, useState } from 'react'
 
 import { Container } from '@/app/(app)/_components/container'
-import { data } from '@/app/_shared/const/news'
+import { data } from '../../_const/news'
 import { NewsItem } from '../news-item'
 import { Title } from '@/app/_shared/ui/typography/title'
 import { Pagination } from '../pagination'

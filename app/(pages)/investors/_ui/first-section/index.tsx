@@ -12,7 +12,12 @@ import styles from './FirstSection.module.scss'
 export const FirstSection: FC = () => {
     return (
         <Container as='section' className={styles.wrapper}>
-            <Title isObserver size='XXL' title='INVESTORS' text='Sit sit non ut adipiscing aliquet est consectetur risus. Velit integer urna ut mattis mauris augue. Nunc amet aliquam blandit risus massa. Scelerisque est sed eu.' />
+            <Title
+                isObserver
+                size='XXL'
+                title='INVESTORS'
+                text='Sit sit non ut adipiscing aliquet est consectetur risus. Velit integer urna ut mattis mauris augue. Nunc amet aliquam blandit risus massa. Scelerisque est sed eu.'
+            />
             <div className={styles.wrapper_content}>
                 <Article
                     size='XL'
@@ -24,10 +29,10 @@ export const FirstSection: FC = () => {
                     ]}
                 />
                 <div className={styles['images-net']}>
-                    <Image src={'/investors/1.webp'} width={725} height={250} alt='' priority />
-                    <Image src={'/investors/2.webp'} width={228} height={250} alt='' priority />
-                    <Image src={'/investors/3.webp'} width={228} height={250} alt='' priority />
-                    <Image src={'/investors/4.webp'} width={228} height={250} alt='' priority />
+                    <Image src={require('../../_assets/1.webp')} width={725} height={250} alt='' priority />
+                    <Image src={require('../../_assets/2.webp')} width={228} height={250} alt='' priority />
+                    <Image src={require('../../_assets/3.webp')} width={228} height={250} alt='' priority />
+                    <Image src={require('../../_assets/4.webp')} width={228} height={250} alt='' priority />
                 </div>
             </div>
         </Container>

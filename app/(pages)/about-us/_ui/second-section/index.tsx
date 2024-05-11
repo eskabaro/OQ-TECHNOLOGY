@@ -15,7 +15,7 @@ export const SecondSection: FC = () => {
         <Container className={styles.wrapper} as='section'>
             <SubTitle upTitle='ABOUT US' title='SPACE LEVEL' />
             <div className={styles.wrapper_content}>
-                <Image src={'/about-us/image-1.webp'} width={783} height={710} alt='' />
+                <Image src={require('../../_assets/space-level-img.webp')} width={783} height={710} alt='' />
                 <div className={styles.article}>
                     <Article
                         titleIcon='star'

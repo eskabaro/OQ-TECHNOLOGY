@@ -10,7 +10,7 @@ import styles from './ThirdSection.module.scss'
 export const ThirdSection: FC = () => {
     return (
         <section className={styles.wrapper}>
-            <PlanBoard title='OQ Network Management System​' imgSrc='/service-plans/rectangle-2.webp' />
+            <PlanBoard title='OQ Network Management System​' imgSrc={require('../../_assets/banner-2.webp')} />
 
             <Plans />
         </section>

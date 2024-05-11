@@ -4,7 +4,7 @@ import { FC } from 'react'
 
 import { Container } from '@/app/(app)/_components/container'
 import { Title } from '@/app/_shared/ui/typography/title'
-import { businessList, servicesList } from '../../const/lists'
+import { businessList, servicesList } from '../../_const/lists'
 import { ListItem } from './_ui/list-item'
 import { ServiceItem } from './_ui/service-item'
 

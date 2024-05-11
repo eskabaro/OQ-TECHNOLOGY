@@ -22,10 +22,10 @@ export const SecondSection: FC = () => {
                         'We take care of the handover. Unlike Elon Musk’s Starlink which is used for broadband video and internet, our radio air-link is compatible with Narrowband IoT (NB-IoT) which was standardized in 3GPP Release 13 and is considered for 5G massive machine communication. We have published patents on how to make NB-IoT works over satellites.'
                     ]}
                 />
-                <Image src={'/technology/sat.webp'} width={773} height={500} alt='' />
+                <Image src={require('../../_assets/sat-1.webp')} width={773} height={500} alt='' />
             </div>
             <div className={styles['wrapper_box']}>
-                <Image src={'/technology/sat-2.webp'} width={773} height={500} alt='' />
+                <Image src={require('../../_assets/sat-2.webp')} width={773} height={500} alt='' />
                 <Article
                     titleTag='h2'
                     title='Licensed Frequency Access'

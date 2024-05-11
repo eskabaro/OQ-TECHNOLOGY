@@ -8,7 +8,7 @@ import { Container } from '@/app/(app)/_components/container'
 import { Button } from '@/app/_shared/ui/button'
 import { Article } from '@/app/_shared/ui/typography/article'
 import { SubTitle } from '@/app/_shared/ui/sub-title'
-import { slides } from './const/slides'
+import { slides } from '../../_const/lists'
 
 import styles from './SecondSection.module.scss'
 

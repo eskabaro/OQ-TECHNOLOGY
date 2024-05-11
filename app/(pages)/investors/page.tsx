@@ -1,6 +1,6 @@
 import { FirstSection } from './_ui/first-section'
 import { Carousel } from '@/app/(app)/_components/carousel'
-import { images } from '../in-the-media/const/carousel-images'
+import { images } from '../in-the-media/_const/carousel-images'
 
 import styles from './_styles/Investors.module.scss'
 
