@@ -1,9 +1,9 @@
 'use client'
 
-import { FC, useMemo, useState } from 'react'
+import { FC, Fragment, useMemo, useState } from 'react'
 
+import { INews } from '@/app/api/contentful/newsApi'
 import { Container } from '@/app/(app)/_components/container'
-import { data } from '../../_const/news'
 import { NewsItem } from '../news-item'
 import { Title } from '@/app/_shared/ui/typography/title'
 import { Pagination } from '../pagination'
@@ -12,14 +12,18 @@ import styles from './NewsList.module.scss'
 
 let PageSize = 9
 
-export const NewsList: FC = () => {
+type INewsListProps = {
+    news: INews[]
+}
+
+export const NewsList: FC<INewsListProps> = ({ news }) => {
     const [currentPage, setCurrentPage] = useState(1)
 
     const currentTableData = useMemo(() => {
         const firstPageIndex = (currentPage - 1) * PageSize
         const lastPageIndex = firstPageIndex + PageSize
 
-        return data.slice(firstPageIndex, lastPageIndex)
+        return news.slice(firstPageIndex, lastPageIndex)
     }, [currentPage])
 
     return (
@@ -28,12 +32,16 @@ export const NewsList: FC = () => {
                 <Title isObserver size='XXL' title='OQ NEWS' />
 
                 <ul className={styles.list}>
-                    {currentTableData.map((item) => {
-                        return <NewsItem key={item.id} {...item} />
+                    {currentTableData.map(({ fields }) => {
+                        return (
+                            <Fragment key={fields.slug}>
+                                <NewsItem {...fields} />
+                            </Fragment>
+                        )
                     })}
                 </ul>
 
-                <Pagination currentPage={currentPage} totalCount={20} pageSize={data.length} onPageChange={(page: number) => setCurrentPage(page)} />
+                <Pagination currentPage={currentPage} totalCount={news.length} pageSize={9} onPageChange={(page: number) => setCurrentPage(page)} />
             </Container>
         </section>
     )

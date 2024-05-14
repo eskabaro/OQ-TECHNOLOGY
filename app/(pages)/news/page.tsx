@@ -1,5 +1,8 @@
+import newsApi from '@/app/api/contentful/newsApi'
 import { NewsList } from './_ui/news-list'
 
-export default function NewsPage() {
-    return <NewsList />
+export default async function NewsPage() {
+    const news = await newsApi.getAll()
+
+    return <NewsList news={news.items} />
 }
