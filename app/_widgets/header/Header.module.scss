@@ -8,12 +8,14 @@
     }
 
     > li > a {
-        @include opacityAnimation;
+        @include allAnimation(all, 0.1s);
         @include fontSize(toRem(18), 4vw, toRem(18), 600);
     }
 }
 
 @mixin link-active($colorLink, $opacity: 1, $activeOpacity: 1) {
+    @include allAnimation(all, 0.1s);
+
     color: rgba(#fff, $opacity);
 
     &:hover,
