@@ -6,8 +6,9 @@
 
     > img {
         max-width: 100%;
-        object-fit: contain;
-        height: auto;
+        width: auto;
+        height: 100%;
+        object-fit: cover;
     }
 
     &_heading {

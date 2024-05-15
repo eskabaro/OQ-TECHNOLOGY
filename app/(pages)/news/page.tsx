@@ -1,5 +1,5 @@
 import { NewsList } from './_ui/news-list'
 
-export default function NewsPage() {
+export default async function NewsPage() {
     return <NewsList />
 }

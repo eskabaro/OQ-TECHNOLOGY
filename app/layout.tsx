@@ -1,6 +1,8 @@
 import { Pragati_Narrow } from 'next/font/google'
 import { Metadata } from 'next'
 
+import { EntriesProvider } from './(app)/_components/entries-provider'
+
 import { Header } from './_widgets/header'
 import { Footer } from './_widgets/footer'
 
@@ -21,11 +23,13 @@ export default function RootLayout({
     return (
         <html lang='en'>
             <body className={pragati.className}>
-                <div className='wrapper'>
-                    <Header />
-                    <main className='main'>{children}</main>
-                    <Footer />
-                </div>
+                <EntriesProvider>
+                    <div className='wrapper'>
+                        <Header />
+                        <main className='main'>{children}</main>
+                        <Footer />
+                    </div>
+                </EntriesProvider>
             </body>
         </html>
     )
