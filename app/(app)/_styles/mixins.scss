@@ -59,7 +59,7 @@
 }
 
 // adaptive value
-@mixin fontSize($min, $vw, $max, $weight, $lh: normal) {
+@mixin fontSize($min, $vw, $max, $weight, $lh: 100%) {
     font-size: clamp($min, $vw, $max);
     font-weight: $weight;
     line-height: $lh;

@@ -11,7 +11,7 @@
         }
 
         &.XL {
-            @include fontSize(toRem(64), 4vw, toRem(64), 600);
+            @include fontSize(toRem(54), 4vw, toRem(54), 600);
         }
 
         &.L {
@@ -24,15 +24,15 @@
         text-align: center;
 
         &.XXL {
-            @include fontSize(toRem(24), 4vw, toRem(24), 600, 150%);
+            @include fontSize(toRem(24), 4vw, toRem(24), 600, 130%);
         }
 
         &.XL {
-            @include fontSize(toRem(24), 4vw, toRem(24), 150%);
+            @include fontSize(toRem(24), 4vw, toRem(24), 600, 130%);
         }
 
         &.L {
-            @include fontSize(toRem(20), 4vw, toRem(20), 400, 150%);
+            @include fontSize(toRem(20), 4vw, toRem(20), 400, 130%);
         }
     }
 }

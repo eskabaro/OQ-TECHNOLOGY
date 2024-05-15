@@ -1,33 +1,36 @@
 @import '../../../../(app)/_styles/mixins.scss';
 
 .wrapper {
-    @include flexVerticalGap(12);
-    align-items: center;
-    padding-block: toRem(120);
-    border-radius: toRem(16);
-    background-image: url('/backgrounds/starry-sky.png');
-    background-size: cover;
-
-    &_heading {
-        > div:first-child > h1 {
-            color: $autumnBlaze;
-        }
-    }
-
-    &_form {
-        @include flexVerticalGap(6);
+    &_bg {
+        @include flexVerticalGap(12);
 
         align-items: center;
-        max-width: em(480);
+        padding-block: toRem(120);
+        border-radius: toRem(16);
+        background-image: url('/backgrounds/starry-sky.png');
+        background-size: cover;
+    }
+}
+
+.heading {
+    > div:first-child > h1 {
+        color: $autumnBlaze;
+    }
+}
+
+.form {
+    @include flexVerticalGap(6);
+
+    align-items: center;
+    max-width: em(480);
+    width: 100%;
+
+    > label {
+        max-width: none !important;
         width: 100%;
 
-        > label {
-            max-width: none !important;
-            width: 100%;
-
-            > input {
-                border-color: $autumnBlaze;
-            }
+        > input {
+            border-color: $autumnBlaze;
         }
     }
 }

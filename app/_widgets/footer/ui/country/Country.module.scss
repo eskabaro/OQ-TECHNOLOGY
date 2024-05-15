@@ -24,7 +24,7 @@
         align-items: center;
 
         > span {
-            @include fontSize(toRem(16), 4vw, toRem(16), 600);
+            @include fontSize(toRem(16), 4vw, toRem(16), 600, 150%);
 
             color: white;
         }

@@ -10,7 +10,7 @@ import styles from './Logo.module.scss'
 export const Logo: FC = () => {
     return (
         <Link href='/' className={styles.logo}>
-            <Image src='/images/logo.svg' width={134} height={87} alt='Logo' priority />
+            <Image src='/images/logo.svg' width={124} height={77} alt='Logo' priority />
         </Link>
     )
 }
