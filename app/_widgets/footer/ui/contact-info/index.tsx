@@ -1,7 +1,6 @@
 import { FC } from 'react'
 import Link from 'next/link'
 
-import { Text } from '@/app/_shared/ui/typography/text'
 import { Logo } from '@/app/_shared/ui/logo'
 import { Icon } from '@/app/_shared/ui/icon'
 import { Country } from '../country'
@@ -13,7 +12,6 @@ export const ContactInfo: FC = () => {
         <div className={styles.wrapper}>
             <div className={styles['wrapper_left-side']}>
                 <Logo />
-                <Text as='p'>Is the world’s first global satellite 5G IoT operator providing uninterrupted cellular coverage for your assets and machines anywhere on the planet.</Text>
                 <ul className={styles.list}>
                     <li className={styles.list_item}>
                         <Link href={''}>

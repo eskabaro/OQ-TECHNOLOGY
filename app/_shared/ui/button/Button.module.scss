@@ -5,8 +5,10 @@
     @include allAnimation(all, 0.1s);
 
     border-radius: toRem(38);
-    max-height: toRem(62);
+    max-height: toRem(64);
+    height: toRem(64);
     background-color: $autumnBlaze;
+    color: white;
 
     &:hover {
         background-color: rgba($color: $autumnBlaze, $alpha: 0.75);
@@ -26,6 +28,7 @@
         @include fontSize(toRem(16), 4vw, toRem(16), 600);
         @include flexHorizontalGap(5);
 
+        color: white;
         align-items: center;
         justify-content: center;
         min-width: toRem(280);
@@ -35,8 +38,8 @@
     &.short {
         @include fontSize(toRem(16), 4vw, toRem(16), 600);
 
+        color: white;
         padding: toRem(16) toRem(32);
-        color: black;
         border-radius: toRem(100);
         width: fit-content;
     }

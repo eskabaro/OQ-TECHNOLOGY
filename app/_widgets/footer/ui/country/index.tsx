@@ -34,7 +34,7 @@ export const Country: FC<ICountryProps> = ({ countryFlagSrc, countryName, phone,
             </li>
             {locations.map((e) => (
                 <li className={styles.wrapper_item} key={e}>
-                    <Link href={`tel:${phone}`}>
+                    <Link href={'/'}>
                         <Icon name='location' style={{ minWidth: 32 }} />
                         <Text isUnderline as='span'>
                             {e}

@@ -1,13 +1,13 @@
 import { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react'
 import { usePathname } from 'next/navigation'
 
-interface IOut {
+type ReturnType = {
     ref: any
     isShow: boolean
     setIsShow: Dispatch<SetStateAction<boolean>>
 }
 
-export const useClickOutside = (initialvaule: boolean): IOut => {
+export const useClickOutside = (initialvaule: boolean): ReturnType => {
     const [isShow, setIsShow] = useState(initialvaule)
     const ref = useRef<HTMLElement>(null)
     const pathname = usePathname()
@@ -29,18 +29,19 @@ export const useClickOutside = (initialvaule: boolean): IOut => {
         }
 
         handleBodyStyle()
-
-        return () => {
-            document.body.style.overflow = 'auto'
-            document.body.style.paddingRight = '0rem'
-        }
     }, [isShow])
 
     useEffect(() => {
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.key === 'Escape') setIsShow(false)
+        }
+
         document.addEventListener('click', handleClickOytside, true)
+        document.addEventListener('keydown', handleKeyDown)
 
         return () => {
             document.removeEventListener('click', handleClickOytside, true)
+            document.removeEventListener('keydown', handleKeyDown)
         }
     }, [])
 

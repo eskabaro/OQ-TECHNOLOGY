@@ -1,6 +1,6 @@
 'use client'
 
-import { FC, useState } from 'react'
+import { FC, useEffect, useState } from 'react'
 import Image from 'next/image'
 
 import { cn } from '@/app/_shared/lib/classnames'
@@ -15,16 +15,20 @@ import styles from './SecondSection.module.scss'
 export const SecondSection: FC = () => {
     const [currentIdx, setCurrentIdx] = useState<number>(0)
 
+    const nextSlide = () => setCurrentIdx((e) => (e <= 0 ? slides.length - 1 : e - 1))
+    const prevSlide = () => setCurrentIdx((e) => (e + 1 >= slides.length ? 0 : e + 1))
+
+    useEffect(() => {
+        const sliderInterval = setInterval(() => {
+            nextSlide()
+        }, 5000)
+
+        return () => clearInterval(sliderInterval)
+    }, [])
+
     return (
         <Container as='section' className={styles.wrapper}>
-            <SubTitle
-                auxiliaryBtn
-                isButtonGroup
-                upTitle='PRODUCTS'
-                title='OUR INNOVATION PRODUCTS'
-                nextSlideFn={() => setCurrentIdx((e) => (e + 1 >= slides.length ? 0 : e + 1))}
-                prevSlideFn={() => setCurrentIdx((e) => (e <= 0 ? slides.length - 1 : e - 1))}
-            />
+            <SubTitle auxiliaryBtn isButtonGroup upTitle='PRODUCTS' title='OUR INNOVATION PRODUCTS' nextSlideFn={prevSlide} prevSlideFn={nextSlide} />
             <div className={styles.wrapper_slider}>
                 {slides.map((item, idx) => (
                     <div key={item.id} className={cn(styles.slide, currentIdx === idx && styles.active)}>

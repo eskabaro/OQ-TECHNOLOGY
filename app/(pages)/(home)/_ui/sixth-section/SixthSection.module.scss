@@ -5,7 +5,8 @@
 
     border-right: 1px solid #faa055;
     border-radius: 32px;
-    width: fit-content;
+    max-width: em(1080);
+    width: 100%;
     margin: auto;
     padding: toRem(48) toRem(84);
     align-items: center;

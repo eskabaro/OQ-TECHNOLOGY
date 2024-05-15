@@ -1,13 +1,14 @@
-import type { Metadata } from 'next'
+import { Pragati_Narrow } from 'next/font/google'
+import { Metadata } from 'next'
 
 import { EntriesProvider } from './(app)/_components/entries-provider'
 
 import { Header } from './_widgets/header'
 import { Footer } from './_widgets/footer'
 
-import { proxima_nova } from './_shared/fonts'
-
 import './(app)/_styles/global.scss'
+
+const pragati = Pragati_Narrow({ subsets: ['latin'], weight: ['400', '700'] })
 
 export const metadata: Metadata = {
     title: 'OQ TECHNOLOGY',
@@ -21,7 +22,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang='en'>
-            <body className={proxima_nova.className}>
+            <body className={pragati.className}>
                 <EntriesProvider>
                     <div className='wrapper'>
                         <Header />
