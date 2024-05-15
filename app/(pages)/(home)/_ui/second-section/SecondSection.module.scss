@@ -44,17 +44,21 @@
 
     justify-content: center;
 
+    > div > h2 {
+        color: $autumnBlaze;
+    }
+
     &_btn-box {
         @include flexHorizontalGap(6);
     }
 }
 
 .image-box {
-    display: flex;
+    // display: flex;
 
     > img {
         // max-width: 100%;
         // width: 100%;
-        height: auto;
+        // height: auto;
     }
 }

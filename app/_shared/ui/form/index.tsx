@@ -33,12 +33,30 @@ export const Form: FC = () => {
     return (
         <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
             <div className={styles['form_inputs-box']}>
-                <Input {...register('firstName', { required: true })} type='text' error={!!errors.firstName} variant='first' placeholder='First name *' />
-                <Input {...register('lastName', { required: true })} type='text' error={!!errors.lastName} variant='first' placeholder='Last name *' />
+                <Input
+                    {...register('firstName', { required: true })}
+                    type='text'
+                    error={!!errors.firstName}
+                    variant='first'
+                    placeholder='First name *'
+                />
+                <Input
+                    {...register('lastName', { required: true })}
+                    type='text'
+                    error={!!errors.lastName}
+                    variant='first'
+                    placeholder='Last name *'
+                />
                 <Input {...register('company', { required: true })} type='text' error={!!errors.company} variant='first' placeholder='Company *' />
                 <Input {...register('country', {})} type='text' error={!!errors.country} variant='first' placeholder='Country' />
-                <Input {...register('email', { required: true })} type='email' error={!!errors.email} variant='first' placeholder='Email *' />
-                <Input {...register('message', { required: true })} type='text' error={!!errors.message} variant='first' placeholder='Message *' />
+                <Input {...register('email', { required: true })} type='email' error={!!errors.email} variant='first' placeholder='E-mail *' />
+                <Input
+                    {...register('message', { required: true })}
+                    type='text'
+                    error={!!errors.message}
+                    variant='first'
+                    placeholder='Your message *'
+                />
             </div>
             <div className={styles['form_btn-box']}>
                 <Button variant='long'>

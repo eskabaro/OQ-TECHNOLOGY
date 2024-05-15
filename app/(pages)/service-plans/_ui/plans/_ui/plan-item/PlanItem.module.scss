@@ -9,6 +9,7 @@
     border: toRem(1) solid $shadowCharcoal;
     padding: toRem(32) toRem(24) toRem(48) toRem(24);
     border-radius: toRem(16);
+    justify-content: space-between;
 
     &.active {
         border-color: $autumnBlaze;
@@ -25,8 +26,17 @@
             @include fontSize(toRem(32), 4vw, toRem(32), 600);
         }
 
+        > p {
+            @include fontSize(toRem(16), 4vw, toRem(16), 400, 150%);
+
+            max-width: toRem(250);
+            margin: auto;
+        }
+
         > span {
             @include fontSize(toRem(16), 4vw, toRem(16), 400, 150%);
+
+            padding-top: toRem(8);
         }
     }
 
@@ -47,7 +57,7 @@
     }
 
     &_list {
-        @include flexVerticalGap(4);
+        @include flexVerticalGap(2);
 
         padding-inline: toRem(32);
     }
@@ -55,10 +65,18 @@
 
 .list-item {
     @include flexHorizontalGap(4);
-    @include fontSize(toRem(18), 4vw, toRem(18), 400);
+    @include fontSize(toRem(18), 4vw, toRem(18), 400, 150%);
+
+    align-items: center;
+
+    > svg {
+        min-width: toRem(14);
+        min-height: toRem(14);
+    }
 }
 
 .order-btn {
     margin-top: toRem(24);
+    max-height: toRem(48);
     margin-inline: auto;
 }

@@ -31,43 +31,37 @@ export const businessList: IListItem[] = [
         id: 1,
         imgSrc: require('../_assets/business/1.webp'),
         title: 'ENERGY & UTILITIES',
-        subTitile:
-            'Ut ac nam potenti magna habitasse in vehicula. Ultricies imperdiet nisl morbi amet leo nisl netus sit. Scelerisque vitae id amet dignissim. Lectus amet.​'
+        subTitile: 'Connectivity for automation, predictive maintenance, and the digital oil field applications​'
     },
     {
         id: 2,
         imgSrc: require('../_assets/business/2.webp'),
         title: 'MARITIME​',
-        subTitile:
-            'Mauris ullamcorper in massa tortor id tincidunt. Aliquet lacus tincidunt leo faucibus tortor varius nunc. Lectus arcu donec massa lectus ipsum nulla.'
+        subTitile: 'Connectivity for ships, containers, and buoys'
     },
     {
         id: 3,
         imgSrc: require('../_assets/business/3.webp'),
-        title: 'MINING​',
-        subTitile:
-            'Tortor in cursus morbi luctus id ultrices. Urna vel eu varius habitant orci nisl enim vitae. Elit nulla maecenas magna sit vitae nec tincidunt ac.'
+        title: 'SUSTAINABILITY',
+        subTitile: 'Connectivity for the environment and monitoring of pollutants, mining equipment’s, wastewater and greenhouse emissions.'
     },
     {
         id: 4,
         imgSrc: require('../_assets/business/4.webp'),
         title: 'LOGISTICS',
-        subTitile:
-            'Tempus in adipiscing sem pharetra dictum sit posuere massa ut. Facilisi neque sed libero tristique cras condimentum. Aliquam a quis sed aliquam.'
+        subTitile: 'Connectivity for mobility and asset tracking'
     },
     {
         id: 5,
         imgSrc: require('../_assets/business/5.webp'),
         title: 'AGRICULTURE',
-        subTitile:
-            'Lorem pulvinar at purus donec aliquam eget fermentum dictumst. A in ultrices gravida donec donec aliquet. Ipsum eu elementum risus viverra.'
+        subTitile: 'Connectivity for the smart agritech and livestock monitoring'
     },
     {
         id: 6,
         imgSrc: require('../_assets/business/6.webp'),
         title: 'SECURITY',
-        subTitile:
-            'Ut et sed quam in sagittis neque enim a. Nibh morbi lectus ut diam urna aliquam tempus pellentesque molestie. Ac vel eget mattis cursus consequat.'
+        subTitile: 'Connectivity for safety, asset protection,  and law enforcement'
     }
 ]
 

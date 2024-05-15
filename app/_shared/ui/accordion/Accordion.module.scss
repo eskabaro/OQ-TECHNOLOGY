@@ -14,17 +14,24 @@
     align-items: center;
     display: flex;
     justify-content: space-between;
+    max-height: toRem(138);
 
     &.active {
         .accordion_btn {
             transform: rotate(180deg);
         }
+
+        .accordion_title {
+            color: white;
+        }
     }
 
     &_title {
         @include fontSize(toRem(20), 4vw, toRem(20), 600, 150%);
+        @include allAnimation(color, 0.2s);
 
         color: $mistyLavender;
+        max-width: toRem(550);
     }
 
     &_btn {
@@ -37,13 +44,12 @@
 
     &_content {
         @include allAnimation(max-height, 0.2s);
-        /* border-left: toRem(0.5) solid $shadowCharcoal; */
         overflow: hidden;
         transition: max-height 0.2s ease;
     }
 
     &_text {
         @include fontSize(toRem(18), 4vw, toRem(18), 400, 150%);
-        padding: 0 toRem(50) toRem(42) toRem(50);
+        padding: 0 toRem(150) toRem(42) toRem(50);
     }
 }

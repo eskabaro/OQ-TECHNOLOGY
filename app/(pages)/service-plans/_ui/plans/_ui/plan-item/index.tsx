@@ -16,12 +16,13 @@ interface IPlanItemProps extends IPlan {
     setSelectIdx: Dispatch<SetStateAction<number>>
 }
 
-export const PlanItem: FC<IPlanItemProps> = ({ title, price, services, index, selectIdx, setSelectIdx }) => {
+export const PlanItem: FC<IPlanItemProps> = ({ title, description, price, services, index, selectIdx, setSelectIdx }) => {
     return (
         <li onClick={() => setSelectIdx(index)} className={cn(styles.wrapper, index === selectIdx && styles.active)}>
             <div className={styles.wrapper_heading}>
                 <Text as='h2'>{title}</Text>
-                <Text as='span'>Description of a plan</Text>
+                <Text as='p'>{description}</Text>
+                <Text as='span'>As low as:</Text>
             </div>
             <div className={styles.wrapper_price}>
                 <Text as='span'>${price}</Text>

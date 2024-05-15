@@ -11,8 +11,8 @@ import styles from './_styles/Home.module.scss'
 const components = {
     Preview,
     FirstSection,
-    SecondSection,
     ThirdSection,
+    SecondSection,
     FourthSection,
     FifthSection,
     SixthSection

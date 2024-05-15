@@ -6,6 +6,7 @@
 
     justify-content: space-between;
     align-items: center;
+    padding-bottom: toRem(12);
 
     &.underline {
         border-bottom: toRem(1) solid $shadowCharcoal;
