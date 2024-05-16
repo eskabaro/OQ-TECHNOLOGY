@@ -25,6 +25,11 @@
         width: em(280);
         height: 100vh;
         padding: toRem(48) toRem(24);
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            width: toRem(2);
+        }
 
         &.active {
             right: 0;
