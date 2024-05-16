@@ -27,7 +27,7 @@ export const SecondSection: FC = () => {
     }, [])
 
     return (
-        <Container as='section' className={styles.wrapper}>
+        <Container as='section' className={styles.wrapper} id='products'>
             <SubTitle auxiliaryBtn isButtonGroup upTitle='PRODUCTS' title='OUR INNOVATION PRODUCTS' nextSlideFn={prevSlide} prevSlideFn={nextSlide} />
             <div className={styles.wrapper_slider}>
                 {slides.map((item, idx) => (

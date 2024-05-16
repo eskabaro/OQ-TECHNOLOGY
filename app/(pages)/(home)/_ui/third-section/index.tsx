@@ -12,7 +12,7 @@ import styles from './ThirdSection.module.scss'
 
 export const ThirdSection: FC = () => {
     return (
-        <Container as='section' className={styles.wrapper}>
+        <Container as='section' className={styles.wrapper} id='services'>
             <SubTitle upTitle='PRODUCTS' title='SERVICES THAT WE PROVIDE' isButtonGroup />
             <div className={styles.wrapper_slider}>
                 <PlanBoard title='DATA PLANS' imgSrc={require('../../_assets/banner-1.webp')} />

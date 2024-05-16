@@ -1,6 +1,6 @@
 'use client'
 
-import { FC } from 'react'
+import { BlockquoteHTMLAttributes, FC } from 'react'
 
 import { cn } from '@/app/_shared/lib/classnames'
 import { HeadingAnimate } from '../../heading-animate'
@@ -10,7 +10,7 @@ import styles from './Title.module.scss'
 
 export type SizesType = 'L' | 'XL' | 'XXL'
 
-interface ITitleProps {
+interface ITitleProps extends BlockquoteHTMLAttributes<HTMLDivElement> {
     size: SizesType
     title: string
     text?: string
@@ -18,9 +18,9 @@ interface ITitleProps {
     className?: string
 }
 
-export const Title: FC<ITitleProps> = ({ size, title, text, isObserver, className }) => {
+export const Title: FC<ITitleProps> = ({ size, title, text, isObserver, className, ...props }) => {
     return (
-        <div className={cn(styles.heading, className)}>
+        <div {...props} className={cn(styles.heading, className)}>
             {isObserver ? (
                 <HeadingAnimate>
                     <Text className={styles[size]} as='h1'>

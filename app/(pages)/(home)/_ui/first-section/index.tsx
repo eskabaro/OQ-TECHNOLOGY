@@ -20,6 +20,7 @@ export const FirstSection: FC = () => {
             </ul>
 
             <Title
+                id='solutions'
                 isObserver
                 size='XL'
                 className={styles.wrapper_heading}
