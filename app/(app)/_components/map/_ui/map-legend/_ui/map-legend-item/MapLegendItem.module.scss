@@ -1,0 +1,20 @@
+@import '../../../../../../_styles/mixins.scss';
+
+.map_legend_item {
+    @include flexHorizontalGap(2);
+
+    align-items: center;
+
+    &_color {
+        width: toRem(20);
+        height: toRem(20);
+
+        border-radius: toRem(4);
+    }
+
+    & > span {
+        @include fontSize(toRem(14), 4vw, toRem(14), 600);
+
+        text-transform: uppercase;
+    }
+}
