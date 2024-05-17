@@ -1,0 +1,28 @@
+@import '../../../../_styles/mixins.scss';
+
+.map_legend {
+    @include flexHorizontalGap(10);
+
+    padding: toRem(34) toRem(24);
+
+    position: absolute;
+    top: 8%;
+    left: 8%;
+
+    background-color: rgba(35, 35, 35, 0.9);
+
+    border-radius: toRem(16);
+    z-index: 1;
+    pointer-events: none;
+
+    & > h3 {
+        font-size: toRem(24);
+        font-weight: 600;
+    }
+
+    &_group {
+        @include flexHorizontalGap(8);
+
+        align-items: center;
+    }
+}
