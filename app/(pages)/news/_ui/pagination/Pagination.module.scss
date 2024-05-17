@@ -9,6 +9,11 @@
     background-color: $autumnBlaze;
     border-radius: 50%;
     cursor: pointer;
+
+    &.disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
 }
 
 .wrapper {
@@ -17,13 +22,18 @@
     align-items: center;
     justify-content: center;
 
-    &_prev {
-        @include opacityAnimation;
+    &_prev,
+    &_next {
         @include btnPrevNext;
+        @include opacityAnimation;
 
-        &:hover {
+        &:not(.disabled):hover {
             opacity: 0.75;
         }
+    }
+
+    &_next {
+        transform: rotate(-180deg);
     }
 
     &_count {
@@ -34,17 +44,6 @@
 
         &.selected {
             color: $autumnBlaze;
-        }
-    }
-
-    &_next {
-        @include btnPrevNext;
-        @include opacityAnimation;
-
-        transform: rotate(-180deg);
-
-        &:hover {
-            opacity: 0.75;
         }
     }
 }

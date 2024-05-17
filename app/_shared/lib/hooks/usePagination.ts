@@ -44,13 +44,17 @@ export const usePagination = ({ totalCount, pageSize, siblingCount = 1, currentP
         if (shouldShowLeftDots && !shouldShowRightDots) {
             let rightItemCount = 3 + 2 * siblingCount
             let rightRange = range(totalPageCount - rightItemCount + 1, totalPageCount)
+
             return [firstPageIndex, DOTS, ...rightRange]
         }
 
         if (shouldShowLeftDots && shouldShowRightDots) {
             let middleRange = range(leftSiblingIndex, rightSiblingIndex)
+
             return [firstPageIndex, DOTS, ...middleRange, DOTS, lastPageIndex]
         }
+
+        return []
     }, [totalCount, pageSize, siblingCount, currentPage])
 
     return paginationRange

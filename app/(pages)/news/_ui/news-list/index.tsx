@@ -10,7 +10,7 @@ import { Pagination } from '../pagination'
 
 import styles from './NewsList.module.scss'
 
-let PageSize = 9
+const PAGE_SIZE = 9
 
 export const NewsList: FC = () => {
     const [currentPage, setCurrentPage] = useState(1)
@@ -18,8 +18,8 @@ export const NewsList: FC = () => {
     const { news } = useEntries()
 
     const currentTableData = useMemo(() => {
-        const firstPageIndex = (currentPage - 1) * PageSize
-        const lastPageIndex = firstPageIndex + PageSize
+        const firstPageIndex = (currentPage - 1) * PAGE_SIZE
+        const lastPageIndex = firstPageIndex + PAGE_SIZE
 
         return news.slice(firstPageIndex, lastPageIndex)
     }, [currentPage, news])
@@ -39,7 +39,12 @@ export const NewsList: FC = () => {
                     })}
                 </ul>
 
-                <Pagination currentPage={currentPage} totalCount={news.length} pageSize={9} onPageChange={(page: number) => setCurrentPage(page)} />
+                <Pagination
+                    currentPage={currentPage}
+                    totalCount={news.length}
+                    pageSize={PAGE_SIZE}
+                    onPageChange={(page) => setCurrentPage(page)}
+                />
             </Container>
         </section>
     )
