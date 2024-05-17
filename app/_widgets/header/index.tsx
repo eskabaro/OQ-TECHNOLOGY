@@ -25,17 +25,17 @@ export const Header: FC = () => {
                     <nav className={styles['nav-left']}>
                         <ul className={styles['nav-left_list']}>
                             <li>
-                                <Link className={styles.link} href='#products'>
+                                <Link className={styles.link} href='/#products'>
                                     Products
                                 </Link>
                             </li>
                             <li>
-                                <Link className={styles.link} href='#services'>
+                                <Link className={styles.link} href='/#services'>
                                     Services
                                 </Link>
                             </li>
                             <li>
-                                <Link className={styles.link} href='#solutions'>
+                                <Link className={styles.link} href='/#solutions'>
                                     Solutions
                                 </Link>
                             </li>
