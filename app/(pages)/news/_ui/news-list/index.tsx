@@ -17,6 +17,11 @@ export const NewsList: FC = () => {
 
     const { news } = useEntries()
 
+    const handlePageChange = (page: number) => {
+        setCurrentPage(page)
+        window.scrollTo({ top: 0 })
+    }
+
     const currentTableData = useMemo(() => {
         const firstPageIndex = (currentPage - 1) * PAGE_SIZE
         const lastPageIndex = firstPageIndex + PAGE_SIZE
@@ -39,12 +44,7 @@ export const NewsList: FC = () => {
                     })}
                 </ul>
 
-                <Pagination
-                    currentPage={currentPage}
-                    totalCount={news.length}
-                    pageSize={PAGE_SIZE}
-                    onPageChange={(page) => setCurrentPage(page)}
-                />
+                <Pagination currentPage={currentPage} totalCount={news.length} pageSize={PAGE_SIZE} onPageChange={handlePageChange} />
             </Container>
         </section>
     )

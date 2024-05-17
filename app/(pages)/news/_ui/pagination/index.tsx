@@ -25,7 +25,7 @@ export const Pagination: FC<IPaginationProps> = ({ onPageChange, totalCount, sib
         pageSize
     })
 
-    const lastPage = paginationRange?.[paginationRange.length - 1]
+    const lastPage = paginationRange[paginationRange.length - 1]
 
     const onNext = () => onPageChange(Math.min(currentPage + 1, +lastPage))
     const onPrevious = () => onPageChange(Math.max(currentPage - 1, 1))
