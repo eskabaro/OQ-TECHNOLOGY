@@ -24,7 +24,7 @@
         text-align: center;
 
         &.XXL {
-            @include fontSize(toRem(24), 4vw, toRem(24), 400, 130%);
+            @include fontSize(toRem(25), 4vw, toRem(25), 400, 130%);
         }
 
         &.XL {
