@@ -8,6 +8,10 @@
 
     &_container {
         @include flexVerticalGap(8);
+
+        h1 {
+            text-align: center;
+        }
     }
 }
 

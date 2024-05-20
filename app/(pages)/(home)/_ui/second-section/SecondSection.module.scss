@@ -37,6 +37,7 @@
 .article {
     @include flexVerticalGap(12);
 
+    width: 100%;
     justify-content: center;
 
     > div > h2 {
@@ -45,5 +46,15 @@
 
     &_btn-box {
         @include flexHorizontalGap(6);
+    }
+}
+
+.image-box {
+    width: 100%;
+
+    img {
+        width: 100%;
+        object-fit: contain;
+        object-position: top;
     }
 }
