@@ -21,7 +21,7 @@ export const SecondSection: FC = () => {
     useEffect(() => {
         const sliderInterval = setInterval(() => {
             nextSlide()
-        }, 5000)
+        }, 12500)
 
         return () => clearInterval(sliderInterval)
     }, [])
