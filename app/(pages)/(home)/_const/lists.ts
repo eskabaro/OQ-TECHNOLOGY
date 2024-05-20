@@ -43,7 +43,7 @@ export const businessList: IListItem[] = [
         id: 3,
         imgSrc: require('../_assets/business/3.webp'),
         title: 'SUSTAINABILITY',
-        subTitile: 'Connectivity for the environment and monitoring of pollutants, mining equipment’s, wastewater and greenhouse emissions.'
+        subTitile: 'Connectivity for the environment and monitoring of pollutants, mining equipment, wastewater and greenhouse emissions.'
     },
     {
         id: 4,
