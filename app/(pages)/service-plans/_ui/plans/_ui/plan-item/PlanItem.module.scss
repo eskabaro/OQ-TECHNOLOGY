@@ -5,7 +5,8 @@
     @include flexVerticalGap(6);
     @include allAnimation(all, 0.15s);
 
-    width: 100%;
+    width: 375px;
+    height: 100%;
     border: toRem(1) solid $shadowCharcoal;
     padding: toRem(32) toRem(24) toRem(48) toRem(24);
     border-radius: toRem(16);

@@ -1,0 +1,80 @@
+@import '../../../../../../(app)/_styles/mixins.scss';
+@import '../../../../../../(app)/_styles/vaiables.scss';
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .list {
+        position: relative;
+
+        &_prev,
+        &_next {
+            @include opacityAnimation;
+
+            width: toRem(62);
+            height: toRem(62);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            position: absolute;
+            top: 50%;
+
+            background-color: $autumnBlaze;
+            border-radius: 50%;
+            z-index: 1;
+            cursor: pointer;
+
+            &.disabled {
+                cursor: not-allowed;
+                opacity: 0.5;
+            }
+        }
+
+        &_prev {
+            left: 0;
+            transform: translate(-50%, -50%);
+        }
+
+        &_next {
+            right: 0;
+            transform: rotate(180deg) translate(-50%, 50%);
+        }
+
+        &_inner {
+            min-height: 800px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        &_items {
+            @include flexHorizontalGap(8);
+            @include allAnimation(left, 0.1s);
+
+            position: absolute;
+        }
+    }
+
+    .pages {
+        @include flexHorizontalGap(2);
+        justify-content: center;
+        margin-top: toRem(16);
+
+        &_item {
+            width: toRem(8);
+            height: toRem(8);
+
+            background-color: #ffffff;
+            border-radius: 50%;
+            opacity: 0.2;
+            cursor: pointer;
+
+            &.active {
+                opacity: 1;
+                background-color: $autumnBlaze;
+            }
+        }
+    }
+}

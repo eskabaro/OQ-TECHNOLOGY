@@ -2,19 +2,21 @@
 
 import { FC, useState } from 'react'
 
-import { PlanItem } from './_ui/plan-item'
 import { plans } from '../second-section/const/plans'
 
-import styles from './Plans.module.scss'
+import { PlanItem } from './_ui/plan-item'
+import { Slider } from './_ui/slider'
 
 export const Plans: FC = () => {
-    const [selectIdx, setSelectIdx] = useState<number>(2)
+    const [selectedPlanIndex, setSelectedPlanIndex] = useState<number>(2)
 
     return (
-        <ul className={styles.list}>
-            {plans.map((item, idx) => (
-                <PlanItem key={item.id} index={idx} selectIdx={selectIdx} setSelectIdx={setSelectIdx} {...item} />
+        <Slider totalItemsCount={plans.length}>
+            {plans.map((item, index) => (
+                <li key={item.id}>
+                    <PlanItem index={index} selectIdx={selectedPlanIndex} setSelectIdx={setSelectedPlanIndex} {...item} />
+                </li>
             ))}
-        </ul>
+        </Slider>
     )
 }

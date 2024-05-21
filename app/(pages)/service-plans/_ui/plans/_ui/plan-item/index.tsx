@@ -18,7 +18,7 @@ interface IPlanItemProps extends IPlan {
 
 export const PlanItem: FC<IPlanItemProps> = ({ title, description, price, services, index, selectIdx, setSelectIdx }) => {
     return (
-        <li onClick={() => setSelectIdx(index)} className={cn(styles.wrapper, index === selectIdx && styles.active)}>
+        <div onClick={() => setSelectIdx(index)} className={cn(styles.wrapper, index === selectIdx && styles.active)}>
             <div className={styles.wrapper_heading}>
                 <Text as='h2'>{title}</Text>
                 <Text as='p'>{description}</Text>
@@ -36,10 +36,9 @@ export const PlanItem: FC<IPlanItemProps> = ({ title, description, price, servic
                     </li>
                 ))}
             </ul>
-
             <Button className={styles['order-btn']} variant='short'>
                 ORDER NOW
             </Button>
-        </li>
+        </div>
     )
 }
