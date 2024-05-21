@@ -6,5 +6,9 @@
 
     &_box {
         @include flexHorizontalGap(12.5);
+
+        > img {
+            width: 50%;
+        }
     }
 }

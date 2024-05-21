@@ -63,6 +63,8 @@
     font-size: clamp($min, $vw, $max);
     font-weight: $weight;
     line-height: $lh;
+
+    letter-spacing: 0.03em;
 }
 
 @mixin adaptiveValue($property, $startSize, $minSize, $widthFrom: $maxWidthContainer, $widthTo: $minWidth, $keepSize: 0) {

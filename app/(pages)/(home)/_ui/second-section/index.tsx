@@ -21,14 +21,14 @@ export const SecondSection: FC = () => {
     useEffect(() => {
         const sliderInterval = setInterval(() => {
             nextSlide()
-        }, 5000)
+        }, 12500)
 
         return () => clearInterval(sliderInterval)
     }, [])
 
     return (
         <Container as='section' className={styles.wrapper} id='products'>
-            <SubTitle auxiliaryBtn isButtonGroup upTitle='PRODUCTS' title='OUR INNOVATION PRODUCTS' nextSlideFn={prevSlide} prevSlideFn={nextSlide} />
+            <SubTitle isButtonGroup upTitle='PRODUCTS' title='OUR INNOVATION PRODUCTS' nextSlideFn={prevSlide} prevSlideFn={nextSlide} />
             <div className={styles.wrapper_slider}>
                 {slides.map((item, idx) => (
                     <div key={item.id} className={cn(styles.slide, currentIdx === idx && styles.active)}>

@@ -7,10 +7,20 @@
     &_content {
         @include flexHorizontalGap(12.5);
 
-        > .images-box {
+        .left-side {
+            width: 100%;
+        }
+
+        .right-side {
             @include flexVerticalGap(8);
 
+            width: 100%;
             padding-inline: toRem(72);
+            justify-content: center;
+
+            > img {
+                width: 100%;
+            }
         }
     }
 }

@@ -32,16 +32,12 @@
         opacity: 1;
         visibility: visible;
     }
-
-    > img {
-        max-width: 100%;
-        object-fit: fill;
-    }
 }
 
 .article {
     @include flexVerticalGap(12);
 
+    width: 100%;
     justify-content: center;
 
     > div > h2 {
@@ -54,11 +50,11 @@
 }
 
 .image-box {
-    // display: flex;
+    width: 100%;
 
-    > img {
-        // max-width: 100%;
-        // width: 100%;
-        // height: auto;
+    img {
+        width: 100%;
+        object-fit: contain;
+        object-position: top;
     }
 }

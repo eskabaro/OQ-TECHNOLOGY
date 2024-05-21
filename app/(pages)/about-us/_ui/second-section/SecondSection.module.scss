@@ -8,18 +8,18 @@
         @include flexHorizontalGap(18.5);
 
         > img {
-            max-width: 100%;
-            height: auto;
+            width: 50%;
         }
     }
 }
 
-.article {
+.right-side {
     @include flexVerticalGap(10);
 
+    width: 100%;
     justify-content: center;
 
-    &_btn-box {
+    .btn-box {
         @include flexHorizontalGap(5);
 
         > button:first-child {

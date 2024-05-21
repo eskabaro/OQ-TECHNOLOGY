@@ -16,7 +16,7 @@ export const SecondSection: FC = () => {
             <SubTitle upTitle='ABOUT US' title='SPACE LEVEL' />
             <div className={styles.wrapper_content}>
                 <Image src={require('../../_assets/space-level-img.webp')} width={783} height={710} alt='' />
-                <div className={styles.article}>
+                <div className={styles['right-side']}>
                     <Article
                         titleIcon='star'
                         title='Next-Gen Connectivity'
@@ -25,7 +25,7 @@ export const SecondSection: FC = () => {
                             'Using 5G technology, long business experience, and support from partners the company is providing both high-value and low-cost IoT connectivity solutions to customers. The company also provides intelligent custom-made solutions in the field of data analytics leveraging the power of our satellite constellation in space. We serve the Oil & Gas, Maritime, Industry 4.0, and Transport segments, particularly for the management and tracking of assets in remote areas.'
                         ]}
                     />
-                    <div className={styles['article_btn-box']}>
+                    <div className={styles['btn-box']}>
                         <Button variant='short'>BOOK A TRIAL</Button>
                         <Button withoutBg variant='short'>
                             CONTACT US

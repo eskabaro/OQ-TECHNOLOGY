@@ -13,14 +13,14 @@
 
 .left-side {
     @include flexVerticalGap(8);
-
+    width: 100%;
     justify-content: center;
 
     &_title {
         align-items: start;
 
         > div > p {
-            text-align: start;
+            text-align: start !important;
         }
     }
 
@@ -30,5 +30,13 @@
         > button {
             color: white !important;
         }
+    }
+}
+
+.right-side {
+    width: 100%;
+
+    > img {
+        width: 100%;
     }
 }
