@@ -25,19 +25,10 @@ export const Pagination: FC<IPaginationProps> = ({ onPageChange, totalCount, sib
         pageSize
     })
 
-    // if (currentPage === 0 || (paginationRange && paginationRange.length < 2)) {
-    //     return null
-    // }
+    const lastPage = paginationRange[paginationRange.length - 1]
 
-    const onNext = () => {
-        onPageChange(currentPage + 1)
-    }
-
-    const onPrevious = () => {
-        onPageChange(currentPage - 1)
-    }
-
-    let lastPage = paginationRange?.[paginationRange.length - 1]
+    const onNext = () => onPageChange(Math.min(currentPage + 1, +lastPage))
+    const onPrevious = () => onPageChange(Math.max(currentPage - 1, 1))
 
     return (
         <ul className={styles.wrapper}>
@@ -45,75 +36,17 @@ export const Pagination: FC<IPaginationProps> = ({ onPageChange, totalCount, sib
                 <Icon name='mini-arrow' />
             </li>
 
-            {/* {paginationRange?.map((pageNumber) => {
-                if (pageNumber === DOTS) {
-                    return (
-                        <li key={pageNumber} className='pagination-item dots'>
-                            &#8230;
-                        </li>
-                    )
-                }
+            {paginationRange.map((pageNumber, index) => (
+                <li
+                    key={index}
+                    onClick={() => pageNumber !== DOTS && onPageChange(pageNumber as number)}
+                    className={cn(pageNumber === DOTS ? 'pagination-item dots' : styles.wrapper_count, pageNumber === currentPage && styles.selected)}
+                >
+                    <Text as='span'>{pageNumber}</Text>
+                </li>
+            ))}
 
-                return (
-                    <li
-                        key={pageNumber}
-                        onClick={() => onPageChange(pageNumber as number)}
-                        className={cn(styles.wrapper_count, {
-                            [styles.selected]: pageNumber === currentPage
-                        })}
-                    >
-                        <Text as='span'>{pageNumber}</Text>
-                    </li>
-                )
-            })} */}
-            <li
-                // className={cn(styles.wrapper_count, {
-                //     // [styles.selected]: pageNumber === currentPage
-                // })}
-                className={cn(styles.wrapper_count)}
-            >
-                <Text as='span'>1</Text>
-            </li>
-            <li
-                // className={cn(styles.wrapper_count, {
-                //     [styles.selected]: currentPage
-                // })}
-                className={cn(styles.wrapper_count, currentPage && styles.selected)}
-            >
-                <Text as='span'>2</Text>
-            </li>
-            <li
-                // className={cn(styles.wrapper_count, {
-                //     // [styles.selected]: pageNumber === currentPage
-                // })}
-                className={cn(styles.wrapper_count)}
-            >
-                <Text as='span'>3</Text>
-            </li>
-            <li
-                // className={cn(styles.wrapper_count, {
-                //     // [styles.selected]: pageNumber === currentPage
-                // })}
-                className={cn(styles.wrapper_count)}
-            >
-                <Text as='span'>...</Text>
-            </li>
-            <li
-                // className={cn(styles.wrapper_count, {
-                //     // [styles.selected]: pageNumber === currentPage
-                // })}
-                className={cn(styles.wrapper_count)}
-            >
-                <Text as='span'>25</Text>
-            </li>
-
-            <li
-                onClick={onNext}
-                // className={cn(styles.wrapper_next, {
-                //     [styles.disabled]: currentPage === lastPage
-                // })}
-                className={cn(styles.wrapper_next)}
-            >
+            <li onClick={onNext} className={cn(styles.wrapper_next, currentPage === lastPage && styles.disabled)}>
                 <Icon name='mini-arrow' />
             </li>
         </ul>
