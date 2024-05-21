@@ -59,6 +59,7 @@
 
     .pages {
         @include flexHorizontalGap(2);
+
         justify-content: center;
         margin-top: toRem(16);
 
