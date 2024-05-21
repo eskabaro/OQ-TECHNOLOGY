@@ -1,10 +1,9 @@
-@import '../../../../(app)/_styles/mixins.scss';
-@import '../../../../(app)/_styles/vaiables.scss';
+@import '../../../../../../(app)/_styles/mixins.scss';
+@import '../../../../../../(app)/_styles/vaiables.scss';
 
 .wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 
     .list {
@@ -16,7 +15,6 @@
 
             width: toRem(62);
             height: toRem(62);
-
             display: flex;
             justify-content: center;
             align-items: center;
