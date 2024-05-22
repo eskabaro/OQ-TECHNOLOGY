@@ -67,6 +67,18 @@
     letter-spacing: 0.03em;
 }
 
+@mixin onMobile {
+    @media (max-width: $mobile) {
+        @content;
+    }
+}
+
+@mixin onTablet {
+    @media (max-width: $tablet) {
+        @content;
+    }
+}
+
 @mixin adaptiveValue($property, $startSize, $minSize, $widthFrom: $maxWidthContainer, $widthTo: $minWidth, $keepSize: 0) {
     @if ($startSize==0) {
         $startSize: 0.000001;

@@ -14,12 +14,11 @@ interface ICountryProps {
     countryName: string
     phone: string
     locations: string[]
-    position?: string
 }
 
-export const Country: FC<ICountryProps> = ({ countryFlagSrc, countryName, phone, locations, position }) => {
+export const Country: FC<ICountryProps> = ({ countryFlagSrc, countryName, phone, locations }) => {
     return (
-        <ul className={styles.wrapper} style={{ gridArea: position }}>
+        <ul className={styles.wrapper}>
             <li className={styles.wrapper_item}>
                 <Image src={countryFlagSrc} width={32} height={32} alt={countryName} />
                 <Text as='span'>{countryName}</Text>
