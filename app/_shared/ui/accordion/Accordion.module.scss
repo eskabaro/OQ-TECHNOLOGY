@@ -29,6 +29,9 @@
     &_title {
         @include fontSize(toRem(20), 4vw, toRem(20), 600, 150%);
         @include allAnimation(color, 0.2s);
+        @include onMobile {
+            @include fontSize(toRem(18), 4vw, toRem(18), 600, 150%);
+        }
 
         color: $mistyLavender;
         max-width: toRem(550);
@@ -50,6 +53,10 @@
 
     &_text {
         @include fontSize(toRem(18), 4vw, toRem(18), 400, 150%);
+        @include onMobile {
+            @include fontSize(toRem(16), 4vw, toRem(16), 400, 150%);
+        }
+
         padding: 0 toRem(150) toRem(42) toRem(50);
     }
 }

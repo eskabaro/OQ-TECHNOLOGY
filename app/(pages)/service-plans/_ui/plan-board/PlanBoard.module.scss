@@ -10,6 +10,9 @@
 
     > h1 {
         @include fontSize(toRem(58), 4vw, toRem(58), 700);
+        @include onMobile {
+            @include fontSize(toRem(28), 4vw, toRem(28), 700);
+        }
 
         position: absolute;
         top: 50%;

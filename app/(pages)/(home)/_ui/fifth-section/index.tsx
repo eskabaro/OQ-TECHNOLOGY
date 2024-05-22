@@ -13,35 +13,11 @@ export const FifthSection: FC = () => {
         <Container className={styles.wrapper} as='section'>
             <SubTitle upTitle='FAQ’S' title='FREQUENTLY ASKED QUESTIONS' isUnderline />
             <div className={styles['wrapper_accordions-box']}>
-                <div className={styles['left-side']}>
-                    <Accordion title='LOREM IPSUM DOLOR SIT AMET CONSECTETUR.'>
+                {Array.from({ length: 8 }).map((_, index) => (
+                    <Accordion key={index} title='LOREM IPSUM DOLOR SIT AMET CONSECTETUR.'>
                         Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.
                     </Accordion>
-                    <Accordion title='LOREM IPSUM DOLOR SIT AMET CONSECTETUR.'>
-                        Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.
-                    </Accordion>
-                    <Accordion title='LOREM IPSUM DOLOR SIT AMET CONSECTETUR.'>
-                        Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.
-                    </Accordion>
-                    <Accordion title='LOREM IPSUM DOLOR SIT AMET CONSECTETUR.'>
-                        Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.
-                    </Accordion>
-                </div>
-                <hr className={styles.border} />
-                <div className={styles['right-side']}>
-                    <Accordion title='LOREM IPSUM DOLOR SIT AMET CONSECTETUR.'>
-                        Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.
-                    </Accordion>
-                    <Accordion title='LOREM IPSUM DOLOR SIT AMET CONSECTETUR. PURUS RIDICULUS SED MASSA ODIO POTENTI UT TELLUS PURUS.'>
-                        Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.
-                    </Accordion>
-                    <Accordion title='LOREM IPSUM DOLOR SIT AMET CONSECTETUR.'>
-                        Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.
-                    </Accordion>
-                    <Accordion title='LOREM IPSUM DOLOR SIT AMET CONSECTETUR. PURUS RIDICULUS SED MASSA ODIO POTENTI UT TELLUS PURUS.'>
-                        Lorem ipsum dolor sit amet consectetur. Feugiat fames leo diam ante pretium aenean adipiscing aliquam.
-                    </Accordion>
-                </div>
+                ))}
             </div>
         </Container>
     )

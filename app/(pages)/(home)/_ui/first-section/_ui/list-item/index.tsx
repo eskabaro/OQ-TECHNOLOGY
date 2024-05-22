@@ -14,7 +14,6 @@ export const ListItem: FC<IListItemProps> = ({ imgSrc, title, subTitile }) => {
     return (
         <li className={styles.wrapper}>
             <Image src={imgSrc} width={520} height={280} alt={title} />
-
             <Title size='L' className={styles.heading} title={title} text={subTitile} />
         </li>
     )

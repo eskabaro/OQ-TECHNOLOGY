@@ -44,6 +44,10 @@
         }
 
         &_inner {
+            @include onMobile {
+                min-height: 750px;
+            }
+
             min-height: 800px;
             position: relative;
             overflow: hidden;

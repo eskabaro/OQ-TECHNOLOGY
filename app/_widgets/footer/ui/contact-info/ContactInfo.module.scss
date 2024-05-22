@@ -6,7 +6,7 @@
     @include onMobile {
         @include flexVerticalGap(10);
 
-        padding-block: toRem(40);
+        padding: toRem(60) 0 toRem(40);
     }
 
     padding-block: toRem(64);

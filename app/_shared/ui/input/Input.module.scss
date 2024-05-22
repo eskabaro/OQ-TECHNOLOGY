@@ -4,10 +4,6 @@
 .wrapper {
     position: relative;
     overflow: hidden;
-
-    &.first {
-        max-width: em(440);
-    }
 }
 
 .input:focus-within ~ .placeholder {
@@ -17,11 +13,12 @@
 
 .input {
     @include allAnimation(all, 0.2s);
+    @include fontSize(toRem(18), 4vw, toRem(18), 400, 150%);
 
     width: 100%;
     border: toRem(1) solid $shadowSlate;
     outline: none;
-    color: white;
+    color: #c4c4c4;
 
     &:-webkit-autofill,
     &:-webkit-autofill:hover,
@@ -51,11 +48,3 @@
         }
     }
 }
-
-// .placeholder {
-//     @apply absolute left-5 top-2/4 -translate-y-2/4 text-silver-mist text-lg font-normal;
-
-//     &.error {
-//         @apply text-red-600;
-//     }
-// }

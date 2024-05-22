@@ -56,6 +56,10 @@
     width: 100%;
     margin: auto;
     padding-inline: toRem(32);
+
+    @include onMobile {
+        padding-inline: toRem(16);
+    }
 }
 
 // adaptive value
@@ -65,18 +69,6 @@
     line-height: $lh;
 
     letter-spacing: 0.03em;
-}
-
-@mixin onMobile {
-    @media (max-width: $mobile) {
-        @content;
-    }
-}
-
-@mixin onTablet {
-    @media (max-width: $tablet) {
-        @content;
-    }
 }
 
 @mixin adaptiveValue($property, $startSize, $minSize, $widthFrom: $maxWidthContainer, $widthTo: $minWidth, $keepSize: 0) {
@@ -126,5 +118,17 @@
         @media (max-width: $widthToMedia) {
             #{$property}: inherit;
         }
+    }
+}
+
+@mixin onMobile {
+    @media (max-width: $mobile) {
+        @content;
+    }
+}
+
+@mixin onTablet {
+    @media (max-width: $tablet) {
+        @content;
     }
 }

@@ -1,6 +1,6 @@
 'use client'
 
-import { FC, useEffect, useState } from 'react'
+import { FC, useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 
 import { cn } from '@/app/_shared/lib/classnames'
@@ -14,16 +14,34 @@ import styles from './SecondSection.module.scss'
 
 export const SecondSection: FC = () => {
     const [currentIdx, setCurrentIdx] = useState<number>(0)
+    const sliderInterval = useRef<NodeJS.Timeout | null>(null)
 
-    const nextSlide = () => setCurrentIdx((e) => (e <= 0 ? slides.length - 1 : e - 1))
-    const prevSlide = () => setCurrentIdx((e) => (e + 1 >= slides.length ? 0 : e + 1))
+    const resetInterval = () => {
+        if (sliderInterval.current) {
+            clearInterval(sliderInterval.current)
+        }
+
+        sliderInterval.current = setInterval(nextSlide, 12500)
+    }
+
+    const nextSlide = () => {
+        setCurrentIdx((event) => (event <= 0 ? slides.length - 1 : event - 1))
+        resetInterval()
+    }
+
+    const prevSlide = () => {
+        setCurrentIdx((event) => (event + 1 >= slides.length ? 0 : event + 1))
+        resetInterval()
+    }
 
     useEffect(() => {
-        const sliderInterval = setInterval(() => {
-            nextSlide()
-        }, 12500)
+        resetInterval()
 
-        return () => clearInterval(sliderInterval)
+        return () => {
+            if (sliderInterval.current) {
+                clearInterval(sliderInterval.current)
+            }
+        }
     }, [])
 
     return (

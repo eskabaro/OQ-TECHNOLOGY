@@ -46,6 +46,10 @@
 }
 
 .nav-left {
+    @include onMobile {
+        display: none;
+    }
+
     display: flex;
     align-items: center;
 
@@ -60,6 +64,10 @@
 }
 
 .nav-right {
+    @include onMobile {
+        display: none;
+    }
+
     display: flex;
     align-items: center;
 

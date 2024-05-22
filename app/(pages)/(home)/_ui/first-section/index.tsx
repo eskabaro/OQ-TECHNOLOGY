@@ -19,20 +19,22 @@ export const FirstSection: FC = () => {
                 ))}
             </ul>
 
-            <Title
-                id='solutions'
-                isObserver
-                size='XL'
-                className={styles.wrapper_heading}
-                title='KEEP YOUR BUSINESS CONNECTED AND WELL MANAGED'
-                text='Connect your IoT devices, machines, and people anywhere, even in the most remote locations and harshest environments​'
-            />
+            <div className={styles.wrapper_content}>
+                <Title
+                    id='solutions'
+                    isObserver
+                    size='XL'
+                    className={styles.wrapper_heading}
+                    title='KEEP YOUR BUSINESS CONNECTED AND WELL MANAGED'
+                    text='Connect your IoT devices, machines, and people anywhere, even in the most remote locations and harshest environments​'
+                />
 
-            <ul className={styles.wrapper_list}>
-                {businessList.map((e) => (
-                    <ListItem key={e.id} {...e} />
-                ))}
-            </ul>
+                <ul className={styles.wrapper_list}>
+                    {businessList.map((item) => (
+                        <ListItem key={item.id} {...item} />
+                    ))}
+                </ul>
+            </div>
         </Container>
     )
 }

@@ -2,6 +2,9 @@
 
 .form {
     @include flexVerticalGap(18);
+    @include onMobile {
+        @include flexVerticalGap(10);
+    }
 
     max-width: em(900);
     width: 100%;
@@ -11,6 +14,13 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: toRem(20);
+        align-items: center;
+        justify-content: center;
+
+        @include onMobile {
+            grid-template-columns: repeat(1, 1fr);;
+            gap: toRem(16);
+        }
     }
 
     &_btn-box {
@@ -27,7 +37,7 @@
 }
 
 .btn-text {
-    @include fontSize(toRem(16), 4vw, toRem(16), 600);
+    @include fontSize(toRem(18), 4vw, toRem(18), 600);
 
     letter-spacing: 0.09em;
 }
