@@ -1,8 +1,8 @@
 interface ICountry {
-    countryFlagSrc: string;
-    countryName: string;
-    phone: string;
-    locations: string[];
+    countryFlagSrc: string
+    countryName: string
+    phone: string
+    locations: string[]
 }
 
 export const countries: ICountry[] = [
