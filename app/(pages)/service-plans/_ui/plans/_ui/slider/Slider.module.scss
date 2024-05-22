@@ -12,6 +12,9 @@
         &_prev,
         &_next {
             @include opacityAnimation;
+            @include onMobile {
+                display: none;
+            }
 
             width: toRem(62);
             height: toRem(62);
