@@ -2,10 +2,15 @@
 
 .wrapper {
     @include flexVerticalGap(37.5);
-    @include adaptiveValue('background-size', 1100, 900, 1920, 1000);
+    @include onMobile {
+        @include flexVerticalGap(30);
+
+        background-size: 640px;
+    }
 
     padding-bottom: toRem(150);
     background-image: url('/images/earth-11.svg');
     background-repeat: no-repeat;
     background-position-y: 13.5%;
+    background-position-x: -200px;
 }

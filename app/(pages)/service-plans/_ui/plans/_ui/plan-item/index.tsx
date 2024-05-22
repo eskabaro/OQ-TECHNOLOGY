@@ -22,17 +22,19 @@ export const PlanItem: FC<IPlanItemProps> = ({ title, description, price, servic
             <div className={styles.wrapper_heading}>
                 <Text as='h2'>{title}</Text>
                 <Text as='p'>{description}</Text>
-                <Text as='span'>As low as:</Text>
             </div>
             <div className={styles.wrapper_price}>
-                <Text as='span'>${price}</Text>
-                <Text as='span'>/mo</Text>
+                <Text as='span'>As low as:</Text>
+                <div className={styles['wrapper_price-inner']}>
+                    <Text as='span'>${price}</Text>
+                    <Text as='span'>/mo</Text>
+                </div>
             </div>
             <ul className={styles.wrapper_list}>
-                {services.map((e) => (
-                    <li key={e} className={styles['list-item']}>
+                {services.map((service) => (
+                    <li key={service} className={styles['list-item']}>
                         <Icon name='chek' />
-                        <Text as='p'>{e}</Text>
+                        <Text as='p'>{service}</Text>
                     </li>
                 ))}
             </ul>

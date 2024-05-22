@@ -2,8 +2,15 @@
 
 .wrapper {
     @include flexVerticalGap(8);
+    @include onMobile {
+        @include flexVerticalGap(6);
+    }
 
     > img {
+        @include onMobile {
+            width: 100%;
+        }
+
         max-width: 100%;
         height: auto;
     }

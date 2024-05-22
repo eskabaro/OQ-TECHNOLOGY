@@ -3,12 +3,36 @@
 
 .wrapper {
     @include flexHorizontalGap(3);
+    @include onMobile {
+        @include flexVerticalGap(10);
+
+        padding: toRem(60) 0 toRem(40);
+    }
 
     padding-block: toRem(64);
     justify-content: space-between;
 
     &_left-side {
         @include flexVerticalGap(6);
+        @include onMobile {
+            @include flexVerticalGap(3);
+        }
+
+        max-width: toRem(360);
+
+        .logo_container {
+            @include flexVerticalGap(6);
+            @include onMobile {
+                @include flexVerticalGap(4);
+            }
+
+            > p {
+                @include fontSize(toRem(16), 4vw, toRem(16), 400);
+                @include onMobile {
+                    @include fontSize(toRem(14), 4vw, toRem(14), 400);
+                }
+            }
+        }
     }
 
     &_right-side {
@@ -16,11 +40,32 @@
         grid-template-columns: repeat(3, 1fr);
         row-gap: toRem(44);
         column-gap: toRem(116);
+
+        @include onTablet {
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: toRem(40);
+            column-gap: toRem(12);
+        }
+
+        > ul:nth-last-child(2) {
+            @include onTablet {
+                grid-area: unset;
+            }
+
+            grid-area: 2 / 2 / 3 / 3;
+        }
+
+        > ul:last-child {
+            @include onTablet {
+                grid-area: unset;
+            }
+
+            grid-area: 2 / 3 / 3 / 4;
+        }
     }
 }
 
 .list {
-    margin-top: toRem(8);
     display: flex;
     gap: toRem(10);
     background-color: $midnightAbyss;

@@ -1,8 +1,12 @@
 @import '../../../../(app)/_styles/mixins.scss';
+@import '../../../../(app)/_styles/vaiables.scss';
 
 .wrapper {
-    padding-top: toRem(400);
-    padding-bottom: toRem(432);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     background-image: url('/backgrounds/home.svg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -10,11 +14,25 @@
 
     &_container {
         @include flexVerticalGap(8);
+        @include onMobile {
+            @include flexVerticalGap(6);
+        }
+
+        h1 {
+            text-align: center;
+        }
     }
 }
 
 .btn-box {
     @include flexHorizontalGap(6);
+    @include onMobile {
+        @include flexVerticalGap(4);
+
+        > button {
+            width: 100% !important;
+        }
+    }
 
     justify-content: center;
 

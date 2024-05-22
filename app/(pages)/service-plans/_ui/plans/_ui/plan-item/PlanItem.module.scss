@@ -25,34 +25,46 @@
 
         > h2 {
             @include fontSize(toRem(44), 4vw, toRem(44), 600);
+            @include onMobile {
+                @include fontSize(toRem(32), 4vw, toRem(32), 600);
+            }
         }
 
         > p {
             @include fontSize(toRem(18), 4vw, toRem(18), 400, 150%);
+            @include onMobile {
+                @include fontSize(toRem(16), 4vw, toRem(16), 400, 150%);
+            }
 
             margin: auto;
-        }
-
-        > span {
-            @include fontSize(toRem(20), 4vw, toRem(20), 400, 150%);
-
-            padding-top: toRem(8);
         }
     }
 
     &_price {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
 
-        > span:first-child {
-            @include fontSize(toRem(48), 4vw, toRem(48), 400);
+        > span {
+            @include fontSize(toRem(20), 4vw, toRem(20), 400, 150%);
+            @include onMobile {
+                @include fontSize(toRem(16), 4vw, toRem(16), 400, 150%);
+            }
         }
 
-        > span:last-child {
-            @include fontSize(toRem(24), 4vw, toRem(24), 400, 70%);
-
+        &-inner {
             display: flex;
-            align-items: flex-end;
+
+            > span:first-child {
+                @include fontSize(toRem(48), 4vw, toRem(48), 400);
+            }
+
+            > span:last-child {
+                @include fontSize(toRem(24), 4vw, toRem(24), 400, 70%);
+
+                display: flex;
+                align-items: flex-end;
+            }
         }
     }
 

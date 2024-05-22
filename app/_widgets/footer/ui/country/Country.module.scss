@@ -4,6 +4,7 @@
 .wrapper {
     @include flexVerticalGap(4);
 
+    min-width: em(166);
     max-width: em(208);
 
     &_item {
@@ -13,6 +14,9 @@
 
         > span {
             @include fontSize(toRem(18), 4vw, toRem(18), 600);
+            @include onMobile {
+                @include fontSize(toRem(14), 4vw, toRem(14), 600);
+            }
 
             color: $mistySlate;
         }
@@ -25,6 +29,9 @@
 
         > span {
             @include fontSize(toRem(16), 4vw, toRem(16), 600, 150%);
+            @include onMobile {
+                @include fontSize(toRem(12), 4vw, toRem(12), 600, 150%);
+            }
 
             color: white;
         }

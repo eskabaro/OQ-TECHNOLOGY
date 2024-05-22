@@ -3,7 +3,13 @@
 
 .wrapper {
     @include flexHorizontalGap(3);
-    @include fontSize(toRem(16), 4vw, toRem(16), 400);
+    @include fontSize(toRem(16), 4vw, toRem(16), 600);
+    @include onMobile {
+        @include flexVerticalGap(4);
+        @include fontSize(toRem(12), 4vw, toRem(12), 600);
+
+        padding-block: toRem(20);
+    }
 
     justify-content: space-between;
     align-items: center;
@@ -12,6 +18,11 @@
 
     &_left-side {
         @include flexHorizontalGap(5);
+        @include onMobile {
+            @include flexHorizontalGap(3);
+        }
+
+        align-items: center;
 
         > .vertical-line {
             width: toRem(1);

@@ -3,9 +3,12 @@
 .wrapper {
     &_bg {
         @include flexVerticalGap(12);
+        @include onMobile {
+            padding: toRem(80) toRem(16);
+        }
 
-        align-items: center;
         padding-block: toRem(120);
+        align-items: center;
         border-radius: toRem(16);
         background-image: url('/backgrounds/starry-sky.png');
         background-size: cover;
@@ -13,13 +16,31 @@
 }
 
 .heading {
-    > div:first-child > h1 {
+    @include flexVerticalGap(5);
+
+    align-items: center;
+
+    .title {
+        @include fontSize(toRem(64), 4vw, toRem(64), 800);
+        @include onMobile {
+            @include fontSize(toRem(32), 4vw, toRem(32), 800);
+        }
+
         color: $autumnBlaze;
+    }
+
+    .text {
+        @include fontSize(toRem(32), 4vw, toRem(32), 700);
+        @include onMobile {
+            @include fontSize(toRem(24), 4vw, toRem(24), 700);
+        }
+
+        text-align: center;
     }
 }
 
 .form {
-    @include flexVerticalGap(6);
+    @include flexVerticalGap(8);
 
     align-items: center;
     max-width: em(480);

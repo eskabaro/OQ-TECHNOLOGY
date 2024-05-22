@@ -13,14 +13,14 @@ interface IAccordionProps extends PropsWithChildren<unknown> {
 }
 
 export const Accordion: FC<IAccordionProps> = ({ title, children }) => {
-    const content = useRef<HTMLDivElement>(null)
+    const contentRef = useRef<HTMLDivElement>(null)
 
     const [isActive, setIsActive] = useState<boolean>(false)
     const [height, setHeight] = useState<string>('0px')
 
     const toggleAccordion = () => {
         setIsActive(!isActive)
-        setHeight(isActive ? '0px' : `${content.current?.scrollHeight}px`)
+        setHeight(isActive ? '0px' : `${contentRef.current?.scrollHeight}px`)
     }
 
     return (
@@ -33,7 +33,7 @@ export const Accordion: FC<IAccordionProps> = ({ title, children }) => {
                     <Icon name='arrow-down-v2' />
                 </button>
             </div>
-            <div ref={content} style={{ maxHeight: height }} className={styles.accordion_content}>
+            <div ref={contentRef} style={{ maxHeight: height }} className={styles.accordion_content}>
                 <div className={styles.accordion_text}>{children}</div>
             </div>
         </div>
