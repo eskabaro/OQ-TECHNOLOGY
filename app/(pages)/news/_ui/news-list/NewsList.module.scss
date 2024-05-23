@@ -1,6 +1,10 @@
 @import '../../../../(app)/_styles/mixins.scss';
 
 .wrapper {
+    @include onMobile {
+        padding: toRem(160) 0 toRem(120) 0;
+    }
+
     padding: toRem(260) 0 toRem(150) 0;
     background-image: url('/images/earth-2.svg');
     background-repeat: no-repeat;
@@ -8,10 +12,21 @@
 
     &_container {
         @include flexVerticalGap(20);
+        @include onMobile {
+            @include flexVerticalGap(10);
+        }
     }
 }
 
 .list {
+    @include onTablet {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include onMobile {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: toRem(50);

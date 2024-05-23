@@ -47,11 +47,6 @@
         }
 
         &_inner {
-            @include onMobile {
-                min-height: 750px;
-            }
-
-            min-height: 800px;
             position: relative;
             overflow: hidden;
         }
@@ -60,7 +55,7 @@
             @include flexHorizontalGap(8);
             @include allAnimation(left, 0.1s);
 
-            position: absolute;
+            position: relative;
         }
     }
 

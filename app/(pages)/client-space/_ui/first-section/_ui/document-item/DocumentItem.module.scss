@@ -4,6 +4,9 @@
 .wrapper {
     @include flexVerticalGap(12);
     @include allAnimation(all, 0.2s);
+    @include onMobile {
+        padding: toRem(16);
+    }
 
     align-items: center;
     padding: toRem(32) toRem(24) toRem(48) toRem(24);
@@ -14,6 +17,31 @@
     &.active {
         border-color: $autumnBlaze;
         box-shadow: 0 0 toRem(35) 0 rgba(250, 160, 85, 0.5);
-        background-color: black;
+        background-color: #000000;
+    }
+
+    .heading {
+        @include flexVerticalGap(4);
+        @include onMobile {
+            @include flexVerticalGap(2);
+        }
+
+        .title {
+            @include fontSize(toRem(32), 4vw, toRem(32), 600);
+            @include onMobile {
+                @include fontSize(toRem(16), 4vw, toRem(16), 600);
+            }
+
+            text-align: center;
+        }
+
+        .subTitle {
+            @include fontSize(toRem(20), 4vw, toRem(20), 400);
+            @include onMobile {
+                @include fontSize(toRem(14), 4vw, toRem(14), 400);
+            }
+
+            text-align: center;
+        }
     }
 }

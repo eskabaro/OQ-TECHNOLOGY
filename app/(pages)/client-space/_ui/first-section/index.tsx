@@ -14,11 +14,16 @@ export const FirstSection: FC = () => {
 
     return (
         <Container className={styles.wrapper} as='section'>
-            <Title isObserver size='XXL' title='CLIENT SPACE' text='Sit sit non ut adipiscing aliquet est consectetur risus. Velit integer urna ut mattis mauris augue. Nunc amet aliquam blandit risus massa. Scelerisque est sed eu.' />
+            <Title
+                isObserver
+                size='XXL'
+                title='CLIENT SPACE'
+                text='Sit sit non ut adipiscing aliquet est consectetur risus. Velit integer urna ut mattis mauris augue. Nunc amet aliquam blandit risus massa. Scelerisque est sed eu.'
+            />
 
             <div className={styles.wrapper_list}>
-                {documents.map((e, i) => (
-                    <DocumentItem key={e.id} index={i} currentIdx={currentIdx} setCurrentIdx={setCurrentIdx} {...e} />
+                {documents.map((document, index) => (
+                    <DocumentItem key={document.id} index={index} currentIdx={currentIdx} setCurrentIdx={setCurrentIdx} {...document} />
                 ))}
             </div>
         </Container>

@@ -2,6 +2,11 @@
 
 .wrapper {
     @include flexVerticalGap(37.5);
+    @include onMobile {
+        @include flexVerticalGap(30);
+
+        padding: toRem(160) 0 toRem(120);
+    }
 
     padding-top: toRem(260);
     padding-bottom: toRem(150);

@@ -2,9 +2,10 @@
 
 import { FC } from 'react'
 
+import { videos } from '../../const/video'
+import { Slider } from '@/app/(pages)/service-plans/_ui/plans/_ui/slider'
 import { SubTitle } from '@/app/_shared/ui/sub-title'
 import { VideoItem } from '../video-item'
-import { video } from '../../const/video'
 
 import styles from './FourthSection.module.scss'
 
@@ -12,11 +13,13 @@ export const FourthSection: FC = () => {
     return (
         <div className={styles.wrapper}>
             <SubTitle upTitle='TECHNOLOGY' title='LEARN MORE FROM OUR PROFESSIONALS' />
-            <ul className={styles.wrapper_video}>
-                {video.map((e) => (
-                    <VideoItem key={e.id} {...e} />
+            <Slider totalItemsCount={videos.length}>
+                {videos.map((video) => (
+                    <li key={video.id}>
+                        <VideoItem {...video} />
+                    </li>
                 ))}
-            </ul>
+            </Slider>
         </div>
     )
 }

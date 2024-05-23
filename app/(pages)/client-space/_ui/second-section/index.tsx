@@ -5,13 +5,13 @@ import { SubmitHandler, useForm } from 'react-hook-form'
 
 import { cn } from '@/app/_shared/lib/classnames'
 import { Container } from '@/app/(app)/_components/container'
-import { HeadingAnimate } from '@/app/_shared/ui/heading-animate'
 import { Text } from '@/app/_shared/ui/typography/text'
 import { hotlines } from '@/app/_shared/const/hotlines'
 import { HotlineItem } from './_ui/hotline-item'
 import { Button } from '@/app/_shared/ui/button'
 import { Textarea } from '@/app/_shared/ui/textarea'
 import { Icon } from '@/app/_shared/ui/icon'
+import { SubTitle } from '@/app/_shared/ui/sub-title'
 
 import styles from './SecondSection.module.scss'
 
@@ -39,20 +39,13 @@ export const SecondSection: FC = () => {
 
     return (
         <Container className={styles.wrapper} as='section'>
-            <div className={styles.wrapper_heading}>
-                <HeadingAnimate>
-                    <Text as='p'>TECHNOLOGY</Text>
-                </HeadingAnimate>
-                <HeadingAnimate duration={200}>
-                    <Text as='h1'>SAT-CP</Text>
-                </HeadingAnimate>
-            </div>
+            <SubTitle  upTitle="CLIENT SPACE" title="CONTACT US NOW" />
             <div className={styles.content}>
                 <div className={styles.content_list}>
                     <Text as='h2'>HOTLINE FOR CLIENTS</Text>
                     <ul>
-                        {hotlines.map((e) => (
-                            <HotlineItem key={e.id} {...e} />
+                        {hotlines.map((hotline) => (
+                            <HotlineItem key={hotline.id} {...hotline} />
                         ))}
                     </ul>
                 </div>
@@ -63,7 +56,7 @@ export const SecondSection: FC = () => {
                             <Textarea {...register('message', { required: true })} placeholder='Your message *' error={!!errors.message} />
                             <label htmlFor='input-file' className={styles['input-box']}>
                                 {!files?.length && <Icon name='plus' />}
-                                <Text as='span'>{files?.length ? 'REPALCE FILE' : 'DRAG OR UPLOAD FILE'}</Text>
+                                <Text as='span'>{files?.length ? 'REPLACE FILE' : 'DRAG OR UPLOAD FILE'}</Text>
                                 <input
                                     {...register('file', {
                                         onChange: (e) => {

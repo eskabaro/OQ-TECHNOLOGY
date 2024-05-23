@@ -2,6 +2,11 @@
 @import '../../../../(app)/_styles/vaiables.scss';
 
 @mixin btnPrevNext {
+    @include onMobile {
+        width: toRem(40);
+        height: toRem(40);
+    }
+
     width: toRem(48);
     height: toRem(48);
     display: grid;
@@ -38,6 +43,9 @@
 
     &_count {
         @include fontSize(toRem(24), 4vw, toRem(24), 400);
+        @include onMobile {
+            @include fontSize(toRem(20), 4vw, toRem(20), 400);
+        }
 
         cursor: pointer;
         height: fit-content;

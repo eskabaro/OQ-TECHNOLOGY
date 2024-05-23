@@ -2,9 +2,13 @@
 
 .wrapper {
     @include flexVerticalGap(37.5);
+    @include onMobile {
+        @include flexVerticalGap(30);
 
-    padding-top: toRem(260);
-    padding-bottom: toRem(150);
+        padding: toRem(160) 0 toRem(120);
+    }
+
+    padding: toRem(260) 0 toRem(150);
     background-image: url('/images/earth-10.svg');
     background-repeat: no-repeat;
     background-position-y: em(300);

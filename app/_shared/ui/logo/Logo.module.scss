@@ -2,6 +2,12 @@
 
 .logo {
     @include opacityAnimation;
+    @include onMobile {
+        > img {
+            width: toRem(84);
+            height: toRem(53);
+        }
+    }
 
     width: fit-content;
     display: flex;

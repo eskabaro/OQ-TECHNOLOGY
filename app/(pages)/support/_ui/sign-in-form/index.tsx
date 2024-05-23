@@ -37,7 +37,13 @@ export const SignInForm: FC = () => {
                 </Text>
                 <form className={styles['form-box_form']} onSubmit={handleSubmit(onSubmit)}>
                     <Input {...register('email', { required: true })} variant='first' placeholder='Email' type='email' error={!!errors.email} />
-                    <Input {...register('password', { required: true })} variant='first' placeholder='Password' type='password' error={!!errors.password} />
+                    <Input
+                        {...register('password', { required: true })}
+                        variant='first'
+                        placeholder='Password'
+                        type='password'
+                        error={!!errors.password}
+                    />
                     <Button className={styles.btn} variant='short'>
                         <div className={styles['btn-circle']} />
                         <Text as='span'>LOG IN</Text>
@@ -47,10 +53,10 @@ export const SignInForm: FC = () => {
                 <div className={styles['form-box_helpers']}>
                     <Link href={''}>Forgot Password?</Link>
                     <Text as='span'>
-                        Don’t have OQ Products yet? <Link href={''}>Order Here</Link>.
+                        Don’t have OQ Products yet? <br /> <Link href={''}>Order Here</Link>
                     </Text>
                     <Text as='span'>
-                        Have OQ Products but no Account? <Link href={''}>Activate Here</Link>.
+                        Have OQ Products but no Account? <br /> <Link href={''}>Activate Here</Link>
                     </Text>
                 </div>
             </div>

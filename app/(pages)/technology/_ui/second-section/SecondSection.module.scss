@@ -3,12 +3,24 @@
 
 .wrapper {
     @include flexVerticalGap(20);
+    @include onMobile {
+        @include flexVerticalGap(10);
+    }
 
     &_box {
         @include flexHorizontalGap(12.5);
+        @include onMobile {
+            @include flexVerticalGap(8);
+        }
 
         > img {
+            @include onMobile {
+                width: 100%;
+                order: -1;
+            }
+
             width: 50%;
+            height: auto;
         }
     }
 }

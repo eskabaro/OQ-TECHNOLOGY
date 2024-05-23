@@ -3,6 +3,7 @@ import { SecondSection } from './_ui/second-section'
 import { ThirdSection } from './_ui/third-section'
 import { FourthSection } from './_ui/fourth-section'
 import { FifthSection } from './_ui/fifth-section'
+
 import styles from './_styles/AboutUs.module.scss'
 
 const components = {

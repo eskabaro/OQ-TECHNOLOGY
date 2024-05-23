@@ -2,26 +2,24 @@
 
 .map_legend {
     @include flexHorizontalGap(10);
+    @include onMobile {
+        padding: toRem(16) toRem(24);
+        top: 5%;
+        left: 5%;
+    }
 
-    padding: toRem(34) toRem(24);
-
+    padding: toRem(32) toRem(24);
     position: absolute;
-    top: 8%;
-    left: 8%;
-
-    background-color: rgba(35, 35, 35, 0.9);
+    top: 10%;
+    left: 10%;
 
     border-radius: toRem(16);
+    background-color: rgba(53, 53, 53, 0.90);
     z-index: 1;
     pointer-events: none;
 
-    & > h3 {
-        font-size: toRem(24);
-        font-weight: 600;
-    }
-
     &_group {
-        @include flexHorizontalGap(8);
+        @include flexHorizontalGap(6);
 
         align-items: center;
     }

@@ -3,6 +3,9 @@
 
 .wrapper {
     @include flexVerticalGap(5);
+    @include onMobile {
+        @include flexVerticalGap(4);
+    }
 
     > img {
         max-width: 100%;
@@ -18,12 +21,24 @@
 
         > .title {
             @include flexVerticalGap(1);
-            @include adaptiveValue('max-width', 300, 100, 1500, 1100, 1);
-            max-width: 300px;
+            @include adaptiveValue('max-width', 300, 100, 1500, 1000, 1);
+
+            @include onTablet {
+                @include adaptiveValue('max-width', 300, 100, 1000, 600, 1);
+            }
+
+            @include onMobile {
+                @include adaptiveValue('max-width', 300, 100, 800, 0, 1);
+            }
 
             width: 100%;
+
             > h2 {
                 @include fontSize(toRem(20), 4vw, toRem(20), 600);
+                @include onMobile {
+                    @include fontSize(toRem(18), 4vw, toRem(18), 600);
+                }
+
                 text-overflow: ellipsis;
                 white-space: nowrap;
                 overflow: hidden;
@@ -49,7 +64,6 @@
 
             &:hover {
                 color: rgba($color: #fff, $alpha: 0.5);
-
                 border-bottom-color: rgba($color: #fff, $alpha: 0.8) !important;
 
                 > svg {

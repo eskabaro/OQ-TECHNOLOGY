@@ -1,11 +1,16 @@
 @import '../../../../../../_styles/mixins.scss';
 
 .map_legend_item {
-    @include flexHorizontalGap(2);
+    @include flexHorizontalGap(3);
 
     align-items: center;
 
     &_color {
+        @include onMobile {
+            width: toRem(16);
+            height: toRem(16);
+        }
+
         width: toRem(20);
         height: toRem(20);
 
@@ -13,7 +18,11 @@
     }
 
     & > span {
-        @include fontSize(toRem(14), 4vw, toRem(14), 600);
+        @include onMobile {
+            @include fontSize(toRem(14), 4vw, toRem(14), 600);
+        }
+
+        @include fontSize(toRem(16), 4vw, toRem(16), 600);
 
         text-transform: uppercase;
     }

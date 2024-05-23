@@ -2,6 +2,11 @@
 
 .container {
     @include flexVerticalGap(37.5);
+    @include onMobile {
+        @include flexVerticalGap(30);
+
+        padding-bottom: toRem(120);
+    }
 
     padding-bottom: toRem(150);
 }

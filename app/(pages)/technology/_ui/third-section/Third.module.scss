@@ -3,9 +3,15 @@
 
 .wrapper {
     @include flexVerticalGap(20);
+    @include onMobile {
+        @include flexVerticalGap(10);
+    }
 
     &_content {
         @include flexHorizontalGap(12.5);
+        @include onMobile {
+            @include flexVerticalGap(8);
+        }
 
         .left-side {
             width: 100%;
@@ -13,6 +19,12 @@
 
         .right-side {
             @include flexVerticalGap(8);
+            @include onMobile {
+                @include flexVerticalGap(6);
+
+                padding: 0;
+                order: -1;
+            }
 
             width: 100%;
             padding-inline: toRem(72);

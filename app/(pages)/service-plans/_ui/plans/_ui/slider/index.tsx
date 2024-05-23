@@ -15,9 +15,10 @@ const SLIDER_STEP = 1
 
 type TSliderProps = PropsWithChildren<{
     totalItemsCount: number
+    hasArrows?: boolean
 }>
 
-export const Slider: FC<TSliderProps> = ({ totalItemsCount, children }) => {
+export const Slider: FC<TSliderProps> = ({ totalItemsCount, hasArrows = false, children }) => {
     const [currentSlideIndex, setCurrentSlideIndex] = useState<number>(0)
     const [touchStart, setTouchStart] = useState(0)
     const [touchEnd, setTouchEnd] = useState(0)
@@ -62,10 +63,12 @@ export const Slider: FC<TSliderProps> = ({ totalItemsCount, children }) => {
         }
     }, [touchStart, touchEnd, handleNext, handlePrev])
 
+    const isArrowVisible = hasArrows && pagesCount > 1
+
     return (
         <div className={styles.wrapper} ref={listRef}>
             <div className={styles.list} style={{ width: ITEM_SIZE * visibleItemsCount - ITEMS_GAP }}>
-                {pagesCount > 1 && (
+                {isArrowVisible && (
                     <button onClick={handlePrev} className={cn(styles.list_prev, isPrevDisabled && styles.disabled)}>
                         <Icon name='mini-arrow' />
                     </button>
@@ -83,7 +86,7 @@ export const Slider: FC<TSliderProps> = ({ totalItemsCount, children }) => {
                     </ul>
                 </div>
 
-                {pagesCount > 1 && (
+                {isArrowVisible && (
                     <button onClick={handleNext} className={cn(styles.list_next, isNextDisabled && styles.disabled)}>
                         <Icon name='mini-arrow' />
                     </button>
