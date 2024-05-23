@@ -21,8 +21,16 @@
 
         > .title {
             @include flexVerticalGap(1);
+            @include adaptiveValue('max-width', 300, 100, 1500, 1000, 1);
 
-            max-width: 300px;
+            @include onTablet {
+                @include adaptiveValue('max-width', 300, 100, 1000, 600, 1);
+            }
+
+            @include onMobile {
+                @include adaptiveValue('max-width', 300, 100, 800, 0, 1);
+            }
+
             width: 100%;
 
             > h2 {

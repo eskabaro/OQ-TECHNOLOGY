@@ -1,6 +1,6 @@
 'use client'
 
-import { FC, Fragment, useMemo, useState } from 'react'
+import { FC, useMemo, useState } from 'react'
 
 import { useEntries } from '@/app/(app)/_components/entries-provider'
 import { Container } from '@/app/(app)/_components/container'
