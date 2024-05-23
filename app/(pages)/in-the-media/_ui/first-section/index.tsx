@@ -5,7 +5,7 @@ import { FC } from 'react'
 import { Container } from '@/app/(app)/_components/container'
 import { VideoItem } from '@/app/(app)/_components/video-item'
 import { Title } from '@/app/_shared/ui/typography/title'
-import { video } from '../../_const/video'
+import { videos } from '../../_const/videos'
 
 import styles from './FirstSection.module.scss'
 
@@ -21,8 +21,8 @@ export const FirstSection: FC = () => {
                 />
 
                 <ul className={styles.wrapper_list}>
-                    {video.map((e) => (
-                        <VideoItem key={e.id} {...e} />
+                    {videos.map((video) => (
+                        <VideoItem key={video.id} {...video} />
                     ))}
                 </ul>
             </div>

@@ -1,4 +1,4 @@
-export const video = [
+export const videos = [
     {
         id: 1,
         imgSrc: require('../_assets/video-1.webp'),
