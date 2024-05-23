@@ -7,7 +7,11 @@
 
     backdrop-filter: blur(toRem(4));
     background: transparent;
-    color: white;
+    color: $silverMist;
+
+    &::placeholder {
+        color: $silverMist;
+    }
 
     &.error {
         &::placeholder {

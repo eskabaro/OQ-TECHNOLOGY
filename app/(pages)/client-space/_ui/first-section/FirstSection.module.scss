@@ -2,8 +2,21 @@
 
 .wrapper {
     @include flexVerticalGap(37.5);
+    @include onMobile {
+        @include flexVerticalGap(10);
+    }
 
     &_list {
+        @include onTablet {
+            grid-template-columns: repeat(3, 1fr);
+            gap: toRem(24);
+        }
+
+        @include onMobile {
+            grid-template-columns: repeat(2, 1fr);
+            gap: toRem(16);
+        }
+
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: toRem(32);

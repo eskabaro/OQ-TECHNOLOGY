@@ -120,7 +120,10 @@ export const icons = {
     'play-v2': (props: SVGProps<SVGSVGElement>) => (
         <svg width='80' height='80' viewBox='0 0 80 80' fill='none' {...props}>
             <circle cx='40' cy='40' r='40' fill='white' />
-            <path d='M56.25 37.904C57.9167 38.8355 57.9167 41.1645 56.25 42.096L33.75 54.6721C32.0833 55.6037 30 54.4392 30 52.5761L30 27.4239C30 25.5608 32.0833 24.3963 33.75 25.3279L56.25 37.904Z' fill='black' />
+            <path
+                d='M56.25 37.904C57.9167 38.8355 57.9167 41.1645 56.25 42.096L33.75 54.6721C32.0833 55.6037 30 54.4392 30 52.5761L30 27.4239C30 25.5608 32.0833 24.3963 33.75 25.3279L56.25 37.904Z'
+                fill='black'
+            />
         </svg>
     ),
     'arrow-down-v2': (props: SVGProps<SVGSVGElement>) => (
@@ -147,6 +150,14 @@ export const icons = {
     'counter-arrow': (props: SVGProps<SVGSVGElement>) => (
         <svg width='13' height='8' viewBox='0 0 13 8' fill='none' {...props}>
             <path d='M12.5 1L6.5 7L0.500001 0.999999' stroke='#FAA055' strokeLinecap='round' strokeLinejoin='round' />
+        </svg>
+    ),
+    download: (props: SVGProps<SVGSVGElement>) => (
+        <svg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 24 24' fill='none' {...props}>
+            <path
+                d='M12 15.577L8.461 12.039L9.169 11.319L11.5 13.65V5H12.5V13.65L14.83 11.32L15.539 12.039L12 15.577ZM6.616 19C6.15533 19 5.771 18.846 5.463 18.538C5.155 18.23 5.00067 17.8453 5 17.384V14.961H6V17.384C6 17.538 6.064 17.6793 6.192 17.808C6.32 17.9367 6.461 18.0007 6.615 18H17.385C17.5383 18 17.6793 17.936 17.808 17.808C17.9367 17.68 18.0007 17.5387 18 17.384V14.961H19V17.384C19 17.8447 18.846 18.229 18.538 18.537C18.23 18.845 17.8453 18.9993 17.384 19H6.616Z'
+                fill='white'
+            />
         </svg>
     )
 } as const

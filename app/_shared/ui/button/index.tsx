@@ -4,7 +4,7 @@ import { FC, HTMLAttributes, PropsWithChildren } from 'react'
 import { cn } from '../../lib/classnames'
 import styles from './Button.module.scss'
 
-type VariantType = 'long' | 'short' | 'dark'
+type VariantType = 'long' | 'short' | 'dark' | 'rounded'
 
 interface IButtonProps extends PropsWithChildren<HTMLAttributes<HTMLButtonElement>> {
     variant: VariantType

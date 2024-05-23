@@ -35,6 +35,31 @@
         padding-block: toRem(16);
     }
 
+    &.rounded {
+        @include onMobile {
+            width: toRem(48);
+            height: toRem(48);
+
+            > svg {
+                width: toRem(36);
+                height: toRem(36);
+            }
+        }
+
+        width: toRem(64);
+        height: toRem(64);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+
+        &:hover {
+            > svg {
+                opacity: 0.5;
+            }
+        }
+    }
+
     &.short {
         @include fontSize(toRem(18), 4vw, toRem(18), 600);
 

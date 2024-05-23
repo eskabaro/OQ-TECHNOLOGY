@@ -1,5 +1,6 @@
 import { FirstSection } from './_ui/first-section'
 import { SecondSection } from './_ui/second-section'
+
 import styles from './_styles/ClientSpace.module.scss'
 
 const components = {
