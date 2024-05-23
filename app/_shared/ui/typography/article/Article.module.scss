@@ -25,6 +25,9 @@
 .wrapper {
     @include flexVerticalGap(4);
     @include header-styles(44, 18, 800);
+    @include onMobile {
+        @include header-styles(24, 16, 600)
+    }
 
     justify-content: center;
 

@@ -3,8 +3,7 @@
 
 .wrapper {
     @include flexVerticalGap(20);
-
-    &_video {
-        @include flexHorizontalGap(12.5);
+    @include onMobile {
+        @include flexVerticalGap(10);
     }
 }

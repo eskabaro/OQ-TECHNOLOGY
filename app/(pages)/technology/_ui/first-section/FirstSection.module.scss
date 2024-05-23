@@ -2,6 +2,9 @@
 
 .wrapper {
     @include flexVerticalGap(20);
+    @include onMobile {
+        @include flexVerticalGap(6);
+    }
 
     &_heading {
         @include flexVerticalGap(4);

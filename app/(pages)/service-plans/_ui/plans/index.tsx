@@ -11,7 +11,7 @@ export const Plans: FC = () => {
     const [selectedPlanIndex, setSelectedPlanIndex] = useState<number>(2)
 
     return (
-        <Slider totalItemsCount={plans.length}>
+        <Slider totalItemsCount={plans.length} hasArrows>
             {plans.map((item, index) => (
                 <li key={item.id}>
                     <PlanItem index={index} selectIdx={selectedPlanIndex} setSelectIdx={setSelectedPlanIndex} {...item} />

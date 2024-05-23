@@ -34,6 +34,10 @@
         &.active {
             right: 0;
         }
+
+        > button {
+            width: min-content;
+        }
     }
 }
 
