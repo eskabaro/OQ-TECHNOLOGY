@@ -14,11 +14,10 @@ import { MapLegend } from './_ui/map-legend'
 import styles from './Map.module.scss'
 
 interface IMapProps {
-    legendTitle: string
     legendItems: IMapLegendItem[]
 }
 
-export const Map: React.FC<IMapProps> = ({ legendTitle, legendItems }) => {
+export const Map: React.FC<IMapProps> = ({ legendItems }) => {
     const [isMapLoaded, setIsMapLoaded] = useState(false)
 
     const { countries } = useEntries()
@@ -67,7 +66,7 @@ export const Map: React.FC<IMapProps> = ({ legendTitle, legendItems }) => {
 
     return (
         <div id='map' className={styles.map}>
-            {isMapLoaded && <MapLegend title={legendTitle} items={legendItems} />}
+            {isMapLoaded && <MapLegend items={legendItems} />}
         </div>
     )
 }

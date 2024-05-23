@@ -21,7 +21,7 @@ export const FirstSection: FC = () => {
                     text='Sit sit non ut adipiscing aliquet est consectetur risus. Velit integer urna ut mattis mauris augue. Nunc amet aliquam blandit risus massa. Scelerisque est sed eu.'
                 />
             </Container>
-            <Map legendTitle='AVAILABILITY' legendItems={items} />
+            <Map legendItems={items} />
         </section>
     )
 }
