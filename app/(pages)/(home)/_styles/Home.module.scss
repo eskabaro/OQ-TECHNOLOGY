@@ -5,6 +5,7 @@
     @include onMobile {
         @include flexVerticalGap(30);
 
+        padding-bottom: toRem(120);
         background-size: 640px;
     }
 

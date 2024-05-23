@@ -8,23 +8,31 @@
 
 .form-box {
     @include flexVerticalGap(8);
-
-    background-color: $midnightSlate;
+    @include onMobile {
+        padding: toRem(40) toRem(16);
+    }
 
     max-width: em(1000);
     width: 100%;
     padding: toRem(64) toRem(84);
     border-radius: toRem(32);
     border-right: toRem(1) solid $autumnBlaze;
+    background-color: $midnightSahadow;
 
     &_heading {
         @include fontSize(toRem(48), 4vw, toRem(48), 800);
+        @include onMobile {
+            @include fontSize(toRem(32), 4vw, toRem(32), 800);
+        }
 
         text-align: center;
     }
 
     &_form {
         @include flexVerticalGap(8);
+        @include onMobile {
+            @include flexVerticalGap(4);
+        }
 
         margin: auto;
         width: 100%;
@@ -38,10 +46,23 @@
     }
 
     &_helpers {
-        @include fontSize(toRem(22), 4vw, toRem(22), 600);
+        @include fontSize(toRem(22), 4vw, toRem(22), 600, 120%);
         @include flexVerticalGap(6);
+        @include onMobile {
+            @include fontSize(toRem(18), 4vw, toRem(18), 600, 120%);
+            @include flexVerticalGap(4);
+        }
 
         align-items: center;
+        text-align: center;
+
+        br {
+            @include onMobile {
+                display: block;
+            }
+
+            display: none;
+        }
 
         > span {
             color: white;
@@ -60,9 +81,13 @@
 .btn {
     @include flexHorizontalGap(5);
     @include fontSize(toRem(16), 4vw, toRem(16), 600);
+    @include onMobile {
+        @include flexHorizontalGap(3);
+    }
 
     margin-top: toRem(16);
     justify-content: center;
+    align-items: center;
     color: white !important;
     max-width: em(280) !important;
     width: 100% !important;

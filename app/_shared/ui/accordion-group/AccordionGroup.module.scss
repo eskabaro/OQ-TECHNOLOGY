@@ -1,0 +1,26 @@
+@import '../../../(app)/_styles/mixins.scss';
+@import '../../../(app)/_styles/vaiables.scss';
+
+.accordion_group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 50%;
+        width: toRem(1);
+        background-color: $shadowCharcoal;
+    }
+
+    @include onMobile {
+        grid-template-columns: repeat(1, 1fr);
+
+        &::after {
+            right: 0;
+        }
+    }
+}

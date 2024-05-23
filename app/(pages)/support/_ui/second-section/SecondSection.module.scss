@@ -1,9 +1,16 @@
 @import '../../../../(app)/_styles/mixins.scss';
+@import '../../../../(app)/_styles/vaiables.scss';
 
 .form-box {
     @include flexVerticalGap(25);
+    @include onMobile {
+        @include flexVerticalGap(10);
 
-    border-right: toRem(1) solid #faa055;
+        padding: toRem(40) toRem(16);
+    }
+
+    background-color: $midnightSahadow;
+    border-right: toRem(1) solid $autumnBlaze;
     border-radius: toRem(32);
     max-width: em(1080);
     width: 100%;
@@ -13,6 +20,9 @@
 
     > h1 {
         @include fontSize(toRem(48), 4vw, toRem(48), 800);
+        @include onMobile {
+            @include fontSize(toRem(32), 4vw, toRem(32), 800);
+        }
 
         text-align: center;
         max-width: em(320);
