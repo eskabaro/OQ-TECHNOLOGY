@@ -1,11 +1,19 @@
 @import '../../../../(app)/_styles/mixins.scss';
 
 .wrapper {
+    @include onMobile {
+        margin-bottom: toRem(80);
+    }
+
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     background-image: url('/backgrounds/services.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding-block: toRem(452);
     margin-bottom: toRem(120);
 
     &_container {
