@@ -21,7 +21,7 @@ export const FirstSection: FC = () => {
             <div className={styles.wrapper_content}>
                 <div className={styles['left-side']}>
                     <Article
-                        size='XL'
+                        size='L'
                         titleTag='h2'
                         title='WE TRUSTED BY THE BEST'
                         paragraphs={[

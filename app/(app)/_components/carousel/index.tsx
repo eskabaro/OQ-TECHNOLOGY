@@ -14,16 +14,9 @@ export const Carousel: FC<ICarouselProps> = ({ imagesSrc }) => {
         <section className={styles.wrapper}>
             <div className={styles.wrapper_marquee}>
                 <div className={styles.group}>
-                    {imagesSrc.map((e, i) => (
-                        <div key={i} className={styles.group_image}>
-                            <Image src={e} width={250} height={95} alt='' />
-                        </div>
-                    ))}
-                </div>
-                <div className={styles.group}>
-                    {imagesSrc.map((e, i) => (
-                        <div key={i} className={styles.group_image}>
-                            <Image src={e} width={250} height={95} alt='' />
+                    {[...imagesSrc, ...imagesSrc].map((image, index) => (
+                        <div key={index} className={styles.group_image}>
+                            <Image src={image} width={250} height={40} alt='' />
                         </div>
                     ))}
                 </div>

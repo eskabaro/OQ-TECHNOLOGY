@@ -1,10 +1,15 @@
 @import '../../../(app)/_styles/mixins.scss';
 
 .wrapper {
-    @include flexVerticalGap(9);
+    @include flexVerticalGap(30);
+    @include onMobile {
+        @include flexVerticalGap(10);
 
+        padding: toRem(160) 0 toRem(120) 0;
+    }
+
+    padding: toRem(260) 0 toRem(150) 0;
     background-image: url('/images/earth-9.svg');
     background-repeat: no-repeat;
     background-position-y: 270%;
-    padding-top: toRem(260);
 }

@@ -8,7 +8,6 @@ export default function InvestorsPage() {
     return (
         <div className={styles.wrapper}>
             <FirstSection />
-
             <Carousel imagesSrc={images} />
         </div>
     )
