@@ -10,7 +10,7 @@ import { Pagination } from '../pagination'
 
 import styles from './NewsList.module.scss'
 
-const PAGE_SIZE = 9
+const PAGE_SIZE = 12
 
 export const NewsList: FC = () => {
     const [currentPage, setCurrentPage] = useState(1)
@@ -35,13 +35,9 @@ export const NewsList: FC = () => {
                 <Title isObserver size='XXL' title='OQ NEWS' />
 
                 <ul className={styles.list}>
-                    {currentTableData.map(({ fields }) => {
-                        return (
-                            <Fragment key={fields.slug}>
-                                <NewsItem {...fields} />
-                            </Fragment>
-                        )
-                    })}
+                    {currentTableData.map(({ fields }) => (
+                        <NewsItem key={fields.slug} {...fields} />
+                    ))}
                 </ul>
 
                 <Pagination currentPage={currentPage} totalCount={news.length} pageSize={PAGE_SIZE} onPageChange={handlePageChange} />
