@@ -2,38 +2,47 @@
 
 .wrapper {
     @include flexVerticalGap(16.5);
-
-    &_slider {
-        overflow: hidden;
+    @include onMobile {
+        @include flexVerticalGap(10);
     }
 }
 
-.slider-container {
-    @include flexHorizontalGap(8);
+.slide {
+    flex: 0 0 100%;
+    max-width: 1000px;
+    position: relative;
 
-    &_slide {
-        position: relative;
+    > img {
+        width: 100%;
+        height: 100%;
+    }
 
-        > .btn {
-            @include flexHorizontalGap(4);
+    > .btn {
+        @include flexHorizontalGap(4);
+        @include onMobile {
+            left: 50%;
+            transform: translateX(-50%);
+            width: max-content;
+            bottom: toRem(16);
+        }
 
-            align-items: center;
-            position: absolute;
-            bottom: toRem(40);
-            right: toRem(40);
-            background-color: $midnightMoss;
-            border-radius: toRem(100);
-            padding-right: toRem(32);
+        align-items: center;
+        position: absolute;
+        bottom: toRem(40);
+        right: toRem(40);
+        background-color: $midnightMoss;
+        border-radius: toRem(100);
+        padding-right: toRem(48);
 
-            > svg {
-                cursor: pointer;
+        > svg {
+            height: 100%;
+            cursor: pointer;
 
-                > circle {
-                    fill: $twilightAsh;
-                }
-                > path {
-                    fill: white;
-                }
+            > circle {
+                fill: $twilightAsh;
+            }
+            > path {
+                fill: white;
             }
         }
     }
@@ -41,6 +50,9 @@
 
 .btn-typography {
     @include fontSize(toRem(16), 4vw, toRem(16), 600);
+    @include onMobile {
+        @include fontSize(toRem(14), 4vw, toRem(14), 600);
+    }
 
     > p {
         color: $mistySlate;

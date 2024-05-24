@@ -3,25 +3,8 @@
 
 .wrapper {
     @include flexVerticalGap(20);
-
-    &_slider {
-        @include flexHorizontalGap(12.5);
-
-        @include onTablet {
-            height: 400px;
-        }
-
-        @include onMobile {
-          height: 860px;
-        }
-
-        height: 666px;
-        position: relative;
-
-        > img {
-            max-width: 100%;
-            height: auto;
-        }
+    @include onMobile {
+        @include flexVerticalGap(10);
     }
 }
 
@@ -32,16 +15,7 @@
     }
 
     height: auto;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.5s ease-in-out;
-    position: absolute;
-    inset: 0;
-
-    &.active {
-        opacity: 1;
-        visibility: visible;
-    }
+    flex: 0 0 100%;
 }
 
 .article {
@@ -75,6 +49,5 @@
     img {
         width: 100%;
         height: 100%;
-        object-fit: contain;
     }
 }

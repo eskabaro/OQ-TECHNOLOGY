@@ -1,0 +1,17 @@
+@import '../../_styles/mixins.scss';
+
+.slider {
+    @include flexVerticalGap(8);
+    @include onMobile {
+        @include flexVerticalGap(6);
+    }
+
+    overflow: hidden;
+
+    &_list {
+        @include flexHorizontalGap(8);
+        @include onMobile {
+            @include flexHorizontalGap(4);
+        }
+    }
+}

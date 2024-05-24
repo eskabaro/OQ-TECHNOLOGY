@@ -3,11 +3,18 @@
 
 .wrapper {
     @include flexVerticalGap(20);
+    @include onMobile {
+        @include flexVerticalGap(6);
+    }
 
     &_video {
         position: relative;
 
         > img {
+            @include onMobile {
+                height: toRem(240);
+            }
+
             max-width: 100%;
             height: auto;
         }
@@ -23,14 +30,31 @@
 
     &_list {
         @include flexHorizontalGap(8);
+        @include onMobile {
+            @include flexHorizontalGap(4);
+        }
 
         justify-content: space-around;
 
         > li {
             @include flexVerticalGap(6);
-            @include fontSize(toRem(28), 4vw, toRem(28), 600);
 
             align-items: center;
+
+            > img {
+                @include onMobile {
+                    height: auto;
+                }
+
+                width: 100%;
+            }
+
+            > span {
+                @include fontSize(toRem(28), 4vw, toRem(28), 600);
+                @include onMobile {
+                    display: none;
+                }
+            }
         }
     }
 }

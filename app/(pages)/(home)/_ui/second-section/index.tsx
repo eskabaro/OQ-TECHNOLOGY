@@ -1,55 +1,26 @@
 'use client'
 
-import { FC, useEffect, useRef, useState } from 'react'
+import { FC } from 'react'
 import Image from 'next/image'
+import Fade from 'embla-carousel-fade'
+import Autoplay from 'embla-carousel-autoplay'
 
-import { cn } from '@/app/_shared/lib/classnames'
 import { Container } from '@/app/(app)/_components/container'
 import { Button } from '@/app/_shared/ui/button'
 import { Article } from '@/app/_shared/ui/typography/article'
 import { SubTitle } from '@/app/_shared/ui/sub-title'
+import { Slider } from '@/app/(app)/_components/slider'
 import { slides } from '../../_const/lists'
 
 import styles from './SecondSection.module.scss'
 
 export const SecondSection: FC = () => {
-    const [currentIdx, setCurrentIdx] = useState<number>(0)
-    const sliderInterval = useRef<NodeJS.Timeout | null>(null)
-
-    const resetInterval = () => {
-        if (sliderInterval.current) {
-            clearInterval(sliderInterval.current)
-        }
-
-        sliderInterval.current = setInterval(nextSlide, 12500)
-    }
-
-    const nextSlide = () => {
-        setCurrentIdx((event) => (event <= 0 ? slides.length - 1 : event - 1))
-        resetInterval()
-    }
-
-    const prevSlide = () => {
-        setCurrentIdx((event) => (event + 1 >= slides.length ? 0 : event + 1))
-        resetInterval()
-    }
-
-    useEffect(() => {
-        resetInterval()
-
-        return () => {
-            if (sliderInterval.current) {
-                clearInterval(sliderInterval.current)
-            }
-        }
-    }, [])
-
     return (
         <Container as='section' className={styles.wrapper} id='products'>
-            <SubTitle isButtonGroup upTitle='PRODUCTS' title='OUR INNOVATION PRODUCTS' nextSlideFn={prevSlide} prevSlideFn={nextSlide} />
-            <div className={styles.wrapper_slider}>
-                {slides.map((item, idx) => (
-                    <div key={item.id} className={cn(styles.slide, currentIdx === idx && styles.active)}>
+            <SubTitle upTitle='PRODUCTS' title='OUR INNOVATION PRODUCTS' />
+            <Slider plugins={[Fade(), Autoplay({ stopOnInteraction: false, stopOnMouseEnter: true, delay: 10000 })]}>
+                {slides.map((item) => (
+                    <div key={item.id} className={styles.slide}>
                         <div key={item.id} className={styles.article}>
                             <Article titleTag='h2' title={item.title} paragraphs={item.paragraphs} />
                             <div className={styles['article_btn-box']}>
@@ -65,7 +36,7 @@ export const SecondSection: FC = () => {
                         </div>
                     </div>
                 ))}
-            </div>
+            </Slider>
         </Container>
     )
 }

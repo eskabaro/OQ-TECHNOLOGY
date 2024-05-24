@@ -46,7 +46,7 @@
 }
 
 .nav-left {
-    @include onMobile {
+    @include onTablet {
         display: none;
     }
 

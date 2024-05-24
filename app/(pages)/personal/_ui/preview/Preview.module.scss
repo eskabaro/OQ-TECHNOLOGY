@@ -1,7 +1,9 @@
 @import '../../../../(app)/_styles/mixins.scss';
 
 .wrapper {
-    padding-block: toRem(260);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
     background-image: url('/backgrounds/personal.svg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -13,27 +15,57 @@
 
 .left-side {
     @include flexVerticalGap(8);
+    @include onMobile {
+        @include flexVerticalGap(6);
+    }
+
     width: 100%;
     justify-content: center;
+
+    > img {
+        @include onMobile {
+            width: 100%;
+            max-height: 360px;
+            height: 100%;
+            display: block;
+        }
+
+        display: none;
+    }
 
     &_title {
         align-items: start;
 
         > div > p {
+            @include onMobile {
+                text-align: center !important;
+            }
+
             text-align: start !important;
         }
     }
 
     &_btn-box {
         @include flexHorizontalGap(6);
+        @include onMobile {
+            @include flexVerticalGap(4);
+        }
 
         > button {
+            @include onMobile {
+                width: 100% !important;
+            }
+
             color: white !important;
         }
     }
 }
 
 .right-side {
+    @include onMobile {
+        display: none;
+    }
+
     width: 100%;
 
     > img {
