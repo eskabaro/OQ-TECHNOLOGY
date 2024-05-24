@@ -42,6 +42,14 @@
 }
 
 .list {
+    > li:nth-child(-n + 4) {
+        @include onMobile {
+            display: block;
+        }
+
+        display: none;
+    }
+
     > li {
         @include fontSize(toRem(18), 4vw, toRem(18), 600);
 

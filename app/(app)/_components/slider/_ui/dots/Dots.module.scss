@@ -1,0 +1,24 @@
+@import '../../../../_styles/mixins.scss';
+
+.dots {
+    @include flexHorizontalGap(2);
+
+    justify-content: center;
+
+    &_item {
+        @include allAnimation(all, 0.25s);
+
+        width: toRem(8);
+        height: toRem(8);
+
+        background-color: #ffffff;
+        border-radius: 50%;
+        opacity: 0.2;
+        cursor: pointer;
+
+        &.active {
+            opacity: 1;
+            background-color: $autumnBlaze;
+        }
+    }
+}

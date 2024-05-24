@@ -3,28 +3,38 @@
 
 .wrapper {
     @include flexVerticalGap(16.5);
-
-    &_slider {
-        overflow: hidden;
+    @include onMobile {
+        @include flexVerticalGap(10);
     }
-}
-
-.slider_container {
-    @include flexHorizontalGap(8);
 }
 
 .slide {
     @include flexVerticalGap(4);
 
-    > div > span {
-        @include fontSize(toRem(24), 4vw, toRem(24), 600);
+    flex: 0 0 100%;
+    max-width: 512px;
+    position: relative;
 
-        color: $slateSilver;
+    > img {
+        width: 100%;
+        height: 100%;
     }
 
-    > div > p {
-        @include fontSize(toRem(24), 4vw, toRem(24), 400);
+    &_content {
+        @include flexVerticalGap(1);
+        @include onMobile {
+            align-items: center;
+            justify-content: center;
+        }
 
-        color: $mistySlate;
+        > span {
+            @include fontSize(toRem(24), 4vw, toRem(24), 600);
+
+            color: $slateSilver;
+        }
+
+        > p {
+            @include fontSize(toRem(24), 4vw, toRem(24), 400);
+        }
     }
 }
