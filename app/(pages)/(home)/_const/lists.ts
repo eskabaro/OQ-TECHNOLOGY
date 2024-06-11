@@ -78,13 +78,13 @@ export const slides = [
         id: 2,
         title: 'OQ TrackME',
         paragraphs: [
-            '0Q TrackMe is a compact personal and commercial GPS/GNSS tracker with cellular and satellite 5G IoT connectivity offering pre-paid data packages and equipped with long life battery. This makes it an ideal companion for hikers, climbers, mountaineers and seafarers. Panic button also included.'
+            '0Q TrackME is a compact personal and commercial GPS/GNSS tracker with cellular and satellite 5G IoT connectivity offering pre-paid data packages and equipped with long life battery. This makes it an ideal companion for hikers, climbers, mountaineers and seafarers. Panic button also included.'
         ],
         imgSrc: require('../_assets/innovation/slide-2.webp')
     },
     {
         id: 3,
-        title: 'Multimode LTE-M / NB-IoT / Satellite /GNSS SoC',
+        title: 'Multimode LTE-M / NB-IoT / Satellite / GNSS SoC',
         paragraphs: [
             'Designed for applications requiring continuous network connectivity, the module leverages the new 3GPP Release 17 features to ensure seamless coverage across the globe. On top of the satellite connectivity, the module supports terrestrial LTE Cat Ml and LTE Cat NB2 optimized for IoT applications.'
         ],
