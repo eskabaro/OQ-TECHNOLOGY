@@ -19,7 +19,7 @@ export const Preview: FC = () => {
                         size='XXL'
                         className={styles['left-side_title']}
                         title='OQ FOR INDIVIDUALS​'
-                        text='Track Your Assets Globally Using Our Non-Terrestrial Network (NTN) narrowband connectivity for Internet-of-Things (IoT)​'
+                        text='Track your assets globally using our Non-Terrestrial Network (NTN) narrowband connectivity of Internet-of-Things (IoT)​'
                     />
                     <Image src={require('../../_assets/product.webp')} width={360} height={311} priority alt='' />
                     <div className={styles['left-side_btn-box']}>

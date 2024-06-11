@@ -16,24 +16,24 @@ export const countries: ICountry[] = [
         countryFlagSrc: '/flags/greece.svg',
         countryName: 'GREECE',
         phone: '+30 697 0050847',
-        locations: ['83 Marathonodromou Street', '15125 Marousi, Greece']
+        locations: ['83 Marathonodromou Street, 15125 Marousi, Greece']
     },
     {
         countryFlagSrc: '/flags/rwanda.svg',
         countryName: 'RWANDA',
         phone: '+250 788 300 075',
-        locations: ['mujyi wa Kigali', 'PO Box 324, Kigali']
+        locations: ['Nyarugenge, mujyi wa Kigali, PO Box 324, Kigali']
     },
     {
         countryFlagSrc: '/flags/uae.svg',
         countryName: 'UAE',
         phone: '+971 54 455 2064',
-        locations: ['Dubai Digital Park', 'Dubai Silicon Oasis']
+        locations: ['Office 2002, Building A5, Dubai Digital Park, Dubai Silicon Oasis, Dubai']
     },
     {
         countryFlagSrc: '/flags/saudi-arabia.svg',
         countryName: 'SAUDI ARABIA',
         phone: '+966 53 951 2262',
-        locations: ['Prince Turkey Street,', 'Al Khobar 34413, Saudi']
+        locations: ['Adeer Tower, Prince Turkey Street, Alkurnaish, Al Khobar 34413, Saudi Arabia']
     }
 ]

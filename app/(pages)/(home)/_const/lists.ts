@@ -76,7 +76,7 @@ export const slides = [
     },
     {
         id: 2,
-        title: 'OQ Track Me',
+        title: 'OQ TrackME',
         paragraphs: [
             '0Q TrackMe is a compact personal and commercial GPS/GNSS tracker with cellular and satellite 5G IoT connectivity offering pre-paid data packages and equipped with long life battery. This makes it an ideal companion for hikers, climbers, mountaineers and seafarers. Panic button also included.'
         ],

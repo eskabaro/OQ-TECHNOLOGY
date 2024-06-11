@@ -18,21 +18,8 @@
             @include flexVerticalGap(3);
         }
 
+        align-items: center;
         max-width: toRem(360);
-
-        .logo_container {
-            @include flexVerticalGap(6);
-            @include onMobile {
-                @include flexVerticalGap(4);
-            }
-
-            > p {
-                @include fontSize(toRem(16), 4vw, toRem(16), 400);
-                @include onMobile {
-                    @include fontSize(toRem(14), 4vw, toRem(14), 400);
-                }
-            }
-        }
     }
 
     &_right-side {
@@ -87,7 +74,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: $shadowCharcoal;
+            background-color: $autumnBlaze;
         }
 
         &:first-child:hover {

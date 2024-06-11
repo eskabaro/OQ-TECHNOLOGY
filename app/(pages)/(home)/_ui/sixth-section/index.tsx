@@ -12,7 +12,7 @@ export const SixthSection: FC = () => {
     return (
         <Container as='section'>
             <div className={styles['form-box']}>
-                <Text as='h1'>Do you have any idea or remaining question?</Text>
+                <Text as='h1'>Do You Have a Question? Contact Us</Text>
                 <Form />
             </div>
         </Container>

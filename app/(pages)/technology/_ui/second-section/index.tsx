@@ -17,7 +17,7 @@ export const SecondSection: FC = () => {
                     titleTag='h2'
                     title='How does it work?'
                     paragraphs={[
-                        "Designed by OQ Technology, the world’s first global satellite 5G IoT operator, OQ TrackMe is a Using a global constellation of low earth orbit Nanosatellites and GEO orbit large satellites, we can provide coverage anywhere in the world. The network is composed of OQ's own LEO satellites and partner GEO satellites.",
+                        "Designed by OQ Technology, the world’s first global satellite 5G IoT operator, OQ TrackME is a Using a global constellation of low earth orbit Nanosatellites and GEO orbit large satellites, we can provide coverage anywhere in the world. The network is composed of OQ's own LEO satellites and partner GEO satellites.",
                         'This way we can access any region on Earth and fill the coverage gaps. The user is provided ubiquitous cellular connectivity roaming between terrestrial, LEO, and GEO networks.',
                         'We take care of the handover. Unlike Elon Musk’s Starlink which is used for broadband video and internet, our radio air-link is compatible with Narrowband IoT (NB-IoT) which was standardized in 3GPP Release 13 and is considered for 5G massive machine communication. We have published patents on how to make NB-IoT works over satellites.'
                     ]}

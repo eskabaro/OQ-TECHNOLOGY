@@ -16,7 +16,7 @@ export const FirstSection: FC = () => {
                     <Title
                         isObserver
                         size='XXL'
-                        title='DO YOU HAVE ANY IDEA OR REMAINING QUESTION?'
+                        title='Do You Have a Question? Contact Us'
                         text='Sit sit non ut adipiscing aliquet est consectetur risus. Velit integer urna ut mattis mauris augue. Nunc amet aliquam blandit risus massa. Scelerisque est sed eu.'
                     />
                     <Form />
