@@ -25,8 +25,6 @@
     &_item > a {
         @include flexHorizontalGap(2);
 
-        align-items: center;
-
         > span {
             @include fontSize(toRem(16), 4vw, toRem(16), 600, 150%);
             @include onMobile {
