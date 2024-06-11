@@ -94,9 +94,8 @@ $spacing: 24px;
     @include flexHorizontalGap(4);
     @include fontSize(toRem(18), 4vw, toRem(18), 400, 150%);
 
-    align-items: center;
-
     > svg {
+        margin-top: 6px;
         min-width: toRem(14);
         min-height: toRem(14);
     }
