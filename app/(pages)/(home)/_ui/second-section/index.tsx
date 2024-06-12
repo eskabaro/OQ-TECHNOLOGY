@@ -27,7 +27,7 @@ export const SecondSection: FC = () => {
                 prevSlideFn={() => onSliderScroll('prev')}
                 nextSlideFn={() => onSliderScroll('next')}
             />
-            <Slider plugins={[Fade(), Autoplay({ delay: 10000 })]} onEmblaApiInit={onEmblaApiInit}>
+            <Slider plugins={[Fade(), Autoplay({ delay: 5000 })]} onEmblaApiInit={onEmblaApiInit} hasDots>
                 {slides.map((item) => (
                     <div key={item.id} className={styles.slide}>
                         <div key={item.id} className={styles.article}>

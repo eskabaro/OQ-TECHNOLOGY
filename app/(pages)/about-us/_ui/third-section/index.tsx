@@ -29,7 +29,7 @@ export const ThirdSection: FC = () => {
                     value of their IoT data and make the best decision for their operations and business.
                 </SubTitle>
             </Container>
-            <Slider hasContainer onEmblaApiInit={onEmblaApiInit}>
+            <Slider hasContainer hasDots onEmblaApiInit={onEmblaApiInit}>
                 {Array.from({ length: 6 }).map((_, index) => (
                     <div key={index} className={styles.slide}>
                         <Image src={require('../../_assets/slider-1/slide-1.webp')} width={923} height={616} alt='' />

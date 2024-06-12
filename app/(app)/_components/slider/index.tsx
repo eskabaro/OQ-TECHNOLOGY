@@ -11,12 +11,13 @@ import styles from './Slider.module.scss'
 
 type TSliderProps = PropsWithChildren<{
     hasContainer?: boolean
+    hasDots?: boolean
     options?: EmblaOptionsType
     plugins?: EmblaPluginType[]
     onEmblaApiInit?: (api: EmblaCarouselType) => void
 }>
 
-export const Slider: FC<TSliderProps> = ({ hasContainer = false, options = {}, plugins = [], onEmblaApiInit, children }) => {
+export const Slider: FC<TSliderProps> = ({ hasContainer, hasDots, options = {}, plugins = [], onEmblaApiInit, children }) => {
     const [emblaRef, emblaApi] = useEmblaCarousel(options, plugins)
 
     useEffect(() => {
@@ -32,7 +33,7 @@ export const Slider: FC<TSliderProps> = ({ hasContainer = false, options = {}, p
     return (
         <div className={styles.slider} ref={emblaRef}>
             <Wrapper className={styles.slider_list}>{children}</Wrapper>
-            <Dots emblaApi={emblaApi} />
+            {hasDots && <Dots emblaApi={emblaApi} />}
         </div>
     )
 }

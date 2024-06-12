@@ -5,52 +5,25 @@
 
     &_marquee {
         @include flexHorizontalGap(12);
-
-        user-select: none;
     }
 }
 
-@keyframes slide {
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(-100%);
-    }
-}
-
-.group {
+.image {
     @include onMobile {
-        gap: toRem(40);
-        animation: 15s slide infinite linear;
+        padding: 0 20px;
     }
 
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    white-space: nowrap;
-    justify-content: space-around;
-    width: 100%;
-    gap: toRem(32);
-    animation: 30s slide infinite linear;
+    padding: 0 16px;
+    display: grid;
+    place-items: center;
 
-    &:hover {
-        animation-play-state: paused;
-    }
-
-    &_image {
-        display: grid;
-        place-items: center;
-
-        > img {
-            @include onMobile {
-                width: em(106);
-                height: toRem(40);
-            }
-
-            width: em(250);
-            height: toRem(94);
+    > img {
+        @include onMobile {
+            width: em(106);
+            height: toRem(40);
         }
+
+        width: em(250);
+        height: toRem(94);
     }
 }

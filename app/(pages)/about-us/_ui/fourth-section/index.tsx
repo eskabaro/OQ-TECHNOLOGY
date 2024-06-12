@@ -29,6 +29,7 @@ export const FourthSection: FC = () => {
                 </SubTitle>
             </Container>
             <Slider
+                hasDots
                 hasContainer
                 onEmblaApiInit={onEmblaApiInit}
                 options={{

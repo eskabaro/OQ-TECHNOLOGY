@@ -12,6 +12,7 @@ export const Plans: FC = () => {
 
     return (
         <Slider
+            hasDots
             options={{
                 breakpoints: {
                     '(min-width: 768px)': { dragFree: true }

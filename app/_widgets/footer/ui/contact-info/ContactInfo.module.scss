@@ -16,6 +16,8 @@
         @include flexVerticalGap(6);
         @include onMobile {
             @include flexVerticalGap(3);
+
+            max-width: min-content;
         }
 
         align-items: center;
