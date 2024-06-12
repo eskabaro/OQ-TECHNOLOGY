@@ -42,7 +42,7 @@
 }
 
 .list {
-    > li:nth-child(-n + 4) {
+    > li:nth-child(-n + 3) {
         @include onMobile {
             display: block;
         }
