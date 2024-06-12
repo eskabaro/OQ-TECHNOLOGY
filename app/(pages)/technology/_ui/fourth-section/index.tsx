@@ -22,7 +22,16 @@ export const FourthSection: FC = () => {
                 prevSlideFn={() => onSliderScroll('prev')}
                 nextSlideFn={() => onSliderScroll('next')}
             />
-            <Slider hasDots onEmblaApiInit={onEmblaApiInit}>
+            <Slider
+                hasDots
+                onEmblaApiInit={onEmblaApiInit}
+                options={{
+                    slidesToScroll: 2,
+                    breakpoints: {
+                        '(max-width: 768px)': { slidesToScroll: 1 }
+                    }
+                }}
+            >
                 {videos.map((video) => (
                     <VideoItem key={video.id} {...video} />
                 ))}
