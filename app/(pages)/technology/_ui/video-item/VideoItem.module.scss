@@ -2,8 +2,11 @@
 
 .wrapper {
     @include flexVerticalGap(8);
+    @include onMobile {
+        flex: 0 0 100%;
+    }
 
-    min-width: 375px;
+    flex: 0 0 calc(50% - 16px);
 
     &_video-box {
         position: relative;
