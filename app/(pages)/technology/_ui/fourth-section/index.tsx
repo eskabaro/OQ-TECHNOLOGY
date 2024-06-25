@@ -26,10 +26,7 @@ export const FourthSection: FC = () => {
                 hasDots
                 onEmblaApiInit={onEmblaApiInit}
                 options={{
-                    slidesToScroll: 2,
-                    breakpoints: {
-                        '(max-width: 768px)': { slidesToScroll: 1 }
-                    }
+                    align: 'start',
                 }}
             >
                 {videos.map((video) => (

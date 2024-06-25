@@ -1,6 +1,6 @@
 'use client'
 
-import { Dispatch, FC, SetStateAction } from 'react'
+import { FC } from 'react'
 
 import { cn } from '@/app/_shared/lib/classnames'
 import { IPlan } from '../../../second-section/const/plans'
@@ -10,15 +10,11 @@ import { Button } from '@/app/_shared/ui/button'
 
 import styles from './PlanItem.module.scss'
 
-interface IPlanItemProps extends IPlan {
-    index: number
-    selectIdx: number
-    setSelectIdx: Dispatch<SetStateAction<number>>
-}
+interface IPlanItemProps extends IPlan {}
 
-export const PlanItem: FC<IPlanItemProps> = ({ title, description, price, services, index, selectIdx, setSelectIdx }) => {
+export const PlanItem: FC<IPlanItemProps> = ({ title, description, price, services }) => {
     return (
-        <div onClick={() => setSelectIdx(index)} className={cn(styles.wrapper, index === selectIdx && styles.active)}>
+        <div className={styles.wrapper}>
             <div className={styles.wrapper_heading}>
                 <Text as='h2'>{title}</Text>
                 <Text as='p'>{description}</Text>

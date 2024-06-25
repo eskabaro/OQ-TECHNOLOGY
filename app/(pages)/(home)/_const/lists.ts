@@ -22,7 +22,7 @@ export const servicesList: IListItem[] = [
         id: 3,
         imgSrc: require('../_assets/services/service-3.webp'),
         title: 'RELIABLE',
-        subTitile: 'High Quility of Service and Security, ensure business continuity'
+        subTitile: 'High Quality of Service and Security, ensure business continuity'
     }
 ]
 
