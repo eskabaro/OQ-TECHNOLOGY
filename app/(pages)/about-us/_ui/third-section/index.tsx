@@ -13,7 +13,7 @@ import { Slider } from '@/app/(app)/_components/slider'
 import styles from './ThirdSection.module.scss'
 
 export const ThirdSection: FC = () => {
-    const [onEmblaApiInit, onSliderScroll] = useScrollSlider()
+    const { onEmblaApiInit, onSliderScroll } = useScrollSlider()
 
     return (
         <section className={styles.wrapper}>

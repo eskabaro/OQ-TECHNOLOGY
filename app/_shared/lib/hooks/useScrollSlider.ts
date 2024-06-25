@@ -1,8 +1,26 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { EmblaCarouselType } from 'embla-carousel'
 
-const useScrollSlider: () => [(api: EmblaCarouselType) => void, (direction: 'prev' | 'next') => void] = () => {
+const useScrollSlider = () => {
     const [emblaApi, setEmblaApi] = useState<EmblaCarouselType | null>(null)
+    const [isPrevAvailable, setIsPrevAvailable] = useState(false)
+    const [isNextAvailable, setIsNextAvailable] = useState(false)
+
+    useEffect(() => {
+        if (!emblaApi) return
+
+        const onSelect = () => {
+            setIsPrevAvailable(emblaApi.canScrollPrev())
+            setIsNextAvailable(emblaApi.canScrollNext())
+        }
+
+        emblaApi.on('select', onSelect)
+        onSelect()
+
+        return () => {
+            emblaApi.off('select', onSelect)
+        }
+    }, [emblaApi])
 
     const onEmblaApiInit = (api: EmblaCarouselType) => {
         setEmblaApi(api)
@@ -22,7 +40,7 @@ const useScrollSlider: () => [(api: EmblaCarouselType) => void, (direction: 'pre
         }
     }
 
-    return [onEmblaApiInit, onSliderScroll]
+    return { onEmblaApiInit, onSliderScroll, isPrevAvailable, isNextAvailable }
 }
 
 export default useScrollSlider

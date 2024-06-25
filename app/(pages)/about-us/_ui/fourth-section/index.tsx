@@ -12,7 +12,7 @@ import { Slider } from '@/app/(app)/_components/slider'
 import styles from './FourthSection.module.scss'
 
 export const FourthSection: FC = () => {
-    const [onEmblaApiInit, onSliderScroll] = useScrollSlider()
+    const { onEmblaApiInit, onSliderScroll } = useScrollSlider()
 
     return (
         <div className={styles.wrapper}>

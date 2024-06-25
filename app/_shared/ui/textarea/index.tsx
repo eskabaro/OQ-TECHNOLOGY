@@ -10,5 +10,5 @@ interface ITextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
 }
 
 export const Textarea: FC<ITextareaProps> = forwardRef(({ error, className, ...props }, ref: ForwardedRef<HTMLTextAreaElement>) => {
-    return <textarea ref={ref} className={cn(styles.textarea, styles[className!], error && styles.error)} {...props} />
+    return <textarea ref={ref} className={cn(styles.textarea, className, error && styles.error)} {...props} />
 })

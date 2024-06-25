@@ -16,27 +16,24 @@ import { slides } from '../../_const/lists'
 import styles from './SecondSection.module.scss'
 
 export const SecondSection: FC = () => {
-    const [onEmblaApiInit, onSliderScroll] = useScrollSlider();
+    const { onEmblaApiInit, onSliderScroll } = useScrollSlider()
 
     return (
         <Container as='section' className={styles.wrapper} id='products'>
             <SubTitle
-                upTitle='PRODUCTS'
+                upTitle=''
                 title='OUR INNOVATIVE PRODUCTS'
                 isButtonGroup
                 prevSlideFn={() => onSliderScroll('prev')}
                 nextSlideFn={() => onSliderScroll('next')}
             />
-            <Slider plugins={[Fade(), Autoplay({ delay: 5000 })]} onEmblaApiInit={onEmblaApiInit} hasDots>
+            <Slider plugins={[Fade(), Autoplay({ stopOnInteraction: false, stopOnMouseEnter: true, delay: 5000 })]} onEmblaApiInit={onEmblaApiInit} hasDots>
                 {slides.map((item) => (
                     <div key={item.id} className={styles.slide}>
                         <div key={item.id} className={styles.article}>
                             <Article titleTag='h2' title={item.title} paragraphs={item.paragraphs} />
                             <div className={styles['article_btn-box']}>
-                                <Button variant='short'>ORDER NOW</Button>
-                                <Button variant='short' withoutBg>
-                                    DOWNLOAD DATASHEET
-                                </Button>
+                                <Button variant='short'>{item.buttonText}</Button>
                             </div>
                         </div>
 

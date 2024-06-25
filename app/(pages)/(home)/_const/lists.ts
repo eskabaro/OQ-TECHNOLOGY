@@ -22,7 +22,7 @@ export const servicesList: IListItem[] = [
         id: 3,
         imgSrc: require('../_assets/services/service-3.webp'),
         title: 'RELIABLE',
-        subTitile: 'High QoS and Security, ensure business continuity'
+        subTitile: 'High Quility of Service and Security, ensure business continuity'
     }
 ]
 
@@ -70,9 +70,10 @@ export const slides = [
         id: 1,
         title: 'OQ ONE',
         paragraphs: [
-            '0Q ONE is a flexible, rugged, and programmable IoT terminal offering pre-paid data packages, This terminal is specifically designed for remote monitoring and controlling Of both fixed and mobile assets across various industries such as transportation, oil and gas, utilities, maritime, agriculture, and more.'
+            '0Q ONE is a flexible, rugged, and programmable IoT terminal offering pre-paid data packages, This terminal is specifically designed for remote monitoring and controlling of both fixed and mobile assets across various industries such as transportation, oil and gas, utilities, maritime, agriculture, and more.'
         ],
-        imgSrc: require('../_assets/innovation/slide-1.webp')
+        imgSrc: require('../_assets/innovation/slide-1.webp'),
+        buttonText: 'ORDER NOW A DEMO KIT',
     },
     {
         id: 2,
@@ -80,7 +81,8 @@ export const slides = [
         paragraphs: [
             '0Q TrackME is a compact personal and commercial GPS/GNSS tracker with cellular and satellite 5G IoT connectivity offering pre-paid data packages and equipped with long life battery. This makes it an ideal companion for hikers, climbers, mountaineers and seafarers. Panic button also included.'
         ],
-        imgSrc: require('../_assets/innovation/slide-2.webp')
+        imgSrc: require('../_assets/innovation/slide-2.webp'),
+        buttonText: 'ORDER NOW',
     },
     {
         id: 3,
@@ -88,6 +90,7 @@ export const slides = [
         paragraphs: [
             'Designed for applications requiring continuous network connectivity, the module leverages the new 3GPP Release 17 features to ensure seamless coverage across the globe. On top of the satellite connectivity, the module supports terrestrial LTE Cat Ml and LTE Cat NB2 optimized for IoT applications.'
         ],
-        imgSrc: require('../_assets/innovation/slide-3.webp')
+        imgSrc: require('../_assets/innovation/slide-3.webp'),
+        buttonText: 'ORDER NOW',
     }
 ]

@@ -13,7 +13,7 @@
             @include flexVerticalGap(8);
         }
 
-        > img {
+        > img, video {
             @include onMobile {
                 width: 100%;
                 order: -1;

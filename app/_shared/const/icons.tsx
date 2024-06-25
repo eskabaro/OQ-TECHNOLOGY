@@ -8,6 +8,11 @@ export const icons = {
             <path d='M0 25.5H32' stroke='white' strokeWidth='2' />
         </svg>
     ),
+    youtube: (props: SVGProps<SVGSVGElement>) => (
+        <svg width='20' height='20' viewBox="0 0 63 56.7" fill="white" {...props}>
+            <path d="M60.7,13.7c-0.7-2.6-2.8-4.7-5.4-5.4c-4.8-1.3-23.8-1.3-23.8-1.3s-19,0-23.8,1.3C5.1,9,3,11.1,2.3,13.7  c-1.3,4.8-1.3,14.6-1.3,14.6s0,9.9,1.3,14.6c0.7,2.6,2.8,4.7,5.4,5.4c4.8,1.3,23.8,1.3,23.8,1.3s19,0,23.8-1.3  c2.6-0.7,4.7-2.8,5.4-5.4c1.3-4.8,1.3-14.6,1.3-14.6S62,18.5,60.7,13.7z M25.4,37.5V19.2l15.8,9.1L25.4,37.5z" />
+        </svg>
+    ),
     facebook: (props: SVGProps<SVGSVGElement>) => (
         <svg width='20' height='20' viewBox='0 0 20 20' fill='none' {...props}>
             <g clipPath='url(#clip0_134_9045)'>

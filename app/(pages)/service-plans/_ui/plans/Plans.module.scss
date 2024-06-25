@@ -1,0 +1,45 @@
+@import '../../../../(app)/_styles/mixins.scss';
+@import '../../../../(app)/_styles/vaiables.scss';
+
+.plans {
+  position: relative;
+
+  &_prev,
+  &_next {
+    @include opacityAnimation;
+    @include onMobile {
+      display: none;
+    }
+
+    width: toRem(62);
+    height: toRem(62);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: calc(50% - 20px);
+
+    background-color: $autumnBlaze;
+    border-radius: 50%;
+    z-index: 1;
+    cursor: pointer;
+
+    opacity: 0;
+
+    &.visible {
+      opacity: 1;
+    }
+  }
+
+  &_prev {
+    left: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  &_next {
+    right: 0;
+    transform: rotate(180deg) translate(-50%, 50%);
+  }
+}

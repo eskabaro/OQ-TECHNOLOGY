@@ -24,7 +24,7 @@
 
 .wrapper {
     @include flexVerticalGap(4);
-    @include header-styles(44, 20, 800);
+    @include header-styles(44, 22, 800);
     @include onMobile {
         @include header-styles(24, 16, 600)
     }

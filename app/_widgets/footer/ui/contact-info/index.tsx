@@ -2,6 +2,7 @@ import { FC } from 'react'
 import Link from 'next/link'
 
 import { countries } from '../../const/countries'
+import { socialLinks } from '../../const/socialLinks'
 import { Logo } from '@/app/_shared/ui/logo'
 import { Icon } from '@/app/_shared/ui/icon'
 import { Country } from '../country'
@@ -14,21 +15,13 @@ export const ContactInfo: FC = () => {
             <div className={styles['wrapper_left-side']}>
                 <Logo />
                 <ul className={styles.list}>
-                    <li className={styles.list_item}>
-                        <Link href={''}>
-                            <Icon name='facebook' />
-                        </Link>
-                    </li>
-                    <li className={styles.list_item}>
-                        <Link href={''}>
-                            <Icon name='twitter' />
-                        </Link>
-                    </li>
-                    <li className={styles.list_item}>
-                        <Link href={''}>
-                            <Icon name='linkedin' />
-                        </Link>
-                    </li>
+                    {socialLinks.map((socialLink, index) => (
+                        <li key={index} className={styles.list_item}>
+                            <Link href={socialLink.link} target='_blank'>
+                                <Icon name={socialLink.name} />
+                            </Link>
+                        </li>
+                    ))}
                 </ul>
             </div>
             <div className={styles['wrapper_right-side']}>

@@ -5,6 +5,7 @@ import { SubmitHandler, useForm } from 'react-hook-form'
 
 import { Input } from '../input'
 import { Button } from '../button'
+import { Textarea } from '../textarea'
 
 import styles from './Form.module.scss'
 
@@ -50,11 +51,10 @@ export const Form: FC = () => {
                 <Input {...register('company', { required: true })} type='text' error={!!errors.company} variant='first' placeholder='Company *' />
                 <Input {...register('country', {})} type='text' error={!!errors.country} variant='first' placeholder='Country' />
                 <Input {...register('email', { required: true })} type='email' error={!!errors.email} variant='first' placeholder='E-mail *' />
-                <Input
+                <Textarea
                     {...register('message', { required: true })}
-                    type='text'
+                    className={styles.textarea}
                     error={!!errors.message}
-                    variant='first'
                     placeholder='Your message *'
                 />
             </div>
