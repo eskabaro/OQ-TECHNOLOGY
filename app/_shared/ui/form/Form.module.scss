@@ -16,7 +16,6 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: toRem(20);
-        align-items: center;
         justify-content: center;
 
         @include onMobile {
@@ -24,9 +23,23 @@
             gap: toRem(16);
         }
 
+        >label:last-of-type {
+            @include onMobile {
+                grid-column: unset;
+            }
+
+            grid-column: span 2;
+        }
+
         .textarea {
-            height: toRem(65);
+            @include onMobile {
+                grid-column: unset;
+            }
+
+            height: toRem(200);
             padding: toRem(18) toRem(20);
+
+            grid-column: span 2;
 
             border-radius: toRem(52);
             backdrop-filter: blur(toRem(4));

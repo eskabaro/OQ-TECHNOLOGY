@@ -14,7 +14,7 @@
     }
 
     &.error {
-        border-color: red;
+        border-color: red !important;
 
         &::placeholder {
             color: red;
