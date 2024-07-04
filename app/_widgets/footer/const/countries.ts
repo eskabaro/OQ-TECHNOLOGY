@@ -34,6 +34,6 @@ export const countries: ICountry[] = [
         countryFlagSrc: '/flags/saudi-arabia.svg',
         countryName: 'SAUDI ARABIA',
         phone: '+966 53 951 2262',
-        locations: ['8535+7Q6, University Blvd, KFUPM, Dhahran 34464, Saudi Arabia']
+        locations: ['Dhahran Techno Valley (DTV) OQ Technology KSA University Blvd, KFUPM, Dhahran 34464, Saudi Arabia']
     }
 ]
