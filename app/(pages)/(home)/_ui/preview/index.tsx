@@ -16,7 +16,7 @@ export const Preview: FC = () => {
                     isObserver
                     size='XXL'
                     title='OQ FOR BUSINESS​'
-                    text='OQ Technology Is the world’s first global satellite 5G IoT operator providing uninterrupted cellular coverage for your assets and machines anywhere on the planet'
+                    text='OQ Technology is the world’s first global satellite 5G IoT operator providing uninterrupted cellular coverage for your assets and machines anywhere on the planet'
                 />
                 <div className={styles['btn-box']}>
                     <Button variant='short'>

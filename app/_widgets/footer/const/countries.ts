@@ -34,6 +34,6 @@ export const countries: ICountry[] = [
         countryFlagSrc: '/flags/saudi-arabia.svg',
         countryName: 'SAUDI ARABIA',
         phone: '+966 53 951 2262',
-        locations: ['Adeer Tower, Prince Turkey Street, Alkurnaish, Al Khobar 34413, Saudi Arabia']
+        locations: ['8535+7Q6, University Blvd, KFUPM, Dhahran 34464, Saudi Arabia']
     }
 ]

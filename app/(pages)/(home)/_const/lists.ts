@@ -70,7 +70,7 @@ export const slides = [
         id: 1,
         title: 'OQ ONE',
         paragraphs: [
-            '0Q ONE is a flexible, rugged, and programmable IoT terminal offering pre-paid data packages, This terminal is specifically designed for remote monitoring and controlling of both fixed and mobile assets across various industries such as transportation, oil and gas, utilities, maritime, agriculture, and more.'
+            'OQ ONE is a flexible, rugged, and programmable IoT terminal offering pre-paid data packages, This terminal is specifically designed for remote monitoring and controlling of both fixed and mobile assets across various industries such as transportation, oil and gas, utilities, maritime, agriculture, and more.'
         ],
         imgSrc: require('../_assets/innovation/slide-1.webp'),
         buttonText: 'ORDER NOW A DEMO KIT',
@@ -79,7 +79,7 @@ export const slides = [
         id: 2,
         title: 'OQ TrackME',
         paragraphs: [
-            '0Q TrackME is a compact personal and commercial GPS/GNSS tracker with cellular and satellite 5G IoT connectivity offering pre-paid data packages and equipped with long life battery. This makes it an ideal companion for hikers, climbers, mountaineers and seafarers. Panic button also included.'
+            'OQ TrackME is a compact personal and commercial GPS/GNSS tracker with cellular and satellite 5G IoT connectivity offering pre-paid data packages and equipped with long life battery. This makes it an ideal companion for hikers, climbers, mountaineers and seafarers. Panic button also included.'
         ],
         imgSrc: require('../_assets/innovation/slide-2.webp'),
         buttonText: 'ORDER NOW',

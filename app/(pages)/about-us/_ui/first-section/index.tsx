@@ -16,7 +16,7 @@ export const FirstSection: FC = () => {
                 isObserver
                 size='XXL'
                 title='ABOUT US'
-                text="OQ Technology Is the world’s first global satellite 5G IoT operator providing uninterrupted cellular coverage for your assets and machines anywhere on the planet."
+                text="OQ Technology is the world’s first global satellite 5G IoT operator providing uninterrupted cellular coverage for your assets and machines anywhere on the planet."
             />
 
             <div className={styles.wrapper_video}>
