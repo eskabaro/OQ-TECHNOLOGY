@@ -7,7 +7,7 @@ import Link from 'next/link'
 import { cn } from '@/app/_shared/lib/classnames'
 import { Logo } from '@/app/_shared/ui/logo'
 import { Text } from '@/app/_shared/ui/typography/text'
-import { Modal } from '@/app/(app)/_components/modal'
+import { Sidebar } from '@/app/(app)/_components/sidebar'
 import { Icon } from '@/app/_shared/ui/icon'
 import { useClickOutside } from '@/app/_shared/lib/hooks/useClickOutside'
 
@@ -71,7 +71,7 @@ export const Header: FC = () => {
                     </button>
                 </div>
             </header>
-            <Modal ref={ref} isActive={isShow} setIsActive={setIsShow} />
+            <Sidebar ref={ref} isActive={isShow} setIsActive={setIsShow} />
         </>
     )
 }

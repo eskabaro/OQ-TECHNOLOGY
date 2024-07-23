@@ -8,15 +8,15 @@ import { Icon } from '@/app/_shared/ui/icon'
 import { Dropdown } from './_ui/dropdown'
 import { links } from './const/links'
 
-import styles from './Modal.module.scss'
+import styles from './Sidebar.module.scss'
 
-interface IModalProps {
+interface ISidebarProps {
     isActive: boolean
     setIsActive: Dispatch<SetStateAction<boolean>>
     ref: any
 }
 
-export const Modal: FC<IModalProps> = forwardRef(({ isActive, setIsActive }, ref: ForwardedRef<HTMLDivElement>) => {
+export const Sidebar: FC<ISidebarProps> = forwardRef(({ isActive, setIsActive }, ref: ForwardedRef<HTMLDivElement>) => {
     return (
         <div className={cn(styles.bg, isActive && styles.active)}>
             <div ref={ref} className={cn(styles.bg_modal, isActive && styles.active)}>
