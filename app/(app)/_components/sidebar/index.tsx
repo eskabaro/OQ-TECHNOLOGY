@@ -19,7 +19,7 @@ interface ISidebarProps {
 export const Sidebar: FC<ISidebarProps> = forwardRef(({ isActive, setIsActive }, ref: ForwardedRef<HTMLDivElement>) => {
     return (
         <div className={cn(styles.bg, isActive && styles.active)}>
-            <div ref={ref} className={cn(styles.bg_modal, isActive && styles.active)}>
+            <div ref={ref} className={cn(styles.bg_sidebar, isActive && styles.active)}>
                 <button onClick={() => setIsActive(false)}>
                     <Icon name='x-mark' />
                 </button>

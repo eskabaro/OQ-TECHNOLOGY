@@ -7,12 +7,19 @@
     }
 
     > img {
+        @include allAnimation(all, 0.25s);
         @include onMobile {
             width: 100%;
         }
 
         max-width: 100%;
         height: auto;
+
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.8;
+        }
     }
 }
 

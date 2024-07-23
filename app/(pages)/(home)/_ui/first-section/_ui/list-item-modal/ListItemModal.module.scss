@@ -1,0 +1,23 @@
+@import '../../../../../../(app)/_styles/mixins.scss';
+
+.modal_content {
+  >video {
+    @include onMobile {
+      height: 100%;
+      margin-bottom: 20px;
+    }
+
+    height: 400px;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .text {
+    align-items: start;
+
+    >div>p {
+      max-width: unset;
+      text-align: start;
+    }
+  }
+}

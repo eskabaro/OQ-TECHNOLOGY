@@ -1,0 +1,51 @@
+@import '../../../(app)/_styles/mixins.scss';
+@import '../../../(app)/_styles/vaiables.scss';
+
+.bg {
+    @include allAnimation(all, 0.25s);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    inset: 0;
+    visibility: hidden;
+    z-index: 2;
+
+    &.active {
+        visibility: visible;
+        background-color: rgba(19, 19, 19, 0.60);
+    }
+
+    &_modalWrapper {
+        @include allAnimation(all, 0.25s);
+        @include onMobile {
+            padding: toRem(40);
+        }
+
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 toRem(20);
+        padding: toRem(80);
+
+        position: relative;
+        opacity: 0;
+        z-index: 1;
+
+        border: 1px solid #FAA056;
+        border-radius: 16px;
+        background-color: #000000;
+        box-shadow: 0px 0px 34px 0px rgba(250, 160, 85, 0.5);
+
+        &.active {
+            opacity: 1;
+        }
+
+        .closeBtn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+    }
+}

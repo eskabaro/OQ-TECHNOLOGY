@@ -3,17 +3,19 @@
 import { FC } from 'react'
 import Image from 'next/image'
 
-import { IListItem } from '@/app/(pages)/(home)/_const/lists'
+import { IBusinessListItem, IModalData } from '@/app/(pages)/(home)/_const/lists'
 import { Title } from '@/app/_shared/ui/typography/title'
 
 import styles from './ListItem.module.scss'
 
-interface IListItemProps extends IListItem {}
+interface IListItemProps extends IBusinessListItem {
+    onModalOpen: (modalData: IModalData) => void;
+}
 
-export const ListItem: FC<IListItemProps> = ({ imgSrc, title, subTitile }) => {
+export const ListItem: FC<IListItemProps> = ({ onModalOpen, imgSrc, title, subTitile, modalData }) => {
     return (
         <li className={styles.wrapper}>
-            <Image src={imgSrc} width={520} height={280} alt={title} />
+            <Image src={imgSrc} width={520} height={280} alt={title} onClick={() => onModalOpen(modalData!)} />
             <Title size='L' className={styles.heading} title={title} text={subTitile} />
         </li>
     )

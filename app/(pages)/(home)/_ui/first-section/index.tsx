@@ -1,16 +1,25 @@
 'use client'
 
-import { FC } from 'react'
+import { FC, useState } from 'react'
 
 import { Container } from '@/app/(app)/_components/container'
 import { Title } from '@/app/_shared/ui/typography/title'
-import { businessList, servicesList } from '../../_const/lists'
+import { businessList, IModalData, servicesList } from '../../_const/lists'
 import { ListItem } from './_ui/list-item'
 import { ServiceItem } from './_ui/service-item'
+import { ListItemModal } from './_ui/list-item-modal'
 
 import styles from './FirstSection.module.scss'
 
 export const FirstSection: FC = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false)
+    const [selectedModalData, setSelectedModalData] = useState<IModalData | null>(null)
+
+    const handleModalOpen = (modalData: IModalData) => {
+        setIsModalOpen(true)
+        setSelectedModalData(modalData)
+    }
+
     return (
         <Container as='section' className={styles.wrapper}>
             <ul className={styles.wrapper_services}>
@@ -31,10 +40,15 @@ export const FirstSection: FC = () => {
 
                 <ul className={styles.wrapper_list}>
                     {businessList.map((item) => (
-                        <ListItem key={item.id} {...item} />
+                        <ListItem key={item.id} onModalOpen={handleModalOpen} {...item} />
                     ))}
                 </ul>
             </div>
+            <ListItemModal
+                isOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
+                {...selectedModalData!}
+            />
         </Container>
     )
 }
