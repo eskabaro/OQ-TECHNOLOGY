@@ -44,7 +44,7 @@ export const businessList: IBusinessListItem[] = [
         subTitile: 'Connectivity for automation, predictive maintenance, and the digital oil field applications​',
         modalData: {
             mediaPath: '/videos/smart-energy.mp4',
-            title: 'Smart Energy',
+            title: 'SMART ENERGY',
             description:
                 'Our solution enables you to run your operations efficiently, and at full capacity and avoid disruption or loss of assets by giving you full access remotely to manage your applications. This includes SCADA systems, pipeline monitoring, and leak detection, predictive maintenance reports of machinery and windmills, inventory and asset tracking, mining, environmental monitoring, oilfields monitoring, tracking of workers and their well-being, and finally industrial smart metering.'
         }
@@ -56,7 +56,7 @@ export const businessList: IBusinessListItem[] = [
         subTitile: 'Connectivity for ships, containers, and buoys',
         modalData: {
             mediaPath: '/videos/smart-ocean.mp4',
-            title: 'Smart Ocean',
+            title: 'SMART OCEAN',
             description:
                 'Maritime connectivity today is limited to expensive satellite VSAT and M2M high-end terminals, this is not suitable for IoT data collection and control. We help you to track fishing boats, smart nets, weather buoys, and commercial containers. In addition to that we can provide real-time tracking solutions for transport ships and yachts. Finally managing sensors and devices on offshore rigs, underwater pipes and oil wells have never been easier, all using a highly secure and reliable system.'
         }
@@ -69,7 +69,7 @@ export const businessList: IBusinessListItem[] = [
         modalData: {
             // TODO: change this to an actual data
             mediaPath: '/videos/smart-mobility.mp4',
-            title: 'Smart Mobility',
+            title: 'SMART CITIES',
             description:
                 'Connected smart vehicles/drones are entering the market and offer companies the chance to deliver goods further and in more efficient ways. Tracking of fleets and goods is not possible outside cities where no cellular coverage is available. OQ offers an end-to-end satellite 5G integrated solution that allows you to monitor your assets and fleet in real time, anywhere they may go. We can also support bi-directional communication to machines such as banking ATMs in poor connectivity areas. We provide a dual satellite-terrestrial solution that can switch automatically between our and partner networks.'
         }
@@ -77,11 +77,11 @@ export const businessList: IBusinessListItem[] = [
     {
         id: 4,
         imgSrc: require('../_assets/business/4.webp'),
-        title: 'LOGISTICS',
+        title: 'LOGISTICS & TELEMATICS',
         subTitile: 'Connectivity for mobility and asset tracking',
         modalData: {
             mediaPath: '/videos/smart-mobility.mp4',
-            title: 'Smart Mobility',
+            title: 'SMART MOBILITY',
             description:
                 'Connected smart vehicles/drones are entering the market and offer companies the chance to deliver goods further and in more efficient ways. Tracking of fleets and goods is not possible outside cities where no cellular coverage is available. OQ offers an end-to-end satellite 5G integrated solution that allows you to monitor your assets and fleet in real time, anywhere they may go. We can also support bi-directional communication to machines such as banking ATMs in poor connectivity areas. We provide a dual satellite-terrestrial solution that can switch automatically between our and partner networks.'
         }
@@ -93,7 +93,7 @@ export const businessList: IBusinessListItem[] = [
         subTitile: 'Connectivity for the smart agritech and livestock monitoring',
         modalData: {
             mediaPath: '/videos/smart-farm.mp4',
-            title: 'Smart Farm',
+            title: 'SMART FARM',
             description:
                 'Farms suffer globally from a lack of cellular connectivity. IoT-based smart farming involves monitoring the crop field with the help of sensors (light, humidity, temperature, soil moisture). These applications require permanent and reliable telecommunication coverage - Our global solution can achieve this purpose easily by integrating our module into your smart farming devices which gives you access to our data platform for a very low cost and within record time.'
         }
@@ -106,7 +106,7 @@ export const businessList: IBusinessListItem[] = [
         modalData: {
             // TODO: change this to an actual data
             mediaPath: '/videos/smart-mobility.mp4',
-            title: 'Smart Mobility',
+            title: 'SMS over Satellite 5G NR',
             description:
                 'Connected smart vehicles/drones are entering the market and offer companies the chance to deliver goods further and in more efficient ways. Tracking of fleets and goods is not possible outside cities where no cellular coverage is available. OQ offers an end-to-end satellite 5G integrated solution that allows you to monitor your assets and fleet in real time, anywhere they may go. We can also support bi-directional communication to machines such as banking ATMs in poor connectivity areas. We provide a dual satellite-terrestrial solution that can switch automatically between our and partner networks.'
         }
