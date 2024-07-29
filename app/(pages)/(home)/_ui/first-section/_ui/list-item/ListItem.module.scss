@@ -26,7 +26,10 @@
 .heading {
     align-items: start;
 
-    > div > p {
-        text-align: start;
+    > div {
+        > p,
+        > h1 {
+            text-align: start;
+        }
     }
 }

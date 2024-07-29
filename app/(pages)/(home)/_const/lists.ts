@@ -89,7 +89,7 @@ export const businessList: IBusinessListItem[] = [
     {
         id: 5,
         imgSrc: require('../_assets/business/5.webp'),
-        title: 'AGRICULTURE',
+        title: 'AGRICULTURE & HERD MANAGEMENT',
         subTitile: 'Connectivity for the smart agritech and livestock monitoring',
         modalData: {
             mediaPath: '/videos/smart-farm.mp4',
