@@ -1,0 +1,69 @@
+@import '../../../../(app)/_styles/vaiables.scss';
+@import '../../../../(app)/_styles/mixins.scss';
+
+.wrapper {
+  @include flexVerticalGap(20);
+
+  @include onMobile {
+    @include flexVerticalGap(10);
+  }
+
+  .content {
+    @include flexHorizontalGap(10);
+
+    align-items: center;
+
+    &__left,
+    &__right {
+      flex: 1 1 50%;
+    }
+
+    &__left {
+      @include flexVerticalGap(10);
+
+      padding: 32px 40px;
+
+      border-radius: 20px;
+      border: 1px solid $shadowCharcoal;
+
+      >hr {
+        height: 1px;
+        width: 100%;
+        background-color: $shadowCharcoal;
+      }
+
+      .stats_container {
+        @include flexHorizontalGap(16);
+      }
+    }
+
+    &__right {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 20px;
+
+      >img {
+        width: 100%;
+        height: 100%;
+
+        border-radius: 16px;
+        object-fit: cover;
+
+        &:nth-child(1) {
+          grid-column: span 2;
+        }
+
+        &:nth-child(3) {
+          grid-row: span 2;
+        }
+      }
+    }
+  }
+
+  .features_container {
+    @include flexHorizontalGap(8);
+
+    margin-bottom: 140px;
+  }
+}

@@ -1,0 +1,16 @@
+@import '../../../../../../(app)/_styles/mixins.scss';
+
+.job_board {
+  @include flexVerticalGap(12);
+
+  &__list {
+    @include flexVerticalGap(10);
+  }
+
+  > button {
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+  }
+}

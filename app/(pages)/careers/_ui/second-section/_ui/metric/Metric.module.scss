@@ -1,0 +1,35 @@
+@import '../../../../../../(app)/_styles/mixins.scss';
+@import '../../../../../../(app)/_styles/vaiables.scss';
+
+.metric {
+  @include flexVerticalGap(6);
+
+  &__value {
+    @include fontSize(toRem(64), 4vw, toRem(64), 600);
+  }
+
+  &__label {
+    @include fontSize(toRem(24), 4vw, toRem(24), 400, 150%);
+  }
+
+  .progress {
+    height: 1px;
+
+    position: relative;
+
+    background: linear-gradient(90deg, $autumnBlaze 0%, rgba(250, 160, 85, 0.00) 100%);
+
+    &__circle {
+      width: 20px;
+      height: 20px;
+
+      position: absolute;
+      left: 0;
+      transform: translateY(-50%);
+
+      border-radius: 50%;
+
+      background: $autumnBlaze;
+    }
+  }
+}

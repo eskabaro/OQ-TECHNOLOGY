@@ -1,0 +1,20 @@
+@import '../../../../../../(app)/_styles/mixins.scss';
+@import '../../../../../../(app)/_styles/vaiables.scss';
+
+.marker {
+  @include flexHorizontalGap(4);
+
+  align-items: center;
+
+  &__value {
+    @include fontSize(toRem(64), 4vw, toRem(64), 700, 50%);
+
+    color: $autumnBlaze;
+  }
+
+  &__label {
+    @include fontSize(toRem(20), 4vw, toRem(20), 600);
+
+    max-width: 140px;
+  }
+}

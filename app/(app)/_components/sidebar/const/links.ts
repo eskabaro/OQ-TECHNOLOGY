@@ -38,42 +38,48 @@ export const links: ILink[] = [
     },
     {
         id: 6,
+        title: 'Careers',
+        href: 'careers',
+        childrens: [],
+    },
+    {
+        id: 7,
         title: 'availability map',
         href: 'availability-map',
         childrens: []
     },
     {
-        id: 7,
+        id: 8,
         title: 'satellite map',
         href: 'satellite-map',
         childrens: []
     },
     {
-        id: 8,
+        id: 9,
         title: 'price comparison',
         href: 'price-comparison',
         childrens: []
     },
     {
-        id: 9,
+        id: 10,
         title: 'investors',
         href: 'investors',
         childrens: []
     },
     {
-        id: 10,
+        id: 11,
         title: 'support',
         href: 'support',
         childrens: []
     },
     {
-        id: 11,
+        id: 12,
         title: 'about us',
         href: 'about-us',
         childrens: []
     },
     {
-        id: 12,
+        id: 13,
         title: 'news and media',
         href: '',
         childrens: [
@@ -92,7 +98,7 @@ export const links: ILink[] = [
         ]
     },
     {
-        id: 13,
+        id: 14,
         title: 'contact us',
         href: 'contact-us',
         childrens: []

@@ -1,0 +1,26 @@
+@import '../../../../../../(app)/_styles/mixins.scss';
+
+.feature_card {
+  @include flexVerticalGap(4);
+
+  padding: 32px 24px;
+
+  border-radius: 16px;
+  border: 1px solid #333;
+  background-color: rgba(51, 51, 51, 0.20);
+
+  > img {
+    width: 80px;
+    height: 80px;
+  }
+
+  &__title {
+    @include fontSize(toRem(28), 4vw, toRem(28), 600, 150%);
+
+    text-transform: uppercase;
+  }
+
+  &__description {
+    @include fontSize(toRem(20), 4vw, toRem(20), 500, 150%);
+  }
+}
