@@ -11,7 +11,7 @@ const components = {
   SecondSection,
   ThirdSection,
   FourthSection,
-  SixthSection: FifthSection,
+  FifthSection,
 }
 
 export default function CareersPage() {
