@@ -1,8 +1,8 @@
 @import '../../../../(app)/_styles/mixins.scss';
 
 .wrapper {
-    @include flexVerticalGap(12.5);
-    @include onMobile {
-        @include flexVerticalGap(10);
-    }
+  @include flexHorizontalGap(8);
+  @include onTablet {
+    @include flexVerticalGap(10);
+  }
 }

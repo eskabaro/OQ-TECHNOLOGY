@@ -2,15 +2,26 @@
 
 .job_board {
   @include flexVerticalGap(12);
-
-  &__list {
+  @include onMobile {
     @include flexVerticalGap(10);
   }
 
+  &__list {
+    @include flexVerticalGap(10);
+    @include onMobile {
+      @include flexVerticalGap(5);
+    }
+  }
+
   > button {
+    @include onMobile {
+      width: 100%!important;
+    }
+
     margin: 0 auto;
 
     display: flex;
     align-items: center;
+    justify-content: center;
   }
 }

@@ -3,6 +3,8 @@ import { SecondSection } from './_ui/second-section';
 import { ThirdSection } from './_ui/third-section';
 import { FourthSection } from './_ui/fourth-section';
 import { FifthSection } from './_ui/fifth-section';
+import { SixthSection } from './_ui/sixth-section';
+import { SeventhSection } from './_ui/seventh-section';
 
 import styles from './_styles/Careers.module.scss';
 
@@ -12,6 +14,8 @@ const components = {
   ThirdSection,
   FourthSection,
   FifthSection,
+  SixthSection,
+  SeventhSection,
 }
 
 export default function CareersPage() {

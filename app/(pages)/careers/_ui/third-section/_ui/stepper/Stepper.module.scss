@@ -3,8 +3,17 @@
 
 .wrapper {
   @include flexVerticalGap(30);
+  @include onMobile {
+    @include flexVerticalGap(14);
+
+    margin-top: 48px;
+  }
 
   .stepper {
+    @include onMobile {
+      margin: 0 24px;
+    }
+
     height: 1px;
     margin: 0 32px;
 
@@ -15,6 +24,10 @@
 
     &__item {
       @include allAnimation(all, 0.25s);
+      @include onMobile {
+        width: 24px;
+        height: 24px;
+      }
 
       width: 36px;
       height: 36px;
@@ -65,6 +78,9 @@
       &__number {
         @include allAnimation(all, 0.25s);
         @include fontSize(toRem(20), 4vw, toRem(20), 600);
+        @include onMobile {
+          @include fontSize(toRem(16), 4vw, toRem(16), 800);
+        }
 
         position: absolute;
         top: -40px;
@@ -79,6 +95,11 @@
 
   .content {
     @include flexHorizontalGap(10);
+    @include onMobile {
+      @include flexVerticalGap(2);
+
+      padding: 24px;
+    }
 
     padding: 40px 60px;
 
@@ -90,6 +111,11 @@
 
     .title {
       @include fontSize(toRem(44), 4vw, toRem(44), 800);
+      @include onMobile {
+        @include fontSize(toRem(24), 4vw, toRem(24), 800, 150%);
+
+        flex: unset;
+      }
 
       flex: 1 0 28%;
 
@@ -98,6 +124,15 @@
 
     .description {
       @include fontSize(toRem(20), 4vw, toRem(20), 500, 150%);
+      @include onMobile {
+        @include fontSize(toRem(16), 4vw, toRem(16), 600, 150%);
+      }
+    }
+
+    > img {
+      @include onMobile {
+        order: -1;
+      }
     }
   }
 }

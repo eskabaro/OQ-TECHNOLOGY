@@ -26,7 +26,13 @@
     @include flexVerticalGap(4);
     @include header-styles(44, 22, 800);
     @include onMobile {
-        @include header-styles(24, 16, 600)
+        @include header-styles(24, 16, 600);
+        @include flexVerticalGap(2);
+
+        > h1 > svg {
+                width: 24px;
+                height: 24px;
+        }
     }
 
     justify-content: center;

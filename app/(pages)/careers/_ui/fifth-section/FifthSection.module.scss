@@ -2,10 +2,137 @@
 @import '../../../../(app)/_styles/vaiables.scss';
 
 .wrapper {
-    &_accordions_box {
-        @include flexVerticalGap(12.5);
-        @include onMobile {
-            @include flexVerticalGap(10);
-        }
+  @include flexVerticalGap(30);
+  @include onMobile {
+    @include flexVerticalGap(14);
+
+    margin-top: 48px;
+  }
+
+  .stepper {
+    @include onMobile {
+      margin: 0 24px;
     }
+
+    height: 1px;
+    margin: 0 32px;
+
+    display: flex;
+    justify-content: space-between;
+
+    background-image: url('../../_assets/stepper-path.svg');
+
+    &__item {
+      @include allAnimation(all, 0.25s);
+      @include onMobile {
+        width: 24px;
+        height: 24px;
+      }
+
+      width: 36px;
+      height: 36px;
+
+      position: relative;
+
+      background-color: $midnightSlate;
+      border: 1px solid #ffffff;
+      border-radius: 50%;
+
+      transform: translateY(-50%);
+      cursor: pointer;
+
+      &::after {
+        @include allAnimation(all, 0.25s);
+
+        content: '';
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        width: 100%;
+        height: 100%;
+
+        border-radius: 50%;
+        background-color: transparent;
+
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+      }
+
+      &.active {
+        background: $autumnBlaze;
+        border-color: $autumnBlaze;
+
+        .stepper__item__number {
+          color: $autumnBlaze;
+        }
+
+        &::after {
+          background-color: $autumnBlaze;
+          transform: translate(-50%, -50%) scale(1.8);
+          opacity: 0.2;
+        }
+      }
+
+      &__number {
+        @include allAnimation(all, 0.25s);
+        @include fontSize(toRem(20), 4vw, toRem(20), 600);
+        @include onMobile {
+          @include fontSize(toRem(16), 4vw, toRem(16), 800);
+        }
+
+        position: absolute;
+        top: -40px;
+        left: 50%;
+
+        transform: translateX(-50%);
+        text-wrap: nowrap;
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .content {
+    @include flexHorizontalGap(10);
+    @include onTablet {
+      @include flexVerticalGap(2);
+
+      padding: 24px;
+    }
+
+    padding: 40px 60px;
+
+    align-items: center;
+
+    border-radius: 16px;
+    border: 1px solid #333;
+    background: rgba(51, 51, 51, 0.20);
+
+    .title {
+      @include fontSize(toRem(44), 4vw, toRem(44), 800);
+      @include onMobile {
+        @include fontSize(toRem(24), 4vw, toRem(24), 800, 150%);
+
+        flex: unset;
+      }
+
+      flex: 1 0 28%;
+
+      color: $autumnBlaze;
+    }
+
+    .description {
+      @include fontSize(toRem(20), 4vw, toRem(20), 500, 150%);
+      @include onMobile {
+        @include fontSize(toRem(16), 4vw, toRem(16), 600, 150%);
+      }
+    }
+
+    > img {
+      @include onMobile {
+        order: -1;
+      }
+    }
+  }
 }

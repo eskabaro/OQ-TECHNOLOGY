@@ -3,13 +3,26 @@
 
 .metric {
   @include flexVerticalGap(6);
+  @include onMobile {
+    @include flexVerticalGap(4);
+  }
 
   &__value {
     @include fontSize(toRem(64), 4vw, toRem(64), 600);
+    @include onMobile {
+      @include fontSize(toRem(32), 4vw, toRem(32), 600, 150%);
+      
+      text-align: center
+    }
   }
 
   &__label {
-    @include fontSize(toRem(24), 4vw, toRem(24), 400, 150%);
+    @include fontSize(toRem(24), 4vw, toRem(24), 600, 150%);
+    @include onMobile {
+      @include fontSize(toRem(16), 4vw, toRem(16), 600, 150%);
+      
+      text-align: center
+    }
   }
 
   .progress {

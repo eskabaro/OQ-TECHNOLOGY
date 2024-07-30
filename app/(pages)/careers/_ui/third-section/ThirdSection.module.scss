@@ -3,30 +3,38 @@
 
 .wrapper {
   @include flexVerticalGap(20);
-
   @include onMobile {
     @include flexVerticalGap(10);
   }
 
   .content {
     @include flexHorizontalGap(10);
+    @include onTablet {
+      @include flexVerticalGap(8);
+    }
 
     align-items: center;
 
     &__left,
     &__right {
-      flex: 1 1 50%;
+      width: 100%;
     }
 
     &__left {
       @include flexVerticalGap(10);
+      @include onMobile {
+        @include flexVerticalGap(4);
+
+        padding: unset;
+        border: unset;
+      }
 
       padding: 32px 40px;
 
       border-radius: 20px;
       border: 1px solid $shadowCharcoal;
 
-      >hr {
+      > hr {
         height: 1px;
         width: 100%;
         background-color: $shadowCharcoal;
@@ -34,10 +42,22 @@
 
       .stats_container {
         @include flexHorizontalGap(16);
+        @include onMobile {
+          @include flexHorizontalGap(6);
+
+          margin-top: 16px;
+        }
+
+        justify-content: space-between;
       }
     }
 
     &__right {
+      @include onTablet {
+        gap: 10px;
+        order: -1;
+      }
+
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);
@@ -59,11 +79,5 @@
         }
       }
     }
-  }
-
-  .features_container {
-    @include flexHorizontalGap(8);
-
-    margin-bottom: 140px;
   }
 }

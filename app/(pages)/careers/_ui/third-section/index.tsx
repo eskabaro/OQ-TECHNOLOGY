@@ -4,8 +4,6 @@ import { Article } from '@/app/_shared/ui/typography/article';
 import { SubTitle } from '@/app/_shared/ui/sub-title';
 import { Container } from '@/app/(app)/_components/container';
 import { StatsMarker } from './_ui/stats-marker';
-import { FeatureCard } from './_ui/feature-card';
-import { Stepper } from './_ui/stepper';
 
 import styles from './ThirdSection.module.scss';
 
@@ -37,12 +35,6 @@ export const ThirdSection = () => {
           <Image src={require('../../_assets/image-4.webp')} alt='' />
         </div>
       </div>
-      <div className={styles.features_container}>
-        <FeatureCard imageSrc={require('../../_assets/features-1.png')} title='FEATURES' description='Lorem ipsum dolor sit amet consectetur. Nec tinci d u nt fames metus quis vitae vestibulum ut. Fringilla consequat odio sit arcu velit rhoncus ultrices vitae. Morbi condimentum vel et i varius etiam. ' />
-        <FeatureCard imageSrc={require('../../_assets/features-2.png')} title='COMFORT' description='Lorem ipsum dolor sit amet consectetur. Nec tinci d u nt fames metus quis vitae vestibulum ut. Fringilla consequat odio sit arcu velit rhoncus ultrices vitae. Morbi condimentum vel et i varius etiam. ' />
-        <FeatureCard imageSrc={require('../../_assets/features-3.png')} title="COMBINATION" description="Lorem ipsum dolor sit amet consectetur. Nec tinci d u nt fames metus quis vitae vestibulum ut. Fringilla consequat odio sit arcu velit rhoncus ultrices vitae. Morbi condimentum vel et i varius etiam. " />
-      </div>
-      <Stepper />
     </Container>
   )
 }
