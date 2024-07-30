@@ -1,5 +1,3 @@
-'use client'
-
 import { FC } from 'react'
 import Image from 'next/image'
 
@@ -19,10 +17,7 @@ export const FirstSection: FC = () => {
                 text="Lorem ipsum dolor sit amet consectetur. Accumsan bibendum vestibulum vivamus ullamcorper."
             />
 
-            <div className={styles.wrapper_video}>
-                <Image src={require('../../_assets/video-1.webp')} width={1600} height={730} alt='' priority />
-                <Icon name='play-v2' />
-            </div>
+            <Image src={require('../../_assets/video-1.webp')} width={1600} height={730} alt='' priority />
         </Container>
     )
 }

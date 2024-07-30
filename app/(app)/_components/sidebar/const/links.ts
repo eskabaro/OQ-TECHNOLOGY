@@ -26,21 +26,21 @@ export const links: ILink[] = [
     },
     {
         id: 4,
+        title: 'careers',
+        href: 'careers',
+        childrens: [],
+    },
+    {
+        id: 5,
         title: 'technology',
         href: 'technology',
         childrens: []
     },
     {
-        id: 5,
+        id: 6,
         title: 'service plans',
         href: 'service-plans',
         childrens: []
-    },
-    {
-        id: 6,
-        title: 'Careers',
-        href: 'careers',
-        childrens: [],
     },
     {
         id: 7,

@@ -46,7 +46,9 @@ export const Header: FC = () => {
                     <nav className={styles['nav-right']}>
                         <ul className={styles['nav-right_list']}>
                             <li>
-                                <Link href={'/'}>Enterprise</Link>
+                                <Link href={'/'} className={cn(styles.link, '/' === pathname && styles.active)}>
+                                    Enterprise
+                                </Link>
                             </li>
                             <Text className={styles['vertical-bar']} as='span'>
                                 {'|'}
@@ -62,6 +64,14 @@ export const Header: FC = () => {
                             <li>
                                 <Link href={'personal'} className={cn(styles.link, '/personal' === pathname && styles.active)}>
                                     Personal
+                                </Link>
+                            </li>
+                            <Text className={styles['vertical-bar']} as='span'>
+                                {'|'}
+                            </Text>
+                            <li>
+                                <Link href={'careers'} className={cn(styles.link, '/careers' === pathname && styles.active)}>
+                                    Careers
                                 </Link>
                             </li>
                         </ul>
