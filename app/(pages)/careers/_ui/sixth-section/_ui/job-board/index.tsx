@@ -1,14 +1,19 @@
+"use client";
+
+import { useEntries } from '@/app/(app)/_components/entries-provider';
 import { Button } from '@/app/_shared/ui/button';
 import { JobBoardItem } from './_ui/job-board-item';
 
 import styles from './JobBoard.module.scss';
 
 export const JobBoard = () => {
+  const { jobs } = useEntries();
+
   return (
     <div className={styles.job_board}>
       <ul className={styles.job_board__list}>
-        {Array.from({ length: 5 }).map((_, index) => (
-          <JobBoardItem key={index} />
+        {jobs.map((job, index) => (
+          <JobBoardItem key={index} job={job.fields} />
         ))}
       </ul>
 

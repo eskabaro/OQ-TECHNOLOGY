@@ -3,7 +3,7 @@
 
 .job_board_item {
   @include flexHorizontalGap(5);
-  @include onMobile {
+  @include onTablet {
     padding: 24px;
 
     flex-wrap: wrap;
@@ -19,16 +19,16 @@
   background-color: rgba(51, 51, 51, 0.20);
 
   > * {
-    @include onMobile {
+    @include onTablet {
       flex: unset;
     }
 
     flex: 1;
   }
 
-  &__description {
+  &__title {
     @include fontSize(toRem(22), 4vw, toRem(22), 400, 130%);
-    @include onMobile {
+    @include onTablet {
       @include fontSize(toRem(20), 4vw, toRem(20), 400, 130%);
 
       width: 100%;
@@ -36,9 +36,9 @@
     }
   }
 
-  &__title {
+  &__type {
     @include fontSize(toRem(20), 4vw, toRem(20), 400, 110%);
-    @include onMobile {
+    @include onTablet {
       @include fontSize(toRem(16), 4vw, toRem(16), 400, 110%);
 
       width: 100%;
@@ -48,7 +48,7 @@
   &__location {
     @include flexHorizontalGap(4);
     @include fontSize(toRem(20), 4vw, toRem(20), 400, 110%);
-    @include onMobile {
+    @include onTablet {
       @include flexHorizontalGap(2);
       @include fontSize(toRem(16), 4vw, toRem(16), 400, 110%);
     }
@@ -61,7 +61,7 @@
   &__apply {
     @include flexHorizontalGap(4);
     @include fontSize(toRem(20), 4vw, toRem(20), 400, 110%);
-    @include onMobile {
+    @include onTablet {
       @include flexHorizontalGap(2);
       @include fontSize(toRem(16), 4vw, toRem(16), 400, 110%);
     }
