@@ -7,6 +7,8 @@
     @include flexVerticalGap(4);
   }
 
+  overflow: hidden;
+
   &__value {
     @include fontSize(toRem(64), 4vw, toRem(64), 600);
     @include onMobile {
@@ -30,19 +32,32 @@
 
     position: relative;
 
-    background: linear-gradient(90deg, $autumnBlaze 0%, rgba(250, 160, 85, 0.00) 100%);
+    background: linear-gradient(90deg, $autumnBlaze 0%, rgba(250, 160, 85, 0) 100%);
 
     &__circle {
+      @include allAnimation(left, 0.8s);
+
       width: 20px;
       height: 20px;
 
       position: absolute;
-      left: 0;
-      transform: translateY(-50%);
+      transform: translate(-50%, -50%);
 
       border-radius: 50%;
-
       background: $autumnBlaze;
+
+      &::before {
+        content: '';
+        width: 200px;
+        height: 1px;
+
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateX(-100%);
+
+        background: $autumnBlaze;
+      }
     }
   }
 }
