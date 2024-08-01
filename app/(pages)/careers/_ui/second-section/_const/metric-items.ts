@@ -5,12 +5,12 @@ export interface IMetricItem {
 
 export const metricItems: IMetricItem[] = [
     {
-        value: '< 15%',
-        label: 'staff turnover'
+        value: '+42%',
+        label: 'turnover over 3 year, creating 16 new jobs'
     },
     {
-        value: '82%',
-        label: 'of our senior specialists built their career at OQ Technology'
+        value: '50%',
+        label: 'of staff have 5y+ exp, 25% 2y+ and 25% are juniors'
     },
     {
         value: '78.5%',

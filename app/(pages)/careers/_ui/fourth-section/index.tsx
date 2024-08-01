@@ -1,3 +1,5 @@
+"use client";
+
 import { Container } from '@/app/(app)/_components/container';
 import { FeatureCard } from './_ui/feature-card';
 

@@ -1,3 +1,5 @@
+"use client";
+
 import Image from 'next/image';
 
 import { Article } from '@/app/_shared/ui/typography/article';
@@ -15,10 +17,14 @@ export const ThirdSection = () => {
         <div className={styles.content__left}>
           <Article
             titleIcon='star'
-            title='Lorem ipsum dolor sit'
+            title='Welcome to Our Tech Haven'
             paragraphs={[
-              'Lorem ipsum dolor sit amet consectetur. Eu malesuada dignissim pulvinar dolor. At turpis nisl dolor pellentesque quis egestas tempor congue sed. Velit neque odio nulla ornare. Eu purus ornare lorem justo et velit ullamcorper. Imperdiet id amet mauris purus sed massa interdum posuere. Facilisis cras pellentesque blandit fringilla. Quam tellus ornare a vulputate.',
-              'Lorem ipsum dolor sit amet consectetur. Nec tincidunt fames metus quis vitae vestibulum ut. Fringilla consequat odio sit arcu velit rhoncus ultrices vitae. Morbi condimentum vel et iaculis nunc mi varius etiam. Feugiat purus cursus non nunc id vitae senectus. Tempus ullamcorper egestas tincidunt egestas facilisi platea. Nullam augue quis morbi risus at et habitant pretium. At imperdiet sodales nibh venenatis enim eu accumsan ornare. Interdum vivamus vel dictumst nibh sed tempus in. Netus egestas elit accumsan auctor dui dictum.'
+              'In the heart of Luxembourg, our workspace is a melting pot of creativity and technology, a place where ideas take flight and dreams become reality.',
+              'Our company thrives on a startup vibe that is palpable from the moment you step through our doors. We believe in disrupting the status quo, in thinking differently, and in challenging ourselves every day. Our open-plan office buzzes with energy, with teams collaborating on exciting projects and engineers brainstorming innovative solutions.',
+              'We take pride in nurturing our engineers, providing them with the tools, resources, and environment they need to grow both professionally and personally. Our engineers are the backbone of our company, their work directly impacting our daily operations and shaping our future.',
+              'Every day at our company is an opportunity to make a great impact. Each line of code written, each problem solved, and each idea shared contributes to our collective success. We celebrate our wins, learn from our failures, and constantly strive for excellence.',
+              'We are always on the lookout for motivated individuals who are ready to roll up their sleeves and dive into the world of tech. Collaboration is at the heart of what we do. We believe that great minds don’t always think alike, and it’s this diversity of thought that fuels our innovation.',
+              'So, if you’re passionate about technology, thrive in a fast-paced environment, and are ready to make a real difference, we’d love to hear from you. Join us and be a part of our exciting journey!',
             ]}
           />
           <hr />
