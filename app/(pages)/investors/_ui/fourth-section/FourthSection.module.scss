@@ -1,9 +1,0 @@
-@import '../../../../(app)/_styles/mixins.scss';
-@import '../../../../(app)/_styles/vaiables.scss';
-
-.wrapper {
-    @include flexVerticalGap(20);
-    @include onMobile {
-        @include flexVerticalGap(10);
-    }
-}

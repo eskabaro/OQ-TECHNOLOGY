@@ -1,7 +1,6 @@
 import { FirstSection } from './_ui/first-section'
 import { SecondSection } from './_ui/second-section'
 import { ThirdSection } from './_ui/third-section'
-import { FourthSection } from './_ui/fourth-section'
 import { FifthSection } from './_ui/fifth-section'
 import { SixthSection } from './_ui/sixth-section'
 import { SeventhSection } from './_ui/seventh-section'
@@ -13,7 +12,6 @@ const components = {
     FirstSection,
     SecondSection,
     ThirdSection,
-    FourthSection,
     FifthSection,
     SixthSection,
     SeventhSection,
