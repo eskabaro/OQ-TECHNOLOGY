@@ -6,8 +6,8 @@ import { Container } from '@/app/(app)/_components/container'
 import { Title } from '@/app/_shared/ui/typography/title'
 import { businessList, IModalData, servicesList } from '../../_const/lists'
 import { ListItem } from './_ui/list-item'
-import { ServiceItem } from './_ui/service-item'
 import { ListItemModal } from './_ui/list-item-modal'
+import { ServicesList } from '@/app/(app)/_components/services-list'
 
 import styles from './FirstSection.module.scss'
 
@@ -22,12 +22,7 @@ export const FirstSection: FC = () => {
 
     return (
         <Container as='section' className={styles.wrapper}>
-            <ul className={styles.wrapper_services}>
-                {servicesList.map((e) => (
-                    <ServiceItem key={e.id} {...e} />
-                ))}
-            </ul>
-
+            <ServicesList services={servicesList} />
             <div className={styles.wrapper_content}>
                 <Title
                     id='solutions'

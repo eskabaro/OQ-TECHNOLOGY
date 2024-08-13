@@ -6,16 +6,6 @@
         @include flexVerticalGap(30);
     }
 
-    &_services {
-        @include flexHorizontalGap(5);
-        @include onMobile {
-            @include flexVerticalGap(20);
-        }
-
-        justify-content: space-between;
-        align-items: center;
-    }
-
     &_content {
         @include flexVerticalGap(20);
         @include onMobile {

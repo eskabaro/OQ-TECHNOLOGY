@@ -12,11 +12,11 @@ interface IListItemProps extends IBusinessListItem {
     onModalOpen: (modalData: IModalData) => void;
 }
 
-export const ListItem: FC<IListItemProps> = ({ onModalOpen, imgSrc, title, subTitile, modalData }) => {
+export const ListItem: FC<IListItemProps> = ({ onModalOpen, imgSrc, title, subTitle, modalData }) => {
     return (
         <li className={styles.wrapper}>
             <Image src={imgSrc} width={520} height={280} alt={title} onClick={() => onModalOpen(modalData!)} />
-            <Title size='L' className={styles.heading} title={title} text={subTitile} />
+            <Title size='L' className={styles.heading} title={title} text={subTitle} />
         </li>
     )
 }

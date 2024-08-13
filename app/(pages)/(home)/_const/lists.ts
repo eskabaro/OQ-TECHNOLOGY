@@ -1,14 +1,9 @@
+import { IListItem } from "@/app/(app)/_components/services-list/_const/list-item"
+
 export interface IModalData {
     mediaPath: string
     title: string
     description: string
-}
-
-export interface IListItem {
-    id: number
-    imgSrc: string
-    title: string
-    subTitile: string
 }
 
 export interface IBusinessListItem extends IListItem {
@@ -20,19 +15,19 @@ export const servicesList: IListItem[] = [
         id: 1,
         imgSrc: require('../_assets/services/service-1.webp'),
         title: 'STANDARD​',
-        subTitile: 'Compatible with 3GPP standard Rel. 17 – No proprietary tech lock-up​'
+        subTitle: 'Compatible with 3GPP standard Rel. 17 – No proprietary tech lock-up​'
     },
     {
         id: 2,
         imgSrc: require('../_assets/services/service-2.webp'),
         title: 'ANYWHERE​',
-        subTitile: 'Connect almost any site on land or sea'
+        subTitle: 'Connect almost any site on land or sea'
     },
     {
         id: 3,
         imgSrc: require('../_assets/services/service-3.webp'),
         title: 'RELIABLE',
-        subTitile: 'High Quality of Service and Security, ensure business continuity'
+        subTitle: 'High Quality of Service and Security, ensure business continuity'
     }
 ]
 
@@ -41,7 +36,7 @@ export const businessList: IBusinessListItem[] = [
         id: 1,
         imgSrc: require('../_assets/business/1.webp'),
         title: 'ENERGY & UTILITIES',
-        subTitile: 'Connectivity for automation, predictive maintenance, and the digital oil field applications​',
+        subTitle: 'Connectivity for automation, predictive maintenance, and the digital oil field applications​',
         modalData: {
             mediaPath: '/videos/smart-energy.mp4',
             title: 'SMART ENERGY',
@@ -53,7 +48,7 @@ export const businessList: IBusinessListItem[] = [
         id: 2,
         imgSrc: require('../_assets/business/2.webp'),
         title: 'MARITIME​',
-        subTitile: 'Connectivity for ships, containers, and buoys',
+        subTitle: 'Connectivity for ships, containers, and buoys',
         modalData: {
             mediaPath: '/videos/smart-ocean.mp4',
             title: 'SMART OCEAN',
@@ -65,9 +60,8 @@ export const businessList: IBusinessListItem[] = [
         id: 3,
         imgSrc: require('../_assets/business/3.webp'),
         title: 'SUSTAINABILITY',
-        subTitile: 'Connectivity for the environment and monitoring of pollutants, mining equipment, wastewater and greenhouse emissions.',
+        subTitle: 'Connectivity for the environment and monitoring of pollutants, mining equipment, wastewater and greenhouse emissions.',
         modalData: {
-            // TODO: change this to an actual data
             mediaPath: '/videos/smart-mobility.mp4',
             title: 'SMART CITIES',
             description:
@@ -78,7 +72,7 @@ export const businessList: IBusinessListItem[] = [
         id: 4,
         imgSrc: require('../_assets/business/4.webp'),
         title: 'LOGISTICS & TELEMATICS',
-        subTitile: 'Connectivity for mobility and asset tracking',
+        subTitle: 'Connectivity for mobility and asset tracking',
         modalData: {
             mediaPath: '/videos/smart-mobility.mp4',
             title: 'SMART MOBILITY',
@@ -90,7 +84,7 @@ export const businessList: IBusinessListItem[] = [
         id: 5,
         imgSrc: require('../_assets/business/5.webp'),
         title: 'AGRICULTURE & HERD MANAGEMENT',
-        subTitile: 'Connectivity for the smart agritech and livestock monitoring',
+        subTitle: 'Connectivity for the smart agritech and livestock monitoring',
         modalData: {
             mediaPath: '/videos/smart-farm.mp4',
             title: 'SMART FARM',
@@ -102,9 +96,8 @@ export const businessList: IBusinessListItem[] = [
         id: 6,
         imgSrc: require('../_assets/business/6.webp'),
         title: 'SECURITY',
-        subTitile: 'Connectivity for safety, asset protection,  and law enforcement',
+        subTitle: 'Connectivity for safety, asset protection,  and law enforcement',
         modalData: {
-            // TODO: change this to an actual data
             mediaPath: '/videos/smart-mobility.mp4',
             title: 'SMS over Satellite 5G NR',
             description:
