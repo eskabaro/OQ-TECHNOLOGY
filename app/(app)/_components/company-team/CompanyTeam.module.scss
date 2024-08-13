@@ -1,0 +1,43 @@
+@import '../../../(app)/_styles/mixins.scss';
+@import '../../../(app)/_styles/vaiables.scss';
+
+.wrapper {
+    @include flexVerticalGap(16.5);
+    @include onMobile {
+        @include flexVerticalGap(10);
+    }
+}
+
+.slide {
+    @include flexVerticalGap(4);
+
+    flex: 0 0 100%;
+    max-width: 512px;
+    position: relative;
+
+    > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        border-radius: 16px
+    }
+
+    &_content {
+        @include flexVerticalGap(1);
+        @include onMobile {
+            align-items: center;
+            justify-content: center;
+        }
+
+        > span {
+            @include fontSize(toRem(24), 4vw, toRem(24), 600);
+
+            color: $slateSilver;
+        }
+
+        > p {
+            @include fontSize(toRem(24), 4vw, toRem(24), 400);
+        }
+    }
+}

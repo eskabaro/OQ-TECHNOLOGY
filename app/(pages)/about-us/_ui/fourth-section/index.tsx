@@ -1,53 +1,18 @@
 'use client'
 
 import { FC } from 'react'
-import Image from 'next/image'
 
-import useScrollSlider from '@/app/_shared/lib/hooks/useScrollSlider'
-import { Container } from '@/app/(app)/_components/container'
-import { SubTitle } from '@/app/_shared/ui/sub-title'
-import { Text } from '@/app/_shared/ui/typography/text'
-import { Slider } from '@/app/(app)/_components/slider'
-
-import styles from './FourthSection.module.scss'
+import { sliderItems } from '../../_const/slider-items'
+import { CompanyTeam } from '@/app/(app)/_components/company-team'
 
 export const FourthSection: FC = () => {
-    const { onEmblaApiInit, onSliderScroll } = useScrollSlider()
-
     return (
-        <div className={styles.wrapper}>
-            <Container className={styles.container}>
-                <SubTitle
-                    upTitle='ABOUT US'
-                    title='CORE TEAM'
-                    isButtonGroup
-                    prevSlideFn={() => onSliderScroll('prev')}
-                    nextSlideFn={() => onSliderScroll('next')}
-                >
-                    Dolor lobortis ullamcorper sollicitudin tellus. Pulvinar nunc aliquam id blandit integer diam tellus. Iaculis elementum est ante
-                    tempus aliquet facilisis. Arcu ac convallis integer elementum a adipiscing. Laoreet commodo sed est quisque. Elit tristique.
-                </SubTitle>
-            </Container>
-            <Slider
-                hasDots
-                hasContainer
-                onEmblaApiInit={onEmblaApiInit}
-                options={{
-                    breakpoints: {
-                        '(min-width: 768px)': { dragFree: true }
-                    }
-                }}
-            >
-                {Array.from({ length: 6 }).map((_, index) => (
-                    <div key={index} className={styles.slide}>
-                        <Image src={require(`../../_assets/slider-2/slide-${(index % 3) + 1}.webp`)} width={512} height={512} alt='' />
-                        <div className={styles.slide_content}>
-                            <Text as='span'>Omar Qaise</Text>
-                            <Text as='p'>Founder and CEO</Text>
-                        </div>
-                    </div>
-                ))}
-            </Slider>
-        </div>
+        <CompanyTeam
+            upTitle='ABOUT US'
+            title='CORE TEAM'
+            subTitle='Dolor lobortis ullamcorper sollicitudin tellus. Pulvinar nunc aliquam id blandit integer diam tellus. Iaculis elementum est ante
+                    tempus aliquet facilisis. Arcu ac convallis integer elementum a adipiscing. Laoreet commodo sed est quisque. Elit tristique.'
+            slides={sliderItems}
+        />
     )
 }

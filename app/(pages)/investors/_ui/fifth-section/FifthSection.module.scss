@@ -1,0 +1,40 @@
+@import '../../../../(app)/_styles/mixins.scss';
+@import '../../../../(app)/_styles/vaiables.scss';
+
+.wrapper {
+    @include flexVerticalGap(20);
+    @include onMobile {
+        @include flexVerticalGap(10);
+    }
+
+    &_content {
+        @include flexHorizontalGap(12.5);
+        @include onMobile {
+            @include flexVerticalGap(8);
+
+            &:nth-child(2) {
+                .right-side {
+                    order: -1;
+                }
+            }
+        }
+
+        align-items: center;
+    }
+}
+
+.left-side,
+.right-side {
+    width: 100%;
+
+    > img {
+        @include onMobile {
+            border-radius: 20px;
+        }
+
+        width: 100%;
+        height: auto;
+
+        border-radius: 20px 20px 20px 100px;
+    }
+}
