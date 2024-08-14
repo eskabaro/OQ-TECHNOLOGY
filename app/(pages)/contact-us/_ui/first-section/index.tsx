@@ -3,7 +3,7 @@
 import { FC } from 'react'
 
 import { Container } from '@/app/(app)/_components/container'
-import { Form } from '@/app/_shared/ui/form'
+import { ContactUsForm } from '@/app/_shared/ui/contact-us-form'
 import { Title } from '@/app/_shared/ui/typography/title'
 
 import styles from './FirstSection.module.scss'
@@ -19,7 +19,7 @@ export const FirstSection: FC = () => {
                         title='Do You Have a Question? Contact Us'
                         text='Sit sit non ut adipiscing aliquet est consectetur risus. Velit integer urna ut mattis mauris augue. Nunc amet aliquam blandit risus massa. Scelerisque est sed eu.'
                     />
-                    <Form />
+                    <ContactUsForm />
                 </div>
             </Container>
         </section>

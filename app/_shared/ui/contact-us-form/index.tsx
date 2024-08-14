@@ -7,9 +7,9 @@ import { Input } from '../input'
 import { Button } from '../button'
 import { Textarea } from '../textarea'
 
-import styles from './Form.module.scss'
+import styles from './ContactUsForm.module.scss'
 
-interface IFormInput {
+interface IContactUsFormInput {
     firstName: string
     lastName: string
     company: string
@@ -18,16 +18,16 @@ interface IFormInput {
     message: string
 }
 
-export const Form: FC = () => {
+export const ContactUsForm: FC = () => {
     const {
         handleSubmit,
         register,
         formState: { errors }
-    } = useForm<IFormInput>({
+    } = useForm<IContactUsFormInput>({
         mode: 'onBlur'
     })
 
-    const onSubmit: SubmitHandler<IFormInput> = (data) => {
+    const onSubmit: SubmitHandler<IContactUsFormInput> = (data) => {
         console.log(data)
     }
 

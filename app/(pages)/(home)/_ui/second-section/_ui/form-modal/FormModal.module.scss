@@ -1,0 +1,52 @@
+@import '../../../../../../(app)/_styles/mixins.scss';
+@import '../../../../../../(app)/_styles/vaiables.scss';
+
+.form {
+    @include flexVerticalGap(18);
+
+    @include onMobile {
+        @include flexVerticalGap(10);
+    }
+
+    max-width: em(900);
+    width: 100%;
+    margin: auto;
+
+    &_inputs-box {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: toRem(20);
+        justify-content: center;
+
+        @include onMobile {
+            grid-template-columns: repeat(1, 1fr);
+            gap: toRem(16);
+        }
+
+        >label:last-of-type {
+            @include onMobile {
+                grid-column: unset;
+            }
+
+            grid-column: span 2;
+        }
+    }
+
+    &_btn-box {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.btn-circle {
+    height: toRem(20);
+    width: toRem(20);
+    background-color: white;
+    border-radius: 50%;
+}
+
+.btn-text {
+    @include fontSize(toRem(18), 4vw, toRem(18), 600);
+
+    letter-spacing: 0.09em;
+}
