@@ -27,8 +27,9 @@ export const ThirdSection = () => {
                     />
                     <hr />
                     <div className={styles.stats_container}>
-                        <StatsMarker value='16+' label='Years experience...' />
-                        <StatsMarker value='5k+' label='Happy Customers...' />
+                        <StatsMarker value='8' label='Years of experience' />
+                        <StatsMarker value='10k' label='Happy customers' />
+                        <StatsMarker value='100' label='Ongoing projects' />
                     </div>
                 </div>
 

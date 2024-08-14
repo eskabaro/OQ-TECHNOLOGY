@@ -6,27 +6,34 @@ import Image from 'next/image'
 import { Container } from '@/app/(app)/_components/container'
 import { Title } from '@/app/_shared/ui/typography/title'
 import { Article } from '@/app/_shared/ui/typography/article'
+import { Button } from '@/app/_shared/ui/button'
 
 import styles from './FirstSection.module.scss'
 
 export const FirstSection: FC = () => {
     return (
         <Container as='section' className={styles.wrapper}>
-            <Title
-                isObserver
-                size='XXL'
-                title='INVESTORS'
-                text='Sit sit non ut adipiscing aliquet est consectetur risus. Velit integer urna ut mattis mauris augue. Nunc amet aliquam blandit risus massa. Scelerisque est sed eu.'
-            />
+            <div className={styles.wrapper_header}>
+                <Title
+                    isObserver
+                    size='XXL'
+                    title='INVESTORS'
+                    text='Sit sit non ut adipiscing aliquet est consectetur risus. Velit integer urna ut mattis mauris augue. Nunc amet aliquam blandit risus massa. Scelerisque est sed eu.'
+                />
+                <Button withoutBg variant='short'>
+                    CONTACT US
+                </Button>
+            </div>
+
             <div className={styles.wrapper_content}>
                 <div className={styles['left-side']}>
                     <Article
                         size='L'
                         titleTag='h2'
-                        title='WE TRUSTED BY THE BEST'
+                        title='OQ TECHNOLOGY’S MISSION'
                         paragraphs={[
-                            'Massa quisque erat urna nisi turpis est magna proin. Proin felis elementum elementum volutpat vel enim enim gravida. Aliquam ultricies purus vestibulum tincidunt. Dis feugiat donec ut mattis. Ut in eget consectetur varius tincidunt id. Aliquet dui congue proin pretium quam.',
-                            'Dui porttitor arcu cras sed non. At sed scelerisque dictumst eu iaculis blandit arcu erat auctor. Commodo maecenas pellentesque mauris eu id tempor. Eu risus duis purus turpis mauris nulla cursus. Faucibus pellentesque orci risus ultricies sed turpis elementum.'
+                            'OQ Technology’s mission aims at unlocking a large untapped IoT Direct-to-Device market estimated at US$10.4 billion* by 2035 thanks to its disruptive 5G IoT ecosystem, already serving well-known customers.',
+                            'Once successfully established into the 5G IoT market, OQ Technology’s future roadmap is to upgrade its technology and satellites to address a larger untapped market, that of the Direct-to-Mobile connectivity estimated at US$ 19.9 billion* providing messaging and voice services to mobile phones and wearables globally.'
                         ]}
                     />
                 </div>

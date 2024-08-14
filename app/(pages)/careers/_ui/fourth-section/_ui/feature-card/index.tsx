@@ -5,17 +5,21 @@ import styles from './FeatureCard.module.scss';
 
 interface IFeatureCardProps {
   title: string;
-  description: string;
+  paragraphs: string[];
   imageSrc: string;
 }
 
-export const FeatureCard: FC<IFeatureCardProps> = ({ title, description, imageSrc }) => {
+export const FeatureCard: FC<IFeatureCardProps> = ({ title, paragraphs, imageSrc }) => {
   return (
     <div className={styles.feature_card}>
       <Image src={imageSrc} alt='' />
       <div className={styles.feature_card__text}>
         <h3 className={styles.feature_card__title}>{title}</h3>
-        <p className={styles.feature_card__description}>{description}</p>
+        <div className={styles.feature_card__content}>
+          {paragraphs.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))}
+        </div>
       </div>
     </div>
   )

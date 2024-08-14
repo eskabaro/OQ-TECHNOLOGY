@@ -1,4 +1,4 @@
-import { IListItem } from "@/app/(app)/_components/services-list/_const/list-item"
+import { IListItem } from '@/app/(app)/_components/services-list/_const/list-item'
 
 export interface IModalData {
     mediaPath: string
@@ -65,7 +65,7 @@ export const businessList: IBusinessListItem[] = [
             mediaPath: '/videos/smart-mobility.mp4',
             title: 'SMART CITIES',
             description:
-                'Connected smart vehicles/drones are entering the market and offer companies the chance to deliver goods further and in more efficient ways. Tracking of fleets and goods is not possible outside cities where no cellular coverage is available. OQ offers an end-to-end satellite 5G integrated solution that allows you to monitor your assets and fleet in real time, anywhere they may go. We can also support bi-directional communication to machines such as banking ATMs in poor connectivity areas. We provide a dual satellite-terrestrial solution that can switch automatically between our and partner networks.'
+                'Imagine a city, pulsing with digital savvy, where technology and people speak in harmony. Picture the Internet of Things, a symphony of devices singing data in real-time, painting a living portrait of urban life. This is the promise of smart cities, where everyday living gets an upgrade, making our urban jungles safer, greener, and more efficient.'
         }
     },
     {
@@ -95,7 +95,7 @@ export const businessList: IBusinessListItem[] = [
     {
         id: 6,
         imgSrc: require('../_assets/business/6.webp'),
-        title: 'SECURITY',
+        title: 'SMARTPHONES',
         subTitle: 'Connectivity for safety, asset protection,  and law enforcement',
         modalData: {
             mediaPath: '/videos/smart-mobility.mp4',

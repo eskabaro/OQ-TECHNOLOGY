@@ -1,7 +1,7 @@
 import { Container } from "@/app/(app)/_components/container";
 import { SubTitle } from "@/app/_shared/ui/sub-title";
 import { Metric } from "./_ui/metric";
-import { metricItems } from "./_const/metric-items";
+import { metricItems } from "../../_const/lists";
 
 import styles from './SecondSection.module.scss';
 

@@ -41,14 +41,15 @@
       }
 
       .stats_container {
-        @include flexHorizontalGap(16);
         @include onMobile {
-          @include flexHorizontalGap(6);
-
           margin-top: 16px;
+          row-gap: 8px;
         }
 
+        display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 16px;
       }
     }
 

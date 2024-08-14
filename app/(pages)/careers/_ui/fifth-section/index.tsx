@@ -5,12 +5,14 @@ import Image from 'next/image'
 
 import { cn } from '@/app/_shared/lib/classnames'
 import { Container } from '@/app/(app)/_components/container'
-import { steps } from './_const/steps'
+import { steps } from '../../_const/lists'
 
 import styles from './FifthSection.module.scss'
 
 export const FifthSection = () => {
     const [selectedStepIndex, setSelectedStepIndex] = useState(0)
+
+    const selectedStep = steps[selectedStepIndex]
 
     return (
         <Container className={styles.wrapper} as='section'>
@@ -27,9 +29,9 @@ export const FifthSection = () => {
             </div>
 
             <div className={styles.content}>
-                <h3 className={styles.title}>{steps[selectedStepIndex].title}</h3>
-                <p className={styles.description}>{steps[selectedStepIndex].description}</p>
-                <Image src={steps[selectedStepIndex].imageSrc} alt='' />
+                <h3 className={styles.title}>{selectedStep.title}</h3>
+                <p className={styles.description}>{selectedStep.description}</p>
+                <Image src={selectedStep.imageSrc} alt='' />
             </div>
         </Container>
     )

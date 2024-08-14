@@ -3,6 +3,7 @@
 .feature_card {
   @include flexVerticalGap(4);
 
+  flex: 1;
   padding: 24px;
 
   border-radius: 16px;
@@ -32,10 +33,10 @@
     text-transform: uppercase;
   }
 
-  &__description {
-    @include fontSize(toRem(20), 4vw, toRem(20), 600, 150%);
+  &__content {
+    @include fontSize(toRem(20), 4vw, toRem(20), 400, 150%);
     @include onMobile {
-      @include fontSize(toRem(16), 4vw, toRem(16), 600, 150%);
+      @include fontSize(toRem(16), 4vw, toRem(16), 400, 150%);
     }
   }
 }

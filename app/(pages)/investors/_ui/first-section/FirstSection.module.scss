@@ -6,11 +6,20 @@
         @include flexVerticalGap(10);
     }
 
+    &_header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: toRem(32);
+    }
+
     &_content {
         @include flexHorizontalGap(25);
         @include onMobile {
             @include flexVerticalGap(8);
         }
+
+        align-items: center;
     }
 }
 

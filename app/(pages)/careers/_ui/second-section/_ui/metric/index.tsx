@@ -3,7 +3,7 @@
 import { FC } from 'react'
 
 import { useIntersectionAnimation } from '@/app/_shared/lib/hooks/useIntersectionAnimation'
-import { IMetricItem } from '../../_const/metric-items'
+import { IMetricItem } from '../../../../_const/lists';
 
 import styles from './Metric.module.scss'
 
