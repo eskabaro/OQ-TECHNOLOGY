@@ -53,31 +53,31 @@ export const steps: IStep[] = [
     {
         title: 'Click on your favorite job offer',
         description: "If you're interested in more than 1 job, please apply to each separately.",
-        imageSrc: require('../_assets/rocket.png')
+        imageSrc: require('../_assets/steps/step-1.png')
     },
     {
         title: 'Upfront questionnaire',
         description: "You'll be invited to answer a few questions, helping us to know you better. Please keep in mind that each job offer is specifying the work location. Full remote applicants will not be considered at this point of time.",
-        imageSrc: require('../_assets/rocket.png')
+        imageSrc: require('../_assets/steps/step-2.png')
     },
     {
         title: 'Submit your CV and supporting documents',
         description: "OQ will value your studies and work experiences. Be specific and do not oversell!",
-        imageSrc: require('../_assets/rocket.png')
+        imageSrc: require('../_assets/steps/step-3.png')
     },
     {
         title: 'OQ will process your application within 2 months',
         description: '',
-        imageSrc: require('../_assets/rocket.png')
+        imageSrc: require('../_assets/steps/step-4.png')
     },
     {
         title: 'If selected, ...',
         description: "you'll be called by our HR officers. An email summarizing discussed information and defining a Teams meeting with our COO will be sent the same day.",
-        imageSrc: require('../_assets/rocket.png')
+        imageSrc: require('../_assets/steps/step-5.png')
     },
     {
         title: 'Face-to-face interview',
         description: '',
-        imageSrc: require('../_assets/rocket.png')
+        imageSrc: require('../_assets/steps/step-6.png')
     }
 ]
