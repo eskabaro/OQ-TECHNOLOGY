@@ -12,8 +12,6 @@ import styles from './FifthSection.module.scss'
 export const FifthSection = () => {
     const [selectedStepIndex, setSelectedStepIndex] = useState(0)
 
-    const selectedStep = steps[selectedStepIndex]
-
     return (
         <Container className={styles.wrapper} as='section'>
             <div className={styles.stepper}>
@@ -28,11 +26,13 @@ export const FifthSection = () => {
                 ))}
             </div>
 
-            <div className={styles.content}>
-                <h3 className={styles.title}>{selectedStep.title}</h3>
-                <p className={styles.description}>{selectedStep.description}</p>
-                <Image src={selectedStep.imageSrc} alt='' />
-            </div>
+            {steps.map((step, index) => (
+                <div key={index} className={cn(styles.content, index === selectedStepIndex && styles.active)}>
+                    <h3 className={styles.title}>{step.title}</h3>
+                    <p className={styles.description}>{step.description}</p>
+                    <Image src={step.imageSrc} alt='' />
+                </div>
+            ))}
         </Container>
     )
 }

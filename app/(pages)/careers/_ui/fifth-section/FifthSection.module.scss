@@ -119,6 +119,7 @@
       padding: 24px;
     }
 
+    display: none;
     padding: 40px 60px;
 
     align-items: center;
@@ -126,6 +127,10 @@
     border-radius: 12px;
     border: 1px solid #333;
     background: rgba(51, 51, 51, 0.20);
+
+    &.active {
+      display: flex;
+    }
 
     .title {
       @include fontSize(toRem(44), 4vw, toRem(44), 800);
