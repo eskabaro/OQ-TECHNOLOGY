@@ -32,8 +32,8 @@ export const Map: React.FC<IMapProps> = ({ legendItems }) => {
             container: 'map',
             style: process.env.MAPBOX_MAP_STYLE,
             center: [0, 0],
-            zoom: 2.5,
-            scrollZoom: false
+            zoom: 1,
+            scrollZoom: false,
         })
 
         const highlightCountries = (id: string, fillColor: string, countries: ICountry[]) => {

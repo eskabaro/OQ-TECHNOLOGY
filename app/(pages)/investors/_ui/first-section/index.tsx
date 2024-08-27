@@ -18,7 +18,7 @@ export const FirstSection: FC = () => {
                     isObserver
                     size='XXL'
                     title='INVESTORS'
-                    text='Sit sit non ut adipiscing aliquet est consectetur risus. Velit integer urna ut mattis mauris augue. Nunc amet aliquam blandit risus massa. Scelerisque est sed eu.'
+                    text='Looking for both strategic and financial VCs to power our scale-up. Join 5G Ventures and Waed on this journey about OQ'
                 />
                 <Button withoutBg variant='short'>
                     CONTACT US

@@ -18,7 +18,7 @@ export const FirstSection: FC = () => {
                     isObserver
                     size='XXL'
                     title='AVAILABILITY MAP'
-                    text='Sit sit non ut adipiscing aliquet est consectetur risus. Velit integer urna ut mattis mauris augue. Nunc amet aliquam blandit risus massa. Scelerisque est sed eu.'
+                    text="Our satellites in polar orbit cover the whole world! On top of our expansion roadmap, we can obtain licensing rights in your country on demand within some months. Don't hesitate to get in touch with us."
                 />
             </Container>
             <Map legendItems={items} />
