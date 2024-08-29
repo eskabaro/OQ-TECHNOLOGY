@@ -2,6 +2,8 @@
 @import '../../../../../../(app)/_styles/vaiables.scss';
 
 .plan_item {
+    max-width: toRem(535);
+    width: 100%;
     padding: toRem(32) 0 toRem(48);
 
     display: flex;
