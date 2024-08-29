@@ -25,6 +25,16 @@
 
 .left-side {
     width: 100%;
+
+    &_images {
+        display: flex;
+        gap: toRem(20);
+
+        >img {
+            width: 100%;
+            height: auto;
+        }
+    }
 }
 
 .right-side {

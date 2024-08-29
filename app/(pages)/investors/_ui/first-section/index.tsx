@@ -18,7 +18,7 @@ export const FirstSection: FC = () => {
                     isObserver
                     size='XXL'
                     title='INVESTORS'
-                    text='Looking for both strategic and financial VCs to power our scale-up. Join 5G Ventures and Waed on this journey about OQ'
+                    text='Looking for both strategic and financial VCs to power our scale-up. Join 5G Ventures and Waed on this journey about OQ.'
                 />
                 <Button withoutBg variant='short'>
                     CONTACT US
@@ -36,6 +36,10 @@ export const FirstSection: FC = () => {
                             'Once successfully established into the 5G IoT market, OQ Technology’s future roadmap is to upgrade its technology and satellites to address a larger untapped market, that of the Direct-to-Mobile connectivity estimated at US$ 19.9 billion* providing messaging and voice services to mobile phones and wearables globally.'
                         ]}
                     />
+                    <div className={styles['left-side_images']}>
+                        <Image src={require('../../_assets/partner-1.webp')} width={268} height={127} alt='' priority />
+                        <Image src={require('../../_assets/partner-2.webp')} width={268} height={127} alt='' priority />
+                    </div>
                 </div>
                 <div className={styles['right-side']}>
                     <Image src={require('../../_assets/1.webp')} width={725} height={250} alt='' priority />

@@ -4,7 +4,7 @@ import { FC } from 'react'
 
 import { cn } from '@/app/_shared/lib/classnames'
 import useScrollSlider from '@/app/_shared/lib/hooks/useScrollSlider'
-import { plans } from '../second-section/const/plans'
+import { IPlan } from '../second-section/const/plans'
 
 import { Slider } from '@/app/(app)/_components/slider'
 import { Icon } from '@/app/_shared/ui/icon'
@@ -12,7 +12,11 @@ import { PlanItem } from './_ui/plan-item'
 
 import styles from './Plans.module.scss';
 
-export const Plans: FC = () => {
+interface IPlansProps {
+    plans: IPlan[]
+}
+
+export const Plans: FC<IPlansProps> = ({ plans }) => {
     const { onEmblaApiInit, onSliderScroll, isPrevAvailable, isNextAvailable } = useScrollSlider();
 
     return (

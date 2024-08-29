@@ -1,0 +1,80 @@
+@import '../../../../../../(app)/_styles/mixins.scss';
+@import '../../../../../../(app)/_styles/vaiables.scss';
+
+.plan_item {
+    padding: toRem(32) 0 toRem(48);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: toRem(48);
+
+    border-radius: 16px;
+    border: 1px solid $shadowCharcoal;
+
+    .content {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        >h2 {
+            padding: 0 toRem(48);
+
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 150%;
+            text-align: center;
+            text-transform: capitalize;
+        }
+
+        >hr {
+            width: toRem(238);
+            height: 1px;
+            margin: toRem(40) 0;
+
+            background: $shadowCharcoal;
+        }
+
+        .options {
+            width: 100%;
+
+            display: flex;
+            flex-direction: column;
+
+            >li {
+                width: 100%;
+                padding: toRem(24) toRem(32);
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: toRem(28);
+
+                border-bottom: 1px solid $shadowCharcoal;
+
+                .label {
+                    font-size: 20px;
+                    font-weight: 600;
+                    line-height: 150%;
+                    color: #ffffff;
+                }
+
+                .value {
+                    font-size: 24px;
+                    font-weight: 600;
+                    line-height: 150%;
+                    color: $autumnBlaze;
+                }
+            }
+        }
+    }
+
+    .btn {
+        height: unset;
+        padding: toRem(16) toRem(32);
+    }
+}

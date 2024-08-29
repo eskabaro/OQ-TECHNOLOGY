@@ -2,7 +2,6 @@
 
 import { FC } from 'react'
 
-import { cn } from '@/app/_shared/lib/classnames'
 import { IPlan } from '../../../second-section/const/plans'
 import { Text } from '@/app/_shared/ui/typography/text'
 import { Icon } from '@/app/_shared/ui/icon'
@@ -12,18 +11,18 @@ import styles from './PlanItem.module.scss'
 
 interface IPlanItemProps extends IPlan {}
 
-export const PlanItem: FC<IPlanItemProps> = ({ title, description, price, services }) => {
+export const PlanItem: FC<IPlanItemProps> = ({ title, description, price, period, services }) => {
     return (
         <div className={styles.wrapper}>
             <div className={styles.wrapper_heading}>
                 <Text as='h2'>{title}</Text>
-                <Text as='p'>{description}</Text>
+                {description && <Text as='p'>{description}</Text>}
             </div>
             <div className={styles.wrapper_price}>
                 <Text as='span'>As low as:</Text>
                 <div className={styles['wrapper_price-inner']}>
                     <Text as='span'>${price}</Text>
-                    <Text as='span'>/mo</Text>
+                    <Text as='span'>/{period}</Text>
                 </div>
             </div>
             <ul className={styles.wrapper_list}>

@@ -35,7 +35,7 @@ export const CompanyTeam: FC<ICompanyTeamProps> = ({ upTitle, title, subTitle, s
                     {subTitle}
                 </SubTitle>
             </Container>
-            <Slider hasDots hasContainer onEmblaApiInit={onEmblaApiInit}>
+            <Slider hasDots hasContainer onEmblaApiInit={onEmblaApiInit} options={{ align: 'start' }}>
                 {slides.map((slide, index) => (
                     <div key={index} className={styles.slide}>
                         <Image src={slide.imgSrc} width={512} height={512} alt='' />

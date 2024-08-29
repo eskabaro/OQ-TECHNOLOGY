@@ -1,0 +1,11 @@
+@import '../../../../(app)/_styles/mixins.scss';
+
+.wrapper {
+    @include onTablet {
+        flex-direction: column;
+    }
+
+    display: flex;
+    justify-content: center;
+    gap: toRem(32);
+}
