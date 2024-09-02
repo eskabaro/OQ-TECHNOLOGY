@@ -12,10 +12,14 @@ import { Icon } from '@/app/_shared/ui/icon'
 import { useClickOutside } from '@/app/_shared/lib/hooks/useClickOutside'
 
 import styles from './Header.module.scss'
+import { ShoppingCart } from '@/app/(app)/_components/shopping-cart'
 
 export const Header: FC = () => {
     const pathname = usePathname()
-    const { ref, isShow, setIsShow } = useClickOutside(false)
+    const { refs, isShow, setIsShow } = useClickOutside({
+        sidebar: false,
+        cart: false
+    })
 
     return (
         <>
@@ -76,12 +80,16 @@ export const Header: FC = () => {
                             </li>
                         </ul>
                     </nav>
-                    <button className={styles['burger-btn']} onClick={() => setIsShow(!isShow)}>
+                    <button onClick={() => setIsShow('cart', !isShow.cart)}>
+                        <Icon name='cart' />
+                    </button>
+                    <button className={styles['burger-btn']} onClick={() => setIsShow('sidebar', !isShow.sidebar)}>
                         <Icon name='bars' />
                     </button>
                 </div>
             </header>
-            <Sidebar ref={ref} isActive={isShow} setIsActive={setIsShow} />
+            <ShoppingCart ref={refs.cart} isActive={isShow.cart} setIsActive={() => setIsShow('cart', !isShow.cart)} />
+            <Sidebar ref={refs.sidebar} isActive={isShow.sidebar} setIsActive={() => setIsShow('sidebar', !isShow.sidebar)} />
         </>
     )
 }

@@ -8,10 +8,13 @@ import { Icon } from '@/app/_shared/ui/icon'
 import { Button } from '@/app/_shared/ui/button'
 
 import styles from './PlanItem.module.scss'
+import { useEntries } from '@/app/(app)/_components/entries-provider'
 
 interface IPlanItemProps extends IPlan {}
 
 export const PlanItem: FC<IPlanItemProps> = ({ title, description, price, period, services }) => {
+    const { addToCart } = useEntries()
+
     return (
         <div className={styles.wrapper}>
             <div className={styles.wrapper_heading}>
@@ -33,7 +36,7 @@ export const PlanItem: FC<IPlanItemProps> = ({ title, description, price, period
                     </li>
                 ))}
             </ul>
-            <Button className={styles['order-btn']} variant='short'>
+            <Button onClick={() => addToCart({ title, price })} className={styles['order-btn']} variant='short'>
                 ORDER NOW
             </Button>
         </div>
