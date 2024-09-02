@@ -21,7 +21,7 @@ export const plans: IPlan[] = [
             'Network availability fee',
             'Low latency',
             'No overage, switch to other plans',
-            'Further discounted tiers when combined with OQ HW and IoT Platform access'
+            'Airtime prices are tiers-based, and can be combined with Products and NMS Insight purchases'
         ]
     },
     {
@@ -37,7 +37,7 @@ export const plans: IPlan[] = [
             'Network availability fee',
             'Low latency',
             'No overage, switch to other plans',
-            'Further discounted tiers when combined with OQ HW and IoT Platform access'
+            'Airtime prices are tiers-based, and can be combined with Products and NMS Insight purchases'
         ]
     },
     {
@@ -53,7 +53,7 @@ export const plans: IPlan[] = [
             'Network availability fee',
             'Low latency',
             'No overage, switch to other plans',
-            'Further discounted tiers when combined with OQ HW and IoT Platform access'
+            'Airtime prices are tiers-based, and can be combined with Products and NMS Insight purchases'
         ]
     },
     {
@@ -69,7 +69,7 @@ export const plans: IPlan[] = [
             'Network availability fee',
             'Low latency',
             'No overage, switch to other plans',
-            'Further discounted tiers when combined with OQ HW and IoT Platform access'
+            'Airtime prices are tiers-based, and can be combined with Products and NMS Insight purchases'
         ]
     },
     {
@@ -85,7 +85,7 @@ export const plans: IPlan[] = [
             'Network availability fee',
             'Low latency',
             'No overage, switch to other plans',
-            'Further discounted tiers when combined with OQ HW and IoT Platform access'
+            'Airtime prices are tiers-based, and can be combined with Products and NMS Insight purchases'
         ]
     }
 ]
