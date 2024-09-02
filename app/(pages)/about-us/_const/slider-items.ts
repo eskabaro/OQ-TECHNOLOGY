@@ -18,5 +18,10 @@ export const sliderItems = [
         imgSrc: require('../_assets/slider-2/slide-4.webp'),
         name: 'Prasanna Nagarajan',
         title: 'Chief Innovation Officer'
+    },
+    {
+        imgSrc: require('../_assets/slider-2/slide-5.webp'),
+        name: 'Marwah Naseem',
+        title: 'Director'
     }
 ]
