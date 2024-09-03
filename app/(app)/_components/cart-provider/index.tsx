@@ -11,11 +11,13 @@ export interface ICartItem {
 interface ICartContext {
     cart: ICartItem[] | []
     addToCart: (item: ICartItem) => void
+    deleteItemfromCart: (id: number) => void
 }
 
 const defaultCart: ICartContext = {
     cart: [],
-    addToCart: () => {}
+    addToCart: () => {},
+    deleteItemfromCart: () => {}
 }
 
 const CartContext = createContext<ICartContext>(defaultCart)
@@ -27,7 +29,11 @@ export const CartProvider: FC<PropsWithChildren> = ({ children }) => {
         setCart((prevState) => [...prevState, item])
     }
 
-    return <CartContext.Provider value={{ cart, addToCart }}>{children}</CartContext.Provider>
+    const deleteItemfromCart = (id: number) => {
+        setCart((prevState) => prevState.filter((item) => item.id !== id))
+    }
+
+    return <CartContext.Provider value={{ cart, addToCart, deleteItemfromCart }}>{children}</CartContext.Provider>
 }
 
 export const useCartContext = () => useContext(CartContext)

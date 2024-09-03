@@ -20,6 +20,8 @@ interface IShoppingCartProps {
 export const ShoppingCart: FC<IShoppingCartProps> = forwardRef(({ isActive, setIsActive }, ref: ForwardedRef<HTMLDivElement>) => {
     const { cart } = useCartContext()
 
+    console.log(cart, 'cart')
+
     return (
         <div className={cn(styles.bg, isActive && styles.active)}>
             <div ref={ref} className={cn(styles.bg_sidebar, isActive && styles.active)}>
@@ -32,7 +34,7 @@ export const ShoppingCart: FC<IShoppingCartProps> = forwardRef(({ isActive, setI
                     </div>
 
                     {cart.length === 0 ? (
-                        <div>Cart Empty</div>
+                        <div className={styles.emptyBlock}>Cart Empty</div>
                     ) : (
                         <>
                             <ul className={styles.list}>
