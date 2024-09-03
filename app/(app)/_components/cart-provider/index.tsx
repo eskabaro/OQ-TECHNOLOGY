@@ -2,7 +2,7 @@
 
 import { FC, PropsWithChildren, createContext, useContext, useState } from 'react'
 
-interface ICartItem {
+export interface ICartItem {
     id: number
     title: string
     price: string

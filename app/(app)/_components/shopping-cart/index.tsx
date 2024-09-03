@@ -5,9 +5,11 @@ import { Dispatch, FC, ForwardedRef, SetStateAction, forwardRef } from 'react'
 import { cn } from '@/app/_shared/lib/classnames'
 import { Icon } from '@/app/_shared/ui/icon'
 
-import styles from './ShoppingCart.module.scss'
 import { Button } from '@/app/_shared/ui/button'
 import { useCartContext } from '../cart-provider'
+import { ShoppingItem } from './_ui/shopping-item'
+
+import styles from './ShoppingCart.module.scss'
 
 interface IShoppingCartProps {
     isActive: boolean
@@ -35,18 +37,7 @@ export const ShoppingCart: FC<IShoppingCartProps> = forwardRef(({ isActive, setI
                         <>
                             <ul className={styles.list}>
                                 {cart.map((item) => (
-                                    <li key={item.id} className={styles.item}>
-                                        <div className={styles.item_header}>
-                                            <span className={styles.item_planName}>IOT DATA PLANS</span>
-                                            <span className={styles.item_planPrice}>{item.price}$</span>
-                                        </div>
-                                        <div className={styles.item_footer}>
-                                            <span className={styles.item_planType}>{item.title}</span>
-                                            <button onClick={() => {}}>
-                                                <Icon name='close' />
-                                            </button>
-                                        </div>
-                                    </li>
+                                    <ShoppingItem key={item.id} {...item} />
                                 ))}
                             </ul>
 
