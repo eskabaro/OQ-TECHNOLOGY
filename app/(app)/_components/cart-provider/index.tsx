@@ -2,9 +2,15 @@
 
 import { FC, PropsWithChildren, createContext, useContext, useState } from 'react'
 
+interface ICartItem {
+    id: number
+    title: string
+    price: string
+}
+
 interface ICartContext {
-    cart: { id: number; title: string; price: string }[] | []
-    addToCart: (item: { id: number; title: string; price: string }) => void
+    cart: ICartItem[] | []
+    addToCart: (item: ICartItem) => void
 }
 
 const defaultCart: ICartContext = {
@@ -15,9 +21,9 @@ const defaultCart: ICartContext = {
 const CartContext = createContext<ICartContext>(defaultCart)
 
 export const CartProvider: FC<PropsWithChildren> = ({ children }) => {
-    const [cart, setCart] = useState<{ id: number; title: string; price: string }[]>([])
+    const [cart, setCart] = useState<ICartItem[]>([])
 
-    const addToCart = (item: { id: number; title: string; price: string }) => {
+    const addToCart = (item: ICartItem) => {
         setCart((prevState) => [...prevState, item])
     }
 

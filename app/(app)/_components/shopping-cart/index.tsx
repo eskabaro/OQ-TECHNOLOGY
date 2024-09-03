@@ -1,7 +1,6 @@
 'use client'
 
 import { Dispatch, FC, ForwardedRef, SetStateAction, forwardRef } from 'react'
-import Link from 'next/link'
 
 import { cn } from '@/app/_shared/lib/classnames'
 import { Icon } from '@/app/_shared/ui/icon'
