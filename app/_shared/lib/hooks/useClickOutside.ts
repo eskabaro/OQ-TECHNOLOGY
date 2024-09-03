@@ -2,53 +2,48 @@ import { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react'
 import { usePathname } from 'next/navigation'
 
 type ReturnType = {
-    refs: { [key: string]: React.RefObject<HTMLElement> }
-    isShow: { [key: string]: boolean }
-    setIsShow: (key: string, value: boolean) => void
+    ref: any
+    isShow: boolean
+    setIsShow: Dispatch<SetStateAction<boolean>>
 }
 
-export const useClickOutside = (initialValues: { [key: string]: boolean }): ReturnType => {
-    const [isShow, setIsShownState] = useState(initialValues)
-    const refs = Object.keys(initialValues).reduce((acc, key) => {
-        acc[key] = useRef<HTMLElement>(null)
-        return acc
-    }, {} as { [key: string]: React.RefObject<HTMLElement> })
-
+export const useClickOutside = (initialvaule: boolean): ReturnType => {
+    const [isShow, setIsShow] = useState(initialvaule)
+    const ref = useRef<HTMLElement>(null)
     const pathname = usePathname()
 
-    const handleClickOutside = (event: MouseEvent) => {
-        Object.keys(refs).forEach((key) => {
-            if (refs[key].current && !refs[key].current!.contains(event.target as Node)) {
-                setIsShownState((prev) => ({ ...prev, [key]: false }))
-            }
-        })
+    const handleClickOytside = (event: any) => {
+        if (ref.current && !ref.current.contains(event.target)) {
+            setIsShow(false)
+        }
     }
 
     useEffect(() => {
-        setIsShownState(initialValues)
+        setIsShow(false)
     }, [pathname])
 
     useEffect(() => {
         const handleBodyStyle = () => {
-            const isAnyOpen = Object.values(isShow).some((value) => value)
-            document.body.style.overflow = isAnyOpen ? 'hidden' : 'auto'
-            document.body.style.paddingRight = isAnyOpen ? '0.25rem' : '0rem'
+            document.body.style.overflow = isShow ? 'hidden' : 'auto'
+            document.body.style.paddingRight = isShow ? '0.25rem' : '0rem'
         }
 
         handleBodyStyle()
     }, [isShow])
 
     useEffect(() => {
-        document.addEventListener('click', handleClickOutside, true)
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.key === 'Escape') setIsShow(false)
+        }
+
+        document.addEventListener('click', handleClickOytside, true)
+        document.addEventListener('keydown', handleKeyDown)
 
         return () => {
-            document.removeEventListener('click', handleClickOutside, true)
+            document.removeEventListener('click', handleClickOytside, true)
+            document.removeEventListener('keydown', handleKeyDown)
         }
     }, [])
 
-    const setIsShow = (key: string, value: boolean) => {
-        setIsShownState((prev) => ({ ...prev, [key]: value }))
-    }
-
-    return { refs, isShow, setIsShow }
+    return { ref, isShow, setIsShow }
 }

@@ -16,10 +16,8 @@ import { ShoppingCart } from '@/app/(app)/_components/shopping-cart'
 
 export const Header: FC = () => {
     const pathname = usePathname()
-    const { refs, isShow, setIsShow } = useClickOutside({
-        sidebar: false,
-        cart: false
-    })
+    const { ref: sidebarRef, isShow: isShowSidebar, setIsShow: setIsShowSidebar } = useClickOutside(false)
+    const { ref: cartRef, isShow: isShowCart, setIsShow: setIsShowCart } = useClickOutside(false)
 
     return (
         <>
@@ -80,16 +78,16 @@ export const Header: FC = () => {
                             </li>
                         </ul>
                     </nav>
-                    <button onClick={() => setIsShow('cart', !isShow.cart)}>
+                    <button onClick={() => setIsShowCart(!isShowCart)}>
                         <Icon name='cart' />
                     </button>
-                    <button className={styles['burger-btn']} onClick={() => setIsShow('sidebar', !isShow.sidebar)}>
+                    <button className={styles['burger-btn']} onClick={() => setIsShowSidebar(!isShowSidebar)}>
                         <Icon name='bars' />
                     </button>
                 </div>
             </header>
-            <ShoppingCart ref={refs.cart} isActive={isShow.cart} setIsActive={() => setIsShow('cart', !isShow.cart)} />
-            <Sidebar ref={refs.sidebar} isActive={isShow.sidebar} setIsActive={() => setIsShow('sidebar', !isShow.sidebar)} />
+            <ShoppingCart ref={cartRef} isActive={isShowCart} setIsActive={setIsShowCart} />
+            <Sidebar ref={sidebarRef} isActive={isShowSidebar} setIsActive={setIsShowSidebar} />
         </>
     )
 }
