@@ -8,7 +8,7 @@ import { Icon } from '@/app/_shared/ui/icon'
 
 import styles from './ShoppingCart.module.scss'
 import { Button } from '@/app/_shared/ui/button'
-import { useEntries } from '../entries-provider'
+import { useCartContext } from '../cart-provider'
 
 interface IShoppingCartProps {
     isActive: boolean
@@ -17,7 +17,7 @@ interface IShoppingCartProps {
 }
 
 export const ShoppingCart: FC<IShoppingCartProps> = forwardRef(({ isActive, setIsActive }, ref: ForwardedRef<HTMLDivElement>) => {
-    const { cart } = useEntries()
+    const { cart } = useCartContext()
 
     return (
         <div className={cn(styles.bg, isActive && styles.active)}>
@@ -36,7 +36,7 @@ export const ShoppingCart: FC<IShoppingCartProps> = forwardRef(({ isActive, setI
                         <>
                             <ul className={styles.list}>
                                 {cart.map((item) => (
-                                    <li className={styles.item}>
+                                    <li key={item.id} className={styles.item}>
                                         <div className={styles.item_header}>
                                             <span className={styles.item_planName}>IOT DATA PLANS</span>
                                             <span className={styles.item_planPrice}>{item.price}$</span>

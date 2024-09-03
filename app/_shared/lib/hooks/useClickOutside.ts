@@ -28,8 +28,6 @@ export const useClickOutside = (initialValues: { [key: string]: boolean }): Retu
         setIsShownState(initialValues)
     }, [pathname])
 
-    console.log('isShow', isShow)
-
     useEffect(() => {
         const handleBodyStyle = () => {
             const isAnyOpen = Object.values(isShow).some((value) => value)

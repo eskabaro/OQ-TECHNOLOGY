@@ -7,6 +7,7 @@ import { Header } from './_widgets/header'
 import { Footer } from './_widgets/footer'
 
 import './(app)/_styles/global.scss'
+import { CartProvider } from './(app)/_components/cart-provider'
 
 const pragati = Pragati_Narrow({ subsets: ['latin'], weight: ['400', '700'] })
 
@@ -24,11 +25,13 @@ export default function RootLayout({
         <html lang='en'>
             <body className={pragati.className}>
                 <EntriesProvider>
-                    <div className='wrapper'>
-                        <Header />
-                        <main className='main'>{children}</main>
-                        <Footer />
-                    </div>
+                    <CartProvider>
+                        <div className='wrapper'>
+                            <Header />
+                            <main className='main'>{children}</main>
+                            <Footer />
+                        </div>
+                    </CartProvider>
                 </EntriesProvider>
             </body>
         </html>
