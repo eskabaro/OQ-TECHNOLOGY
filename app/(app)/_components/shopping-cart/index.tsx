@@ -32,9 +32,9 @@ export const ShoppingCart: FC<IShoppingCartProps> = forwardRef(({ isActive, setI
                     </div>
 
                     {cart.length === 0 ? (
-                        <div>Cart Empty</div>
+                        <div className={styles.emptyBlock}>Cart Empty</div>
                     ) : (
-                        <>
+                        <div className={styles.body}>
                             <ul className={styles.list}>
                                 {cart.map((item) => (
                                     <ShoppingItem key={item.id} {...item} />
@@ -53,7 +53,7 @@ export const ShoppingCart: FC<IShoppingCartProps> = forwardRef(({ isActive, setI
                                     </Button>
                                 </div>
                             </div>
-                        </>
+                        </div>
                     )}
                 </>
             </div>

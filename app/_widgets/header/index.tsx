@@ -78,10 +78,10 @@ export const Header: FC = () => {
                             </li>
                         </ul>
                     </nav>
-                    <button onClick={() => setIsShowCart(!isShowCart)}>
+                    <button className={styles['icon-btn']} onClick={() => setIsShowCart(!isShowCart)}>
                         <Icon name='cart' />
                     </button>
-                    <button className={styles['burger-btn']} onClick={() => setIsShowSidebar(!isShowSidebar)}>
+                    <button className={styles['icon-btn']} onClick={() => setIsShowSidebar(!isShowSidebar)}>
                         <Icon name='bars' />
                     </button>
                 </div>
