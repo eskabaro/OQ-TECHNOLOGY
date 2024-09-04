@@ -38,6 +38,11 @@
         > button {
             width: min-content;
         }
+
+        @include onMobile {
+            width: 100vw;
+            right: -100vw;
+        }
     }
 }
 
@@ -51,6 +56,10 @@
         font-weight: 700;
         line-height: 32px;
     }
+}
+
+.body {
+    @include flexVerticalGap(62);
 }
 
 .list {
